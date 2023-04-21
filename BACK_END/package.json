@@ -1,0 +1,14 @@
+{
+  "name": "node-samefa-api",
+  "version": "1.0.0",
+  "description": "An awesome API for donation.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Melisande, Sabrina, Fanny",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
