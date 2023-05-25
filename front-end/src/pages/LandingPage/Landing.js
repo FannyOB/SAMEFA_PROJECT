@@ -1,5 +1,6 @@
 import React from 'react';
-import Card from '../../components/Card';
+import Card from '../../components/Card/Card';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -8,6 +9,7 @@ const LandingPage = () => {
       <h1>Welcome to My Homepage</h1>
       <p>This is a simple homepage component.</p>
       <Card />
+      
     </div>
   );
 };
