@@ -1,0 +1,13 @@
+.smf-asso-item{
+    margin: 10px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	text-transform: capitalize;
+}
+
+.smf-asso-item-cover{
+    height: 220px;
+	width: 220px;
+}
