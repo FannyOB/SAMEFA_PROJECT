@@ -6,7 +6,7 @@ const SignIn = () => {
 
   function handleClick(e) {
     e.preventDefault();
-    navigate('/landing');
+    navigate('/homepage');
   }
   return (
     <div>
