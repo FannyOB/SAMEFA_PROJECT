@@ -1,31 +1,36 @@
 import React from 'react';
-import Navigation from '../Navigation/Navigation';
 import logo from '../../assets/Logo.png'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
     return (
         <header>
+            <div className="img">
                 <img src={logo} alt="Samefa-logo"/> 
-                <ul className='navigation'>
-                    <NavLink to="/homepage" className="navigation-link">
-                    <li>HOME</li>
+            </div>
+            <div className="nav-bar">
+                <ul>
+                    <NavLink to="/homepage" className="nav-link">
+                        <li>HOME</li>
                     </NavLink>
-                    <NavLink to="/aboutUs" className="navigation-link">
-                    <li>ABOUT US</li>
+                    <NavLink to="/aboutUs" className="nav-link">
+                        <li>ABOUT US</li>
                     </NavLink>
-                    <NavLink to="/categories" className="navigation-link">
-                    <li>CATEGORIES</li>
-                    </NavLink>
-                    <NavLink to="/" className="navigation-link">
-                    <li>SIGN UP</li>
-                    </NavLink>
-                    <NavLink to="/login" className="navigation-link">
-                    <li>LOGIN</li>
+                    <NavLink to="/categories" className="nav-link">
+                        <li>CATEGORIES</li>
                     </NavLink>
                 </ul>
-    </header>
+                <div className="button">
+                    <button>
+                        <Link to="/" className="nav-link">SIGN UP</Link>
+                    </button>
+                    <button>
+                        <Link to="/login" className="nav-link">LOG IN</Link>
+                    </button>
+                </div>
+            </div>
+        </header>
     );
 };
 

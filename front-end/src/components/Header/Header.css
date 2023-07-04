@@ -1,31 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 0 5rem; 
-    gap: 2rem;  
-    border: 1px solid pink;
-}
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-shadow: border-box;
 }
 
-header ul {
-    list-style: none;
+header{
     display: flex;
-    gap:2rem
-}
-
-.navigation .navigation-link{
-    color: black;
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: .25rem;
+    justify-content: space-around;
+    padding: 10px;  
+    border: 1px solid pink;
     font-family: 'Lora', serif;
     font-size: 18px;
     font-style: normal;
@@ -33,10 +18,55 @@ header ul {
     line-height: 20px;
 }
 
-.navigation .navigation-link:nth-last-child(-n+2){
-    color:white;
-    background-color: rgba(6, 150, 135, 0.90);
-    border-radius:18px ;
-    height: 5rem;
-    width: 5.5rem;
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:3rem;
 }
+
+header li {
+    margin-right: 2rem; 
+} 
+
+ header ul .nav-link{
+    color: black;
+    text-decoration: none;
+    align-items: center; 
+}
+
+.nav-link{
+    text-decoration: none;
+}
+
+header button{
+    color: #FFF;
+    width: 110px;
+    height: 53px;
+    margin-top: 2.5rem;
+    margin-right: 3.5rem;
+    background-color: rgba(6, 150, 135, 0.90);
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    border-radius: 18px;
+    border: none; 
+}
+
+header button:nth-last-child(-n+1){
+    background-color: #CCC;
+} 
+
+button a{
+    color:white;
+    list-style: none;
+}
+
+.nav-bar{
+    display: flex; 
+    padding-left: 20rem;
+} 
+
+
