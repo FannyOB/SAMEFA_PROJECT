@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import SignIn from './pages/SignIn/SignIn'
+import SignUp from './pages/SignIn/SignUp'
 import Homepage from './pages/Homepage/Homepage'
 import Associations from './pages/Associations/Associations'
 import Categories from './pages/Categories/Categories'
@@ -12,12 +12,12 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route exact path="/" element={<SignIn />} /> 
-          <Route exact path="/homepage" element={<Homepage />} />
-          <Route exact path="/associations" element={<Associations />} />
-          <Route exact path="/categories" element={<Categories />} />
-          <Route exact path="/login" element={< Login/>} />
+          <Route exact path="/" element={<Homepage />} />
           <Route exact path="/aboutUs" element={< AboutUs/>} />
+          <Route exact path="/categories" element={<Categories />} />
+          <Route exact path="/signup" element={<SignUp />} /> 
+          <Route exact path="/associations" element={<Associations />} />
+          <Route exact path="/login" element={< Login/>} />
         </Routes>
       </div>
     </Router>

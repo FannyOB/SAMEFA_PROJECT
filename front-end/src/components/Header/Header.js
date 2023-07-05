@@ -6,30 +6,30 @@ import './Header.css'
 const Header = () => {
     return (
         <header>
-            <div className="img">
+            <div className="logo">
                 <img src={logo} alt="Samefa-logo"/> 
             </div>
-            <div className="nav-bar">
-                <ul>
-                    <NavLink to="/homepage" className="nav-link">
-                        <li>HOME</li>
-                    </NavLink>
-                    <NavLink to="/aboutUs" className="nav-link">
-                        <li>ABOUT US</li>
-                    </NavLink>
-                    <NavLink to="/categories" className="nav-link">
-                        <li>CATEGORIES</li>
-                    </NavLink>
-                </ul>
-                <div className="button">
-                    <button>
-                        <Link to="/" className="nav-link">SIGN UP</Link>
-                    </button>
-                    <button>
-                        <Link to="/login" className="nav-link">LOG IN</Link>
-                    </button>
-                </div>
-            </div>
+                <nav>
+                    <ul>
+                        <NavLink to="/" className="nav-link">
+                            <li>HOME</li>
+                        </NavLink>
+                        <NavLink to="/aboutUs" className="nav-link">
+                            <li>ABOUT US</li>
+                        </NavLink>
+                        <NavLink to="/categories" className="nav-link">
+                            <li>CATEGORIES</li>
+                        </NavLink>
+                    </ul>
+                    <div className="nav-button">
+                        <button>
+                            <Link to="/signup" className="nav-link">SIGN UP</Link>
+                        </button>
+                        <button>
+                            <Link to="/login" className="nav-link">LOG IN</Link>
+                        </button>
+                    </div>
+                </nav>
         </header>
     );
 };

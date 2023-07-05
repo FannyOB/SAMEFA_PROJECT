@@ -1,9 +1,9 @@
 .smf-asso-list{
     display: grid ;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 5rem;
     list-style-type: none;
-	padding: 32px;
+	padding: 3rem;
 	max-width: 800px;
 }
 
