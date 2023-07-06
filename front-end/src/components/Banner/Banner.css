@@ -1,0 +1,36 @@
+.search-bar-wrapper{
+    height:90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.title-search-bar{
+    display: flex;
+    flex-direction:column;   
+}
+
+h1{
+    color: #000;
+    font-family: Crimson Pro;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 76px;
+}
+
+input{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 29px;
+    border: 1px solid #000;
+}
+
+button{
+    width: 110px;
+    height: 53px;
+    color: white;
+    background-color: rgba(6, 150, 135, 0.90); 
+    border-radius: 18px;
+}
