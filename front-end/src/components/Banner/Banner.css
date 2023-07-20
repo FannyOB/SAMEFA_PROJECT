@@ -6,9 +6,11 @@
     padding-left: 3rem;
 }
 
-.title-search-bar{
+.search-bar-title{
     display: flex;
-    flex-direction:column;   
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20rem;
 }
 
 h1{
@@ -20,12 +22,22 @@ h1{
     line-height: 76px;
 }
 
+.search-bar{
+    display: flex;
+    justify-content:space-between;
+    gap:1rem;
+}
+
 input{
     width: 20rem;
     height: 3rem;
     border-radius: 29px;
-    border: 1px solid #000;
+    border: 1px solid #000;  
 }
+
+.search-input {
+    text-align: center;
+  }
 
 button{
     width: 110px;
@@ -33,4 +45,5 @@ button{
     color: white;
     background-color: rgba(6, 150, 135, 0.90); 
     border-radius: 18px;
+    border: none; 
 }
