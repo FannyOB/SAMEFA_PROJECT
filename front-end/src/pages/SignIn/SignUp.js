@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SignIn = () => {
+const SignUp = () => {
   const navigate = useNavigate();
 
   function handleClick(e) {
@@ -10,10 +10,10 @@ const SignIn = () => {
   }
   return (
     <div>
-      <h1>Sign In</h1>
+      <h1>Sign Up</h1>
       <button onClick={handleClick}>Click here please</button>
     </div>
   );
 };
 
-export default SignIn;
+export default SignUp;
