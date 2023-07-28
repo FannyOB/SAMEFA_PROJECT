@@ -7,6 +7,10 @@ import Categories from './pages/Categories/Categories'
 import Login from './pages/Login/Login'
 import AboutUs from './pages/AboutUs/AboutUs'
 
+
+//name of database: SAMEFA
+//password of Supabase: dxEDLt0RnWj0Dpzk
+
 function App() {
   return (
     <Router>
