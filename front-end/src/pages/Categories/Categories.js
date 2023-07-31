@@ -22,18 +22,13 @@ const Categories = ({Categories}) => {
     const handlecategoryChange =(e) =>{
         setSelectedCategory(e.target.value);
     }
-
     //option selectionné
     console.log(selectedCategory);
-
-
-
     return (
         <div>
 
             <Header/>
             <h1>Here is our NGO Categories</h1>
-
             <hr></hr>
             <h3>Current Database Category:</h3>
             <br></br>
@@ -41,11 +36,9 @@ const Categories = ({Categories}) => {
                 <li key={categories.name_category}>{categories.name_category}</li>
             ))}</ul>
             <hr></hr>
-            
             <br></br>
             <form id="">
                 <h3 >Choose a Category: </h3>
-
                 <br></br>
                 <select id="categorie-select" onChange={handlecategoryChange}>
                     <option value="">--Please select a category--</option> 
@@ -59,7 +52,6 @@ const Categories = ({Categories}) => {
                 <br></br>
                 <button type="submit">Validate</button>
             </form>
-          
         </div>
     );
 };
