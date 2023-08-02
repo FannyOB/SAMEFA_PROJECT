@@ -1,12 +1,12 @@
-import alba from "../assets/Alba_img.jpeg";
-import mamama from "../assets/AssoMamama_img.png";
-import bissaiMedia from "../assets/BissaiMedia_img.jpeg";
-import diveka from "../assets/Diveka_img.jpeg";
-import domAsile from "../assets/DomAsile_img.jpeg";
-import lallab from "../assets/Lallab_img.jpeg";
-import emmaus from "../assets/Emmaus_img.jpeg";
-import utopia from "../assets/Utopia56_img.jpeg";
-import memoire from "../assets/memoiredDesSexualites_img.jpeg"
+import alba from "../assets/img/Alba_img.jpeg";
+import mamama from "../assets/img/AssoMamama_img.png";
+import bissaiMedia from "../assets/img/BissaiMedia_img.jpeg";
+import diveka from "../assets/img/Diveka_img.jpeg";
+import domAsile from "../assets/img/DomAsile_img.jpeg";
+import lallab from "../assets/img/Lallab_img.jpeg";
+import emmaus from "../assets/img/Emmaus_img.jpeg";
+import utopia from "../assets/img/Utopia56_img.jpeg";
+import memoire from "../assets/img/memoiredDesSexualites_img.jpeg"
 
 export const assoList =[
     {

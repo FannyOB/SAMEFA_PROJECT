@@ -1,12 +1,14 @@
 import React from 'react';
-import Header from '../../components/Header/Header'
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer'
+import CategoriesImg from '../../assets/img/Categories_img.png';
 import { useState, useEffect } from 'react';
 import { supabase } from '../../supabase';
+import './Categories.css';
 
 const Categories = ({Categories}) => {
     //visibilité de ma bdd
    // console.log(supabase)
-    
     const [categories, setCategories] = useState([]);
     const [selectedCategory,setSelectedCategory] = useState('');
 
@@ -26,15 +28,21 @@ const Categories = ({Categories}) => {
     console.log(selectedCategory);
     return (
         <div>
-
             <Header/>
-            <h1>Here is our NGO Categories</h1>
-            <hr></hr>
-            <h3>Current Database Category:</h3>
-            <br></br>
-            <ul>{categories.map((categories) => (
-                <li key={categories.name_category}>{categories.name_category}</li>
-            ))}</ul>
+            <div className='categories-title-wrapper'>
+                <div className='categories-title'>
+                    <h1>All Categories</h1>
+                </div>
+                <img src={CategoriesImg} alt="banner img"/>
+                <hr></hr>
+            </div>
+                <h3>Current Database Category:</h3>
+                <br></br>
+            <ul className='categories-list'>
+                {categories.map((categories) => (
+                    <li className='list' key={categories.name_category}>{categories.name_category}</li>
+            ))}
+            </ul>
             <hr></hr>
             <br></br>
             <form id="">
@@ -52,6 +60,7 @@ const Categories = ({Categories}) => {
                 <br></br>
                 <button type="submit">Validate</button>
             </form>
+            <Footer/>
         </div>
     );
 };

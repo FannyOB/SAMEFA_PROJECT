@@ -1,0 +1,48 @@
+.categories-title-wrapper{
+    height:90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.categories-list{
+    display: grid ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    list-style-type: none;
+    padding: 4rem;
+} 
+
+.categories-title h1{
+        font-family: 'Poppins';
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 76px;
+    }
+
+.list{
+    /* width: 180px;
+    height: 43px;
+    border: 0px solid #069687;
+    background: rgba(6, 150, 135, 0.70);
+    border-radius: 18px;
+    box-shadow: -6px -6px 5px rgba(6, 150, 135, 0.2);
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;  */
+    border: 1px solid;
+    border-radius: 8px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 100;
+
+}
+
