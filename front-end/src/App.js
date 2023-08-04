@@ -6,6 +6,7 @@ import Associations from './pages/Associations/Associations'
 import Categories from './pages/Categories/Categories'
 import Login from './pages/Login/Login'
 import AboutUs from './pages/AboutUs/AboutUs'
+import './App.css'
 
 
 //name of database: SAMEFA

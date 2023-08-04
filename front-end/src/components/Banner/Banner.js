@@ -1,22 +1,24 @@
 import React from 'react';
 import './Banner.css'
-import mainImg from '../../assets/main_img.png'
+import homepageImg from '../../assets/img/homepage_img.png'
 
 const Banner = () => {
     return (   
         <div className='search-bar-wrapper'>
             <div className='search-bar-title'>
                 <div className='title'>
-                    <h1>Boost</h1>
-                    <h1>your</h1>
-                    <h1>engagement</h1>
+                    <h1>
+                        Boost<br/>                        
+                        Your<br/> 
+                        Engagement
+                    </h1>
                 </div>
                 <div className='search-bar'>
                     <input type='text' placeholder='Find your asso' className='search-input'/>
                     <button>SEARCH</button>
                 </div>
             </div>
-            <img src={mainImg} alt="banner img"/>
+            <img src={homepageImg} alt="banner img"/>
         </div>
     );
 };

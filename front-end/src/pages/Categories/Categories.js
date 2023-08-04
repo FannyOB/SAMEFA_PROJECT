@@ -1,12 +1,15 @@
 import React from 'react';
-import Header from '../../components/Header/Header'
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer'
+import CategoriesImg from '../../assets/img/Categories_img.png';
+import ComponentBanner from '../../components/ComponentBanner/ComponentBanner';
 import { useState, useEffect } from 'react';
 import { supabase } from '../../supabase';
+import './Categories.css';
 
 const Categories = ({Categories}) => {
     //visibilité de ma bdd
    // console.log(supabase)
-    
     const [categories, setCategories] = useState([]);
     const [selectedCategory,setSelectedCategory] = useState('');
 
@@ -22,30 +25,26 @@ const Categories = ({Categories}) => {
     const handlecategoryChange =(e) =>{
         setSelectedCategory(e.target.value);
     }
-
     //option selectionné
     console.log(selectedCategory);
-
-
-
     return (
         <div>
-
             <Header/>
-            <h1>Here is our NGO Categories</h1>
-
-            <hr></hr>
+            <ComponentBanner 
+            title = "All Categories"
+            image={CategoriesImg}
+            />
             <h3>Current Database Category:</h3>
             <br></br>
-            <ul>{categories.map((categories) => (
-                <li key={categories.name_category}>{categories.name_category}</li>
-            ))}</ul>
+            <ul className='categories-list'>
+                {categories.map((categories) => (
+                    <li className='list' key={categories.name_category}>{categories.name_category}</li>
+            ))}
+            </ul>
             <hr></hr>
-            
             <br></br>
             <form id="">
                 <h3 >Choose a Category: </h3>
-
                 <br></br>
                 <select id="categorie-select" onChange={handlecategoryChange}>
                     <option value="">--Please select a category--</option> 
@@ -59,7 +58,7 @@ const Categories = ({Categories}) => {
                 <br></br>
                 <button type="submit">Validate</button>
             </form>
-          
+            <Footer/>
         </div>
     );
 };

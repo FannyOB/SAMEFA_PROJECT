@@ -13,9 +13,8 @@
     height: 20rem;
 }
 
-h1{
-    color: #000;
-    font-family: Crimson Pro;
+.title h1{
+    font-family: 'Lora-Medium';
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
