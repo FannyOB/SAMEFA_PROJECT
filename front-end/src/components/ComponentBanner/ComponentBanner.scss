@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .componentBannerWrapper{
     height:90vh;
     display: flex;
@@ -7,7 +9,7 @@
 }
 
 .componentBannerTitle h1{
-    font-family: 'Lora-Medium';
+    font-family: "Lora-Medium";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;

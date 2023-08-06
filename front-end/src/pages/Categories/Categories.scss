@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .categories-title-wrapper{
     height:90vh;
     display: flex;
@@ -16,25 +18,8 @@
     padding: 4rem;
 } 
 
-/* .categories-title h1{
-        font-family: 'Poppins';
-        font-size: 64px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 76px;
-    } */
-
 .list{
-    /* width: 180px;
-    height: 43px;
-    border: 0px solid #069687;
-    background: rgba(6, 150, 135, 0.70);
-    border-radius: 18px;
-    box-shadow: -6px -6px 5px rgba(6, 150, 135, 0.2);
-    cursor: pointer;
-    text-align: center;
-    margin-top: 1rem;  */
-    border: 1px solid;
+    border: 1px solid $color-lightgrey;
     border-radius: 8px;
     height: 40px;
     display: flex;
@@ -43,6 +28,5 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 100;
-
 }
 

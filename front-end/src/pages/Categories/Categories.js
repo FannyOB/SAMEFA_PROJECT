@@ -5,7 +5,7 @@ import CategoriesImg from '../../assets/img/Categories_img.png';
 import ComponentBanner from '../../components/ComponentBanner/ComponentBanner';
 import { useState, useEffect } from 'react';
 import { supabase } from '../../supabase';
-import './Categories.css';
+import './Categories.scss';
 
 const Categories = ({Categories}) => {
     //visibilité de ma bdd

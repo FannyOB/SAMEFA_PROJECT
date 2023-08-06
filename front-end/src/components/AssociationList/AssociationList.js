@@ -1,5 +1,5 @@
 import React from 'react';
-import './AssociationList.css'
+import './AssociationList.scss'
 import AssociationItem from '../AssociationItem/AssociationItem'; 
 import {assoList} from '../../data/AssoList'
 
