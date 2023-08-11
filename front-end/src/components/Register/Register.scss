@@ -1,0 +1,29 @@
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-image: linear-gradient(79deg, #fcfced,#fcedfc 48%, #ebf6ff );
+  // margin-left: 75px;
+  // margin-right: 75px;
+  // padding-left: 34px;
+}
+
+.form-group {
+  display: flex;
+  position: relative;
+  margin-bottom: 25px;
+  overflow: hidden;
+  gap: 1rem;
+}
+  .form-group:last-child {
+    margin-bottom: 0px; }
+
+::placeholder {
+  // position:absolute;
+  // left: 22px;
+  text-align: center;
+}
+  
