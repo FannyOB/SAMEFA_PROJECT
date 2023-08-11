@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+
+// colors
+$color-green : rgba(6, 150, 135, 1);
+$color-white: rgba(255, 255, 255, 1);
+$color-darkgrey: rgba(34, 34, 34, 1);
+$color-black : rgba(0, 0, 0, 1);
+$color-lightgrey: #CCC;
+
+//fonts
+@font-face{
+    font-family:"Lora-Regular";
+    src: url(../src/assets/fonts/Lora/Lora-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: "Lora-Medium";
+    src: url(../src/assets/fonts/Lora/Lora-Medium.ttf);
+  }
+  
+  @font-face{
+    font-family: "Lora-Bold";
+    src: url(../src/assets/fonts/Lora/Lora-Bold.ttf)
+  }
+  
+  @font-face {
+    font-family: "Dosis-Light";
+    src: url(../src/assets/fonts/Dosis/Dosis-Light.ttf);
+  }
+  
+  @font-face {
+    font-family: "Dosis-Medium";
+    src: url(../src/assets/fonts/Dosis/Dosis-Medium.ttf);
+  }
+  
+  @font-face {
+    font-family: "Dosis-SemiBold";
+    src: url(../src/assets/fonts/Dosis/Dosis-SemiBold.ttf);
+  };
+
+  @font-face {
+    font-family: "Montserrat-Thin";
+    src: url(../src/assets/fonts/Montserrat/Montserrat-Thin.ttf);
+  };
+
+  @font-face {
+    font-family: "Montserrat-Light";
+    src: url(../src/assets/fonts/Montserrat/Montserrat-Light.ttf);
+  };
+
+  @font-face {
+    font-family: "Montserrat-Regular";
+    src: url(../src/assets/fonts/Montserrat/Montserrat-Regular.ttf);
+  };
+
+  @font-face {
+    font-family: "Montserrat-Medium";
+    src: url(../src/assets/fonts/Montserrat/Montserrat-Medium.ttf);
+  };
+
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: url(../src/assets/fonts/Montserrat/Montserrat-Bold.ttf);
+  };
+

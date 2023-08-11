@@ -1,4 +1,6 @@
-.search-bar-wrapper{
+@import "../../index.scss";
+
+.componentBannerWrapper{
     height:90vh;
     display: flex;
     justify-content: space-around;
@@ -6,32 +8,27 @@
     padding-left: 3rem;
 }
 
-.search-bar-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20rem;
-}
-
-.title h1{
-    font-family: 'Lora-Medium';
+.componentBannerTitle h1{
+    font-family: "Montserrat-Bold";
+    white-space: pre-line;
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
     line-height: 76px;
 }
 
-.search-bar{
+input .search-bar{
     display: flex;
-    justify-content:space-between;
     gap:1rem;
+    margin-left: 12rem;
 }
 
 input{
     width: 20rem;
     height: 3rem;
-    border-radius: 29px;
-    border: 1px solid #000;  
+    border-radius: 20px;
+    border: 1px solid #000; 
+    
 }
 
 .search-input {
@@ -45,4 +42,5 @@ input{
     background-color: rgba(6, 150, 135, 0.90); 
     border-radius: 18px;
     border: none; 
+    cursor: pointer;
 }

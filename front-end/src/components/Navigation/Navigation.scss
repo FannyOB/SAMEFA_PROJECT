@@ -1,0 +1,56 @@
+@import '../../index.scss';
+
+.navigation-wrapper{
+    display: flex;
+}
+
+
+.navigation-wrapper ul{
+display: flex;
+align-items: center;
+list-style-type: none;
+gap:3rem; 
+}
+
+.navigation-wrapper li{
+margin-right: 2rem; 
+font-family: "Montserrat-Medium";
+font-size: 18px;
+}
+
+.navigation-link{
+text-decoration: none;
+color: $color-black;
+font-family: "Montserrat-Bold";
+}
+
+.navigation-link:hover{
+color: $color-green;
+}
+
+.navigation-button{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navigation-button button{
+    width: 80px;
+    height: 40px;
+    background-color: $color-green; 
+    border-radius: 10px;
+    border: none; 
+    list-style-type: none;
+}
+
+.navigation-button button:nth-last-child(-n+1){
+     background-color: $color-lightgrey;
+} 
+
+button .navigation-link {
+    color:$color-white;    
+}
+
+button .navigation-link:hover {
+    color:$color-black;    
+}
