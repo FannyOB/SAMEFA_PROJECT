@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Register.scss';
-import {AiOutlineUser} from 'react-icons/ai';
+import './LoginForm.scss';
 import {AiOutlineMail} from 'react-icons/ai';
 import {AiOutlineLock} from 'react-icons/ai';
 import samefalogo from '../../assets/img/samefalogo.png';
 
-const SignUpForm = () => {
+const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
-  const [name, setName] = useState('');
 
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,20 +18,6 @@ const handleSubmit = (e) => {
     <div className='container'>
       <div className='auth-form'>
         <form onSubmit={handleSubmit}>
-          <div className='form-group'>
-          <AiOutlineUser/>
-            <label htmlFor='name'className='label-with-icon'>
-            Name
-            </label>
-              <input
-                className='input-field' 
-                value={name} 
-                onChange ={(e) => setName(e.target.value)} 
-                type='text' 
-                placeholder='Your Name' 
-                id='name' 
-                name='name'/>
-          </div>
 
         <div className='form-group'>
           <AiOutlineMail/>
@@ -65,15 +49,15 @@ const handleSubmit = (e) => {
             name='password'/>
         </div>
 
-        <button type='submit' className='form-submit'>Sign up</button>
+        <button type='submit' className='form-submit'>Log in</button>
       </form>  
     </div>
 
     <div className='signup-image'>
       <img src={samefalogo} alt='two girls coding'/>
         <div className='login-container'>
-          <Link to ="/login" className='login-link'>
-            Already have an account? Login here.
+          <Link to ="/signup" className='login-link'>
+            Don't have an account? Sign up here.
           </Link>
         </div>
       </div>
@@ -81,4 +65,4 @@ const handleSubmit = (e) => {
     );
 };
 
-export default SignUpForm;
+export default LoginForm;
