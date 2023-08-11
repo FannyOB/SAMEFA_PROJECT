@@ -1,6 +1,7 @@
 import React from 'react';
 import './AssociationList.scss'
 import AssociationItem from '../AssociationItem/AssociationItem'; 
+import HeartButton from '../HeartButton/HeartButton';
 import {assoList} from '../../data/AssoList'
 
 const AssociationList = ({shouldSlice}) => { // ajout d'une props au composant AssociationList
@@ -16,6 +17,7 @@ const AssociationList = ({shouldSlice}) => { // ajout d'une props au composant A
           name={name}
           cover={cover}
           />
+          <HeartButton/>
         </div>
         ))}
       </ul>

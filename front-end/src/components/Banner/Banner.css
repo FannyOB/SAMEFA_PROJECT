@@ -38,8 +38,8 @@ input{
     text-align: center;
   }
 
-button{
-    width: 110px;
+.search-bar button{ /*à vérifier*/
+    width: 110px; 
     height: 53px;
     color: white;
     background-color: rgba(6, 150, 135, 0.90); 

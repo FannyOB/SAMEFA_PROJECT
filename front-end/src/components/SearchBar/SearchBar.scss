@@ -1,23 +1,6 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
-.componentBannerWrapper{
-    height:90vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 3rem;
-}
-
-.componentBannerTitle h1{
-    font-family: "Montserrat-Bold";
-    white-space: pre-line;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 76px;
-}
-
-input .search-bar{
+.search-bar{
     display: flex;
     gap:1rem;
     margin-left: 12rem;

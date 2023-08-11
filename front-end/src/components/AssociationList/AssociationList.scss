@@ -3,10 +3,14 @@
 .asso-list{
     display: grid ;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    // align-items: center;
     gap: 5rem;
     list-style-type: none;
-	padding: 4rem;
-	max-width: 800px;  
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 .asso-item-wrapper{

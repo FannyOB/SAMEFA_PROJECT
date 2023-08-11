@@ -28,21 +28,18 @@ const Categories = ({Categories}) => {
     //option selectionné
     console.log(selectedCategory);
     return (
-        <div>
+        <div className='categories-wrapper'>
             <Header/>
             <ComponentBanner 
             title = "All Categories"
             image={CategoriesImg}
             />
-            <h3>Current Database Category:</h3>
-            <br></br>
+            <h3>Choose your favorite category</h3>
             <ul className='categories-list'>
                 {categories.map((categories) => (
                     <li className='list' key={categories.name_category}>{categories.name_category}</li>
             ))}
             </ul>
-            <hr></hr>
-            <br></br>
             <form id="">
                 <h3 >Choose a Category: </h3>
                 <br></br>
@@ -54,8 +51,6 @@ const Categories = ({Categories}) => {
                         </option>  
                     ))}
                 </select>
-                <br></br>
-                <br></br>
                 <button type="submit">Validate</button>
             </form>
             <Footer/>

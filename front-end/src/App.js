@@ -15,7 +15,6 @@ import AboutUs from './pages/AboutUs/AboutUs'
 function App() {
   return (
     <Router>
-      <div>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/aboutUs" element={< AboutUs/>} />
@@ -24,7 +23,6 @@ function App() {
           <Route exact path="/associations" element={<Associations />} />
           <Route exact path="/login" element={< Login/>} />
         </Routes>
-      </div>
     </Router>
   );
 }

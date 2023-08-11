@@ -41,31 +41,31 @@ nav li {
     font-family: "Lora-Bold";
 }
 
-nav ul .nav-link:hover{
-    color: $color-green;
-}
+// nav ul .nav-link:hover{
+//     color: $color-green;
+// }
 
-.nav-button{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
+// .nav-button{
+//     display: flex;
+//     align-items: center;
+//     gap: 2rem;
+// }
 
-header button{
-    width: 110px;
-    height: 53px;
-    background-color: $color-green; 
-    border-radius: 18px;
-    border: none; 
-}
+// header button{
+//     width: 110px;
+//     height: 53px;
+//     background-color: $color-green; 
+//     border-radius: 18px;
+//     border: none; 
+// }
 
-header button:nth-last-child(-n+1){
-    background-color: $color-lightgrey;
-} 
+// header button:nth-last-child(-n+1){
+//     background-color: $color-lightgrey;
+// } 
 
-button a{
-    color:white;    
-}
+// button a{
+//     color:white;    
+// }
 
 
 
