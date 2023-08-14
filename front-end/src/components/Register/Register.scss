@@ -3,6 +3,17 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .form-group {
+      flex-direction: column;
+  }
+
+  label, input {
+      flex: none;
+      /* Adjust styles for better readability on smaller screens */
+  }
+}
+
 .auth-form {
   flex: 1;
   display: flex;
@@ -12,16 +23,14 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-image: linear-gradient(79deg, #069687E6,#72B7B0E6 48%, #D0EDE8E6 );
-  // margin-left: 75px;
-  // margin-right: 75px;
-  // padding-left: 34px;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 
 .form-group {
   display: flex;
   align-items: center;
-  // position: relative;
+  position: relative;
   margin-bottom: 15px;
   gap: 1rem;
 }
