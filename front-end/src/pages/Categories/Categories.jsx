@@ -22,8 +22,8 @@ const Categories = ({Categories}) => {
         setCategories(data);
     }
 
-    const handlecategoryChange =(e) =>{
-        setSelectedCategory(e.target.value);
+    const handlecategoryChange =(categoryValue) =>{
+        setSelectedCategory(categoryValue);
     }
     //option selectionné
     console.log(selectedCategory);
@@ -37,7 +37,11 @@ const Categories = ({Categories}) => {
             <h3>Choose your favorite category</h3>
             <ul className='categories-list'>
                 {categories.map((categories) => (
-                    <li className='list' key={categories.name_category}>{categories.name_category}</li>
+                    <li className='list' 
+                    key={categories.id}
+                    value={categories.name_category}
+                    onClick={() => handlecategoryChange(categories.name_category)}
+                    >{categories.name_category}</li>
             ))}
             </ul>
             <form id="">
@@ -46,9 +50,9 @@ const Categories = ({Categories}) => {
                 <select id="categorie-select" onChange={handlecategoryChange}>
                     <option value="">--Please select a category--</option> 
                     {categories.map((categories)=>(
-                        <option key={categories.id} value={categories.name_category}>
-                            {categories.name_category}
-                        </option>  
+                        <option key={categories.id} 
+                        value={categories.name_category}
+                        >{categories.name_category}</option>  
                     ))}
                 </select>
                 <button type="submit">Validate</button>
