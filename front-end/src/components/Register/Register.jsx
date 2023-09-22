@@ -1,20 +1,54 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Register.scss';
+import React, { useState } from 'react';
 import {AiOutlineUser} from 'react-icons/ai';
 import {AiOutlineMail} from 'react-icons/ai';
 import {AiOutlineLock} from 'react-icons/ai';
 import samefalogo from '../../assets/img/samefalogo.png';
+import { supabase } from '../../supabase';
 
 const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [name, setName] = useState('');
 
-const handleSubmit = (e) => {
+  const navigate = useNavigate();  // 2. Use useNavigation hook
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email)
+ 
+ 
+    if (pass.length <= 6) {
+      // Handle this case appropriately, such as showing an error message
+      alert("Password must be longer than 6 characters.");
+      return;
+    }
+ 
+ 
+    const { data, error } = await supabase.auth.signUp(
+      {
+        email: email,
+        password: pass,
+        options: {
+          data: {
+            first_name: name,
+          }
+        }
+      }
+      )
+      console.log(data)
+ 
+ 
+    if (data) {  // Check if data is received which means successful login
+      navigate('/');  // 3. Redirect to the homepage using navigate
+    } else {
+      console.error("Signup error:", error);
+      // Handle the error appropriately, like showing an error message to the user
+    }
+ 
+ 
   }
+ 
 
     return (
     <div className='container'>
