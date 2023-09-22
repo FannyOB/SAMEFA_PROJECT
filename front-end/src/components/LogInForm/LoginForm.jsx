@@ -1,18 +1,41 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom'; 
 import './LoginForm.scss';
 import {AiOutlineMail} from 'react-icons/ai';
 import {AiOutlineLock} from 'react-icons/ai';
 import samefalogo from '../../assets/img/samefalogo.png';
+import { supabase } from '../../supabase'; 
 
-const LoginForm = () => {
+const LoginForm = (setToken) => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(email)
+
+
+  const navigate = useNavigate();  // 2. Use useNavigation hook
+
+
+  const handleSubmit = async (e) => {
+     e.preventDefault();
+    
+   const { data, error } = await supabase.auth.signInWithPassword({
+     email: email,
+     password: pass,
+   })
+   console.log(data)
+  
+  
+   if (data) {  // Check if data is received which means successful login
+     navigate('/');  // 3. Redirect to the homepage using navigate
+     setToken(data)
+   } else {
+     console.error("Login error:", error);
+     // Handle the error appropriately, like showing an error message to the user
+   }
+  
+  
   }
+  
 
     return (
     <div className='container'>
