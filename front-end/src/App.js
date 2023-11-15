@@ -6,6 +6,7 @@ import Associations from './pages/Associations/Associations';
 import Categories from './pages/Categories/Categories';
 import Login from './pages/Login/Login';
 import AboutUs from './pages/AboutUs/AboutUs';
+import AssociationProfile from './components/Association/AssociationProfile/AssociationProfile';
 //import './App.css'
 
 //name of database: SAMEFA
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/associations" element={<Associations />} />
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/profile" element={<AssociationProfile />} />
       </Routes>
     </Router>
   );
