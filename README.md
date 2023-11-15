@@ -16,7 +16,7 @@
 
 ## Architecture des dossiers et lancement du projet : 
 * Works in Mono-repo <br>
-* "Frontend" launches from the path  "cd .\front-end\"  and runs woth "npm start" <br>
+* "Frontend" launches from the path  "cd .\front-end\"  and runs with "npm start" <br>
 
 
 ## Convention de nommage et utilisation des branches :
@@ -24,4 +24,7 @@
 
 
 ## Review Code
-* Every PR must be reviewed and approved by another appointed developer before merging.
+* Every PR must be reviewed and approved by another appointed developer before merging.<br> 
+* Every PR must have few words to describe achieved work <br> 
+* Every PR must be wrote in English <br>
+
