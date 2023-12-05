@@ -13,16 +13,13 @@ const Associations = () =>{
     return(
         <>
             <Header/>
-            <ComponentBanner 
-            title="All Associations"
-            image={AssociationImg}
-            />
-            <SearchBar/>
-            <h1>Assocations page in progress</h1> 
-            <AssociationList />
-            <ComponentProfile 
-            title="Alba"
-            image={AssociationImg}/>
+                <ComponentBanner 
+                    title="All Associations"
+                    image={AssociationImg}
+                />
+                <SearchBar/>
+                <h1>Assocations page in progress</h1> 
+                <AssociationList />
         </>
     )  
 }

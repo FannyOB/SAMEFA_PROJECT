@@ -8,6 +8,7 @@ import Footer from '../../components/Footer/Footer';
 import HomepageImg from '../../assets/img/homepage_img.png';
 import {BsArrowRight} from 'react-icons/bs';
 import './Homepage.scss'
+import { assoList } from '../../data/AssoList';
 
 const Homepage = () => {
   return (

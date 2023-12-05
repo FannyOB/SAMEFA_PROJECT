@@ -11,28 +11,28 @@ import memoire from "../assets/img/memoiredDesSexualites_img.jpeg"
 export const assoList =[
     {
         id: 1,
-        name:"Lallab",
+        name:"LALLAB",
         description:"Lallab est une association féministe et antiraciste dont le but est de faire entendre les voix et de défendre les droits des femmes musulmanes",
         tags:["Feminismn", "Anti-racism"],
-        cover: lallab
+        cover: "https://pbs.twimg.com/profile_images/1280913422943760385/StPgXGVe_400x400.jpg"
     },
     {
         id: 2,
-        name:"Dom'Asile",
+        name:"DOM'ASILE",
         description:"Dom’Asile est une association francilienne dédiée à la domiciliation et à l’accès aux droits sociaux des personnes exilées sans hébergement stable.",
         tags:["Social", "Inclusion", "Solidarity"],
-        cover: domAsile
+        cover: "https://yt3.googleusercontent.com/ytc/APkrFKbZOO0SqrAvWtWlmg0FKlQtB1jyz2SdNmhjUPatiA=s176-c-k-c0x00ffffff-no-rj"
     },
     {
         id: 3,
-        name:"Alba Asso",
+        name:"ALBA",
         description:"ALBA est une association loi 1er juillet 1901 qui propose un programme d’empowerment qui a pour mission d’accompagner les jeunes femmes âgées entre 15 et 25 ans dans leur choix d’orientation aussi bien au niveau scolaire que professionnel. Ces jeunes femmes vivent dans des territoires isolés (principalement QPV (quartiers prioritaires de la ville), péri-urbains, …).",
         tags:["Education", "Orientation"],
         cover: alba
     },
     {
         id: 4,
-        name:"Utopia56",
+        name:"UTOPIA56",
         description:"Utopia 56: venir en aide aux personnes exilées et à toute personne en détresse en France, dans le respect de leurs choix de parcours et de vie, grâce à la mobilisation citoyenne.",
         tags:["Social", "Inclusion", "Solidarity","Refugees"],
         cover: utopia 
@@ -43,7 +43,8 @@ export const assoList =[
         name:"Emmaüs",
         description:null,
         tags:["Social", "Homelessness", "Solidarity"],
-        cover: emmaus
+        cover: "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4d/Logo_EF_Couleur.svg/1200px-Logo_EF_Couleur.svg.png"
+        
 
     },
     {

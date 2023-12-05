@@ -5,10 +5,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    // align-items: center;
-    gap: 5rem;
-    list-style-type: none;
-    width: 400px;
+   
+    
+    gap: 2rem;
+    // list-style-type: none;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -17,14 +18,29 @@
     // border: 1px solid $color-lightgrey;
     // border-radius: 8px;
     // height: 20rem;
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-    padding: 30px;
-    border-radius: 30px;
+    position: relative;
+    padding: 10px;
+    margin: 5px;
+    min-height: 200px;
+    border-radius: 10px;
     border: 0.5px solid grey;
-    backdrop-filter: bur(1.5px);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add transitions for smooth effect */
+    transition: transform 0.3s ease; /* Add transitions for smooth effect */
+}
+
+.asso-item-wrapper span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: pink;
+    padding: 3px 5px;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+
+.asso-item-wrapper .link-no-underline{
+    text-decoration: none;
 }
 
 .asso-item-wrapper:hover {

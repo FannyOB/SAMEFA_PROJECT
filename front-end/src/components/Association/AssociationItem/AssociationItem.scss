@@ -1,15 +1,23 @@
 @import '../../../index.scss';
 
 .smf-asso-item{
-    margin: 10px;
+    margin: 15px;
 	display: flex;
-	align-items: flex-start;
-	justify-content: center;
 	flex-direction: column;
-	text-transform: capitalize;
+	min-height: 250px;
+	max-width: 200px;
+	// align-items: flex-start;
+	// justify-content: center
+	
 }
 
 .smf-asso-item-cover{
-    height: 220px;
-	width: 220px;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.smf-asso-item.h1{
+	font-size: 10px;
+	text-decoration: none;
+	
 }

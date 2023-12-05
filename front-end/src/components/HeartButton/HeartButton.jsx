@@ -4,12 +4,12 @@ import {AiOutlineHeart} from 'react-icons/ai';
 
 const HeartButton = () => {
     return (
-        <div>
-            <button className='heart-button'>
-                <div>
-                    <AiOutlineHeart/>
-                </div>
-            </button>
+        <div className='heart-button'>
+            <button>
+                <div className='heart-button-wrapper'>
+                    <AiOutlineHeart size='20px'/>
+                </div>       
+            </button>   
         </div>
     );
 };
