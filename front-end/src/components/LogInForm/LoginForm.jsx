@@ -10,10 +10,7 @@ const LoginForm = (setToken) => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
 
-
-
   const navigate = useNavigate();  // 2. Use useNavigation hook
-
 
   const handleSubmit = async (e) => {
      e.preventDefault();
@@ -32,16 +29,12 @@ const LoginForm = (setToken) => {
      console.error("Login error:", error);
      // Handle the error appropriately, like showing an error message to the user
    }
-  
-  
-  }
-  
 
+  }
     return (
     <div className='container'>
       <div className='auth-form'>
         <form onSubmit={handleSubmit}>
-
         <div className='form-group'>
           <AiOutlineMail/>
           <label htmlFor='name'className='label-with-icon'>

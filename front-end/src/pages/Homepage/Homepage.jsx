@@ -1,14 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {AssociationList} from '../../components/Association';
 import Header from '../../components/Header/Header';
 import ComponentBanner from '../../components/ComponentBanner/ComponentBanner';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Footer from '../../components/Footer/Footer';
 import HomepageImg from '../../assets/img/homepage_img.png';
-import {BsArrowRight} from 'react-icons/bs';
 import './Homepage.scss'
-import { assoList } from '../../data/AssoList';
 
 const Homepage = () => {
   return (
@@ -19,13 +16,7 @@ const Homepage = () => {
       image={HomepageImg}>
       </ComponentBanner>
       <SearchBar/>
-      <AssociationList shouldSlice={true} className='asso-list' /> 
-        <Link 
-        to="/associations"  
-        className='homepage-link'> 
-          <BsArrowRight/> 
-          See more
-        </Link>
+      <AssociationList shouldSlice={false} className='asso-list' /> 
       <Footer/>
     </>
   );

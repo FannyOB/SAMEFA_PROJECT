@@ -13,11 +13,7 @@ const SearchBar = ({onSearch}) => {
                 OnChange={(e) => setSearchQuery(e.target.value)}
                 className='search-input'
             />
-            
-
-          
         </div>
-    
     );
 };
 
