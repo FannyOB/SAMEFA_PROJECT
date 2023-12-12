@@ -1,0 +1,45 @@
+@import '../../index.scss';
+
+.product {
+    padding: 6% 10% 0 10%;
+    // border: 1px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 2px ;
+}
+
+.left{
+    // border: 1px solid red   
+}
+
+.left img{
+    display: block;
+    margin: 10px auto ;
+    width: 80%;
+    height: 65vh;
+    object-fit: cover;
+    border: 1px solid $color-black;
+}
+
+.right{
+    grid-column: 2/ 4;
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 10% ;
+}
+
+.right p{
+    color:black;
+    font-size: 18px;
+    font-weight: 300;
+    font-family:"Montserrat-Regular";
+    text-align: justify; 
+}
+
+.right h1{
+    font-family: "Montserrat-Bold";
+    font-size: 64px; 
+}

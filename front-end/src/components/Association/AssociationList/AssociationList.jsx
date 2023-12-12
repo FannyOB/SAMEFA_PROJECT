@@ -14,7 +14,7 @@ const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au comp
         {renderedList.map(({id,name, cover}) =>(
           <div className='asso-item-wrapper'>
               <span>NEW</span>
-              <Link to={`/DetailsProfile/${id}`} key={id} className='link-no-underline'>
+              <Link to={`/details/${id}`} key={id} className='link-no-underline'>
                 <AssociationItem
                   key={id}
                   name={name} 

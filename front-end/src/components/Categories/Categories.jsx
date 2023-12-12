@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer'
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer'
 import CategoriesImg from '../../assets/img/Categories_img.png';
-import ComponentBanner from '../../components/ComponentBanner/ComponentBanner';
+import ComponentBanner from '../ComponentBanner/ComponentBanner';
 import { useState, useEffect } from 'react';
 import { supabase } from '../../supabase';
 import './Categories.scss';
@@ -31,12 +31,7 @@ const Categories = ({Categories}) => {
     //option selectionné
     console.log(selectedCategory);
     return (
-        <div className='categories-wrapper'>
-            <Header/>
-            <ComponentBanner 
-            title = "All Categories"
-            image={CategoriesImg}
-            />
+        <div className='categories-wrapper'>           
             <h3>Choose your favorite category</h3>
                 <div className='search-bar'> {/* ajout de la line 41 à 47*/}
                     <input 
@@ -72,7 +67,6 @@ const Categories = ({Categories}) => {
                 </select>
                 <button type="submit">Validate</button>
             </form>
-            <Footer/>
         </div>
     );
 };
