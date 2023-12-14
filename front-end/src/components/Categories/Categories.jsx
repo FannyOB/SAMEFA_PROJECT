@@ -1,10 +1,5 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer'
-import CategoriesImg from '../../assets/img/Categories_img.png';
-import ComponentBanner from '../ComponentBanner/ComponentBanner';
 import { useState, useEffect } from 'react';
-import { supabase } from '../../supabase';
 import './Categories.scss';
 
 const Categories = ({Categories}) => {

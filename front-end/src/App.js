@@ -9,9 +9,6 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import DetailsProfile from './pages/DetailsProfile/DetailsProfile';
 //import './App.css'
 
-//name of database: SAMEFA
-//password of Supabase: dxEDLt0RnWj0Dpzk
-
 function App() {
   return (
     <Router>

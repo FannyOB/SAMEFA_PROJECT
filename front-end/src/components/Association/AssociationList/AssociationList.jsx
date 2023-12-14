@@ -1,8 +1,6 @@
 import React from 'react';
 import './AssociationList.scss'
 import AssociationItem from '../AssociationItem/AssociationItem';
-import HeartButton from '../../HeartButton/HeartButton';
-import DetailsProfile from '../../../pages/DetailsProfile/DetailsProfile';
 import {assoList} from '../../../data/AssoList';
 import { Link } from 'react-router-dom';
 

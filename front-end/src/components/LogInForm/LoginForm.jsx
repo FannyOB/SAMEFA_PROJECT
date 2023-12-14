@@ -4,7 +4,7 @@ import './LoginForm.scss';
 import {AiOutlineMail} from 'react-icons/ai';
 import {AiOutlineLock} from 'react-icons/ai';
 import samefalogo from '../../assets/img/samefalogo.png';
-import { supabase } from '../../supabase'; 
+
 
 const LoginForm = (setToken) => {
   const [email, setEmail] = useState('');

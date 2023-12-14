@@ -5,7 +5,7 @@ import {AiOutlineUser} from 'react-icons/ai';
 import {AiOutlineMail} from 'react-icons/ai';
 import {AiOutlineLock} from 'react-icons/ai';
 import samefalogo from '../../assets/img/samefalogo.png';
-import { supabase } from '../../supabase';
+
 
 const SignUpForm = () => {
   const [email, setEmail] = useState('');
