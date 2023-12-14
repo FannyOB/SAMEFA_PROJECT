@@ -3,7 +3,7 @@
 .search-bar{
     display: flex;
     gap:1rem;
-    margin-left: 12rem;
+    margin-left: 4rem;
 }
 
 .search-bar input{
@@ -15,14 +15,4 @@
 
 .search-input {
     text-align: center;
-  }
-
-.search-bar button{ /*à vérifier*/
-    width: 110px; 
-    height: 53px;
-    color: white;
-    background-color: rgba(6, 150, 135, 0.90); 
-    border-radius: 18px;
-    border: none; 
-    cursor: pointer;
 }

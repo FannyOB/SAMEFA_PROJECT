@@ -1,14 +1,14 @@
 @import "../../index.scss";
 
-.componentBannerWrapper{
-    height:90vh;
+.component-banner-wrapper{
+    max-height:50vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-left: 3rem;
 }
 
-.componentBannerTitle h1{
+.component-banner-title h1{
     font-family: "Montserrat-Bold";
     white-space: pre-line;
     font-size: 64px;
@@ -17,30 +17,7 @@
     line-height: 76px;
 }
 
-input .search-bar{
-    display: flex;
-    gap:1rem;
-    margin-left: 12rem;
+.component-banner-wrapper img{
+    max-height: 45vh;
 }
 
-input{
-    width: 20rem;
-    height: 3rem;
-    border-radius: 20px;
-    border: 1px solid #000; 
-    
-}
-
-.search-input {
-    text-align: center;
-  }
-
-.search-bar button{ /*à vérifier*/
-    width: 110px; 
-    height: 53px;
-    color: white;
-    background-color: rgba(6, 150, 135, 0.90); 
-    border-radius: 18px;
-    border: none; 
-    cursor: pointer;
-}

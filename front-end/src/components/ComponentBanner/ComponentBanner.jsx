@@ -3,8 +3,8 @@ import "./ComponentBanner.scss";
 
 const ComponentBanner = ({title,image}) => {
     return (
-        <div className='componentBannerWrapper'>
-            <div className='componentBannerTitle'>
+        <div className='component-banner-wrapper'>
+            <div className='component-banner-title'>
                 <h1>{title}</h1>
             </div>
             <img src={image} alt="bannerImage"></img> 
