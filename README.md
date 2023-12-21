@@ -1,7 +1,7 @@
 # SAMEFA_PROJECT
 
 * Project for RNCP certification
-Hello
+Hello c'est un test 
 
 ## Stack principal : 
 * BDD : Supabase <br>
