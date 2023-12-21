@@ -10,6 +10,7 @@ import DetailsProfile from './pages/DetailsProfile/DetailsProfile';
 //import './App.css'
 
 function App() {
+
   return (
     <Router>
       <Routes>
