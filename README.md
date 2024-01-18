@@ -3,7 +3,7 @@
 * Project for RNCP certification
 
 ## Stack principal : 
-* BDD : Supabase <br>
+* BDD : PostgreSQL <br>
 * NodeJs <br>
 * ReactJs (CSS : Sass) <br>
 * GitHub 

@@ -12,7 +12,7 @@ const port = 3000;
 
 //-------------------------------------------------
 
-//TEST REQUETES
+//TEST REQUETES POUR CONNECTION FRONT
 
 //app.get('/', (req, res) => res.send('Hello, Express 28!'));
 
@@ -36,14 +36,12 @@ app.get('/ngos/:id',(req,res)=>
     if(ngoId){
       res.json(ngoId);
     }else {
-      res.status(404).json({message:"Associaiton not find"})
+      res.status(404).json({message:"Associaiton non trouvée"})
     }
 });
 
-
-
 //-------------------------------------------------
-
+//PORT
 app.listen(port, () =>
   console.log(`Notre application Node est démarée sur : http://localhost:${port}`)
 );
