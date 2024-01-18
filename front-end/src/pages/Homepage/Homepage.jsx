@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import {AssociationList} from '../../components/Association';
 import Header from '../../components/Header/Header';
 import ComponentBanner from '../../components/ComponentBanner/ComponentBanner';
@@ -13,14 +13,27 @@ const Homepage = () => {
 
   //connection front-end to back-end
   const [data, setData]=useState("");
+  const [ngos, setNgos] = useState([]);
 
   const getData=async()=>{
-    const response=await Axios.get("http://localhost:3000/getData");
+    const response=await axios.get("http://localhost:3000/getData");
     setData(response.data);
   }
 
   useEffect(()=>{
     getData()
+  }, []);
+
+  //-------------
+  //Fonction pour récupérer la liste dans le front
+
+  const getAllNgos = async () => {
+    const response = await axios.get("http://localhost:3000/ngos");
+    console.log(response.data);
+  };
+
+  useEffect(()=> {
+    getAllNgos()
   }, []);
 
   return (
