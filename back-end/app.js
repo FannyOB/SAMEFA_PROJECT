@@ -4,11 +4,18 @@ import { ngoList } from "./db/mockNgos.js";
 
 const app = express();
 
+//Option du cors
+const corsOptions = { //pour dire que j'autorise spécifiquement les requêtes qui viennent de cette origine.
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200,
+};
+
 // les middlewares
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
-const port = 3000;
+
+const port = 3001;
 
 //-------------------------------------------------
 

@@ -8,17 +8,14 @@
     grid-gap: 2px ;
 }
 
-.left{
-    // border: 1px solid red   
-}
 
 .left img{
     display: block;
     margin: 10px auto ;
-    width: 80%;
-    height: 65vh;
-    object-fit: cover;
-    border: 1px solid $color-black;
+    width: 75%;
+    height: 60vh;
+    object-fit: contain; // ou object-fit : cover, voir pour trouver des images avec meilleures résolutions
+    //border: 1px solid $color-black;
 }
 
 .right{
@@ -36,10 +33,11 @@
     font-size: 18px;
     font-weight: 300;
     font-family:"Montserrat-Regular";
-    text-align: justify; 
+    text-align:left; 
 }
 
 .right h1{
     font-family: "Montserrat-Bold";
     font-size: 64px; 
+    text-align: left;
 }

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import {AssociationList} from '../../components/Association';
 import Header from '../../components/Header/Header';
 import ComponentBanner from '../../components/ComponentBanner/ComponentBanner';
@@ -12,30 +11,17 @@ import Categories from '../../components/Categories/Categories';
 const Homepage = () => {
 
   //connection front-end to back-end
-  const [data, setData]=useState("");
-  const [ngos, setNgos] = useState([]);
+  // const [data, setData]=useState("");
 
-  const getData=async()=>{
-    const response=await axios.get("http://localhost:3000/getData");
-    setData(response.data);
-  }
+  // // const getData=async()=>{
+  // //   const response=await axios.get("http://localhost:3001/getData");
+  // //   console.log(response.data);
+  // //   setData(response.data)
+  // // }
 
-  useEffect(()=>{
-    getData()
-  }, []);
-
-  //-------------
-  //Fonction pour récupérer la liste dans le front
-
-  const getAllNgos = async () => {
-    const response = await axios.get("http://localhost:3000/ngos");
-    console.log(response.data);
-  };
-
-  useEffect(()=> {
-    getAllNgos()
-  }, []);
-
+  // // useEffect(()=>{
+  // //   getData()
+  // // }, []);
   return (
     <>
       <Header/>
@@ -46,7 +32,6 @@ const Homepage = () => {
       <SearchBar/>
       <AssociationList shouldSlice={false} className='asso-list' />
       <Categories/>
-      <div>{data}</div>
       <Footer/>
     </>
   );

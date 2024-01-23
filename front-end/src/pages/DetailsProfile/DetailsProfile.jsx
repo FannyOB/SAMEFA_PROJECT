@@ -1,21 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import "./DetailsProfile.scss";
 import Header from '../../components/Header/Header';
-import { assoList  } from '../../data/AssoList';
+//import { assoList  } from '../../data/AssoList';
 import { useParams } from 'react-router-dom';
 
 const DetailsProfile = () => {
 
     const { id } = useParams();
-    const selectedAssociation = assoList.find(association => association.id === parseInt(id));
+    const [selectNgosId, setSelectNgosId] = useState(null);
+    // const selectedAssociation = assoList.find(association => association.id === parseInt(id));
 
-    if (!selectedAssociation) {
-      return <div>Cette association n'existe pas</div>;
+    // Fonction pour récupérer les données d'une association pour son ID
+    const getNgoId = async () =>{
+        try{
+            const response = await axios.get(`http://localhost:3001/ngos/${id}`);
+            setSelectNgosId(response.data);
+        } catch (error) {
+            console.error ('Erreur lors de la récupération des données');
+        }
+    };
+    
+    useEffect(() => {
+        getNgoId();
+    });
+
+    if (!selectNgosId) {
+      return <div> Erreur : cette association n'existe pas</div>;
     }
   
-    const { name, description, cover } = selectedAssociation;
-  
-    
+    const { name, description, cover } = selectNgosId;
     return (
         <>
         <Header/>
