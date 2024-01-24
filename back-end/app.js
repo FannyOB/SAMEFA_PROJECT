@@ -35,7 +35,7 @@ app.get ('/ngos',(req,res)=>
   {res.json(ngoList)})
 
 
-// requête GET pour récupérer par son ID une seule associations
+// requête GET pour récupérer par son ID une seule association
 app.get('/ngos/:id',(req,res)=>
   { let selectId = parseInt(req.params.id);
     let ngoId = ngoList.find(ngo => ngo.id === selectId)
