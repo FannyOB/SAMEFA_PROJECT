@@ -1,10 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom';
-import './Register.scss';
+import '../styles/components/Register.scss';
 import React, { useState } from 'react';
 import {AiOutlineUser} from 'react-icons/ai';
 import {AiOutlineMail} from 'react-icons/ai';
 import {AiOutlineLock} from 'react-icons/ai';
-import samefalogo from '../../assets/img/samefalogo.png';
+import samefalogo from '../assets/img/samefalogo.png';
 
 
 const SignUpForm = () => {

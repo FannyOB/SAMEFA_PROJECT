@@ -1,9 +1,8 @@
-@import '../../index.scss';
+ @import '../../index.scss';
 
 .navigation-wrapper{
-    display: flex;
+ display: flex;
 }
-
 
 .navigation-wrapper ul{
 display: flex;
@@ -15,7 +14,7 @@ gap:3rem;
 .navigation-wrapper li{
 margin-right: 2rem; 
 font-family: "Montserrat-Medium";
-font-size: 18px;
+font-size: $fontsize-l;
 }
 
 .navigation-link{

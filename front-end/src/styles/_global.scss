@@ -1,0 +1,26 @@
+@import '../styles/variables.scss';
+// contient le style qu'il y a à la racine.
+// mettre la typo sans empattement et la couelr des textes par défaut. 
+
+// global.scss
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}// permet de réinitialiser toutes les balises HTML
+
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $color-black;
+    
+  }// permet de réinitialiser les marges du corps et définit la famille de polices selon les nagivateurs
+
+  
+// code {
+//     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//       monospace;
+// }

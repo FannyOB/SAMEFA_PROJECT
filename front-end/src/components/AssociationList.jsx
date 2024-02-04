@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import axios from 'axios';
-import './AssociationList.scss'
-import AssociationItem from '../AssociationItem/AssociationItem';
+import '../styles/components/AssociationList.scss'
+import AssociationItem from './AssociationItem';
 //import {assoList} from '../../../data/AssoList'; // mock dans le front
 import { Link } from 'react-router-dom';
 

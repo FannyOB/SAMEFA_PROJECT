@@ -1,5 +1,5 @@
 import React from 'react';
-import './AssociationItem.scss'
+import '../styles/components/AssociationItem.scss'
 
 const   AssociationItem = ({id, name, cover}) => {
     return (

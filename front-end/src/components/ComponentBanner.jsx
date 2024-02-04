@@ -1,5 +1,5 @@
 import React from 'react';
-import "./ComponentBanner.scss";
+import "../styles/components/ComponentBanner.scss";
 
 const ComponentBanner = ({title,image}) => {
     return (

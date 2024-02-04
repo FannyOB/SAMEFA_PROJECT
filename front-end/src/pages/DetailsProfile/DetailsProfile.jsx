@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "./DetailsProfile.scss";
-import Header from '../../components/Header/Header';
+import Header from '../../components/Header';
 //import { assoList  } from '../../data/AssoList';
 import { useParams } from 'react-router-dom';
 

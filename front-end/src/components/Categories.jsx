@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import './Categories.scss';
+import '../styles/components/Categories.scss';
 
 const Categories = ({Categories}) => {
     //visibilité de ma bdd

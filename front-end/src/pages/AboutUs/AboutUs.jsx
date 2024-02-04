@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../../components/Header/Header'
-import ComponentBanner from '../../components/ComponentBanner/ComponentBanner';
+import Header from '../../components/Header'
+import ComponentBanner from '../../components/ComponentBanner';
 import aboutUs from '../../assets/img/aboutus_img.png';
 
 const AboutUs = () => {
