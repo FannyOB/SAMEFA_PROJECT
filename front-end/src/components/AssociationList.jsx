@@ -2,8 +2,8 @@ import React, {useEffect,useState} from 'react';
 import axios from 'axios';
 import '../styles/components/AssociationList.scss'
 import AssociationItem from './AssociationItem';
-//import {assoList} from '../../../data/AssoList'; // mock dans le front
 import { Link } from 'react-router-dom';
+import { FaRegHeart } from "react-icons/fa";
 
 const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au composant AssociationList
   const [ngos, setNgos] = useState([]);
@@ -29,7 +29,7 @@ const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au comp
       <ul className='asso-list'>
         {renderedList.map(({id,name, cover}) =>(
           <div className='asso-item-wrapper'>
-              <span>NEW</span>
+              <span><FaRegHeart /></span>
               <Link to={`/details/${id}`} key={id} className='link-no-underline'>
                 <AssociationItem
                   key={id}

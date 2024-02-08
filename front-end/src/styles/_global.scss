@@ -1,14 +1,12 @@
-@import '../styles/variables.scss';
 // contient le style qu'il y a à la racine.
-// mettre la typo sans empattement et la couelr des textes par défaut. 
+@import '../styles/variables.scss';
 
-// global.scss
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }// permet de réinitialiser toutes les balises HTML
-
 
 body {
     margin: 0;
@@ -16,11 +14,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $color-black;
-    
+    background-color: $color-white; 
   }// permet de réinitialiser les marges du corps et définit la famille de polices selon les nagivateurs
 
   
-// code {
-//     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-//       monospace;
-// }

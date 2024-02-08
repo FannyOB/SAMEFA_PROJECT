@@ -27,7 +27,7 @@ const Categories = ({Categories}) => {
     console.log(selectedCategory);
     return (
         <div className='categories-wrapper'>           
-            <h3>Choose your favorite category</h3>
+            <h2>Choose your favorite category</h2>
                 <div className='search-bar'> {/* ajout de la line 41 à 47*/}
                     <input 
                         type='text' 
@@ -50,7 +50,7 @@ const Categories = ({Categories}) => {
                     ))}
                 </ul>
             <form id="">
-                <h3 >Choose a Category: </h3>
+                <h2 >Choose a Category: </h2>
                 <br></br>
                 <select id="categorie-select" onChange={handlecategoryChange}>
                     <option value="">--Please select a category--</option> 

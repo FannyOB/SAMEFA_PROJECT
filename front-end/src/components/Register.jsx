@@ -25,34 +25,35 @@ const SignUpForm = () => {
     }
  
  
-    const { data, error } = await supabase.auth.signUp(
-      {
-        email: email,
-        password: pass,
-        options: {
-          data: {
-            first_name: name,
-          }
-        }
-      }
-      )
-      console.log(data)
+    // const { data, error } = await supabase.auth.signUp(
+    //   {
+    //     email: email,
+    //     password: pass,
+    //     options: {
+    //       data: {
+    //         first_name: name,
+    //       }
+    //     }
+    //   }
+    //   )
+    //   console.log(data)
  
  
-    if (data) {  // Check if data is received which means successful login
-      navigate('/');  // 3. Redirect to the homepage using navigate
-    } else {
-      console.error("Signup error:", error);
-      // Handle the error appropriately, like showing an error message to the user
-    }
- 
- 
+    // if (data) {  // Check if data is received which means successful login
+    //   navigate('/');  // 3. Redirect to the homepage using navigate
+    // } else {
+    //   console.error("Signup error:", error);
+    //   // Handle the error appropriately, like showing an error message to the user
+    // }
   }
- 
-
     return (
     <div className='container'>
       <div className='auth-form'>
+        <div className='login-container'>
+          <Link to ="/login" className='login-link'>
+            Already have an account? Login here.
+          </Link>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className='form-group'>
           <AiOutlineUser/>
@@ -83,7 +84,6 @@ const SignUpForm = () => {
             id='email' 
             name='email'/>
         </div>
-      
         <div className='form-group'>
           <AiOutlineLock/>
           <label htmlFor='name'className='label-with-icon'>
@@ -98,21 +98,14 @@ const SignUpForm = () => {
             id='password' 
             name='password'/>
         </div>
-
         <button type='submit' className='form-submit'>Sign up</button>
       </form>  
     </div>
-
     <div className='signup-image'>
       <img src={samefalogo} alt='two girls coding'/>
-        <div className='login-container'>
-          <Link to ="/login" className='login-link'>
-            Already have an account? Login here.
-          </Link>
-        </div>
       </div>
-  </div>
-    );
+    </div>
+  );
 };
 
 export default SignUpForm;
