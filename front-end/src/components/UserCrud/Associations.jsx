@@ -1,0 +1,1 @@
+// Composant React pour gérer les associations par utilisateur.

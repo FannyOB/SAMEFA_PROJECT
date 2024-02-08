@@ -1,0 +1,1 @@
+//Composant React pour supprimer un utilisateur.
