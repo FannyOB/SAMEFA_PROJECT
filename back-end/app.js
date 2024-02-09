@@ -1,7 +1,8 @@
 import express from "express";
 import cors from "cors";
 import { ngoList } from "./db/mockNgos.js";
-import pool from "./config/connection.js";
+//import pool from "./config/connection.js";
+import pool from "./config/elephantsql.js";
 
 const app = express();
 
@@ -84,6 +85,9 @@ app.get('/administrators/:id', (req,res)=>{
   });
   
 });
+
+//app.get('/', (req, res) => res.send('Hello, Express 28!'));
+app.get('/homepage', (req, res) => res.send('Welcome Fanny!!'));
 
 //requête SQL pour selectionner un id de la table administrators
 app.post('')
