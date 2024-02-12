@@ -21,14 +21,23 @@ pool.connect((err, client, release) => {
       return console.error('error running query', err);
     }
     else{
-        
+        console.log(result.rows[0].theTime);
+        // >> output: 2024-02-09T14:19:53.959Z
+        console.log("connected to database");
     }
-    console.log(result.rows[0].theTime);
-    // >> output: 2018-08-23T14:02:57.117Z
-    console.log("connected to database");
   });
 });
 
-//pool.connect
+//Test Affichage de la table categories dans le terminal
+/*
+pool.query(`SELECT * FROM categories`, (err, res) => {
+    if(!err){
+        console.log(res.rows);
+    }
+    else{
+        console.log(err.message);
+    }
+})
+*/
 
 export default pool;

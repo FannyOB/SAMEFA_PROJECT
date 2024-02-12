@@ -1,3 +1,5 @@
+//Fichier de connection avec PostreSQL pgAdmin en local
+
 import pkg  from 'pg'; //importation du module 'pg', cela importe la classe 'Pool' depuis le module 'pg'. Un 'Pool' est une maniere de gérer les connexions à la bdd de manière efficace
 import dotenv from 'dotenv';
 
