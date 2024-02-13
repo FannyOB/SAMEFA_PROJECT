@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import { ngoList } from "./db/mockNgos.js";
 //import pool from "./config/connection.js";
-//import pool from "./config/elephantsql.js";
 import administratorsRouter from "./routes/adminAssociations/administrators.js"; // Importez les routes des administrateurs
 
 const app = express();

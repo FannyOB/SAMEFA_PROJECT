@@ -5,10 +5,19 @@ import pool from "../../config/elephantsql.js";
 
 const router = express.Router();
 
-//requête SQL GET pour selectionner des données de la table administrators
+//requête SQL GET pour selectionner toutes des données de la table administrators
 // GET /administrators
-router.get('/', (req,res)=>{
-  
+router.get('/', async (req,res)=>{
+
+    try{
+        const result = await pool.query('SELECT * FROM administrators');
+        console.log("Récupération réussie!");
+        res.json(result.rows);
+    }catch(error) {
+        console.log('Erreur lors de la requete SQL');
+        res.status(500).send('Erreur lors de la requete SQL');
+    }
+  /*
     pool.query('SELECT * FROM administrators', (err, result) => {
       if(err){
         console.error('Erreur lors de la requete SQL', err);
@@ -19,16 +28,28 @@ router.get('/', (req,res)=>{
         res.json(result.rows);
       }
     });
+    */
   });
 
   
   //requête SQL GET pour selectionner un id de la table administrators
   // GET /administrators/:id
-  router.get('/:id', (req, res) => {
+  router.get('/:id', async (req, res) => {
     
+    try {
+        // Nous utilisons $1 comme paramètre pour éviter les injections SQL, et nous passons req.params.id comme valeur de ce paramètre.
+        const result = await pool.query(`SELECT * FROM administrators WHERE administrator_id = $1`, [req.params.id]);
+        console.log('Requete SQL REUSSI, id récupéré');
+        res.json(result.rows);
+    } catch (error) {
+        console.log('Erreur lors de la requete SQL');
+        res.status(500).send('Erreur lors de la récupération des données de la base de données!')
+        //res.status(404).send(`L'ID ${req.params.id} n'existe pas`);
+    }
+    /*
     pool.query(`Select * FROM administrators WHERE administrator_id=${req.params.id}`, (err, result) => {
       if(!err){
-        console.log(' requete SQL REUSSI, id récupéré');
+        console.log('Requete SQL REUSSI, id récupéré');
         res.json(result.rows);
       }
       else{
@@ -36,16 +57,30 @@ router.get('/', (req,res)=>{
         res.status(500).send('Erreur lors de la récupération des données de la base de données!');
       }
     });
-    
+    */
   });
 
 
 //requête SQL POST pour ajouter un administrateur dans la table administrators
 // POST /administrators
-router.post('/', (req, res) => {
-    const {administrator_id, first_name, name, email, password } = req.body;
-    console.log(req.body)
+router.post('/', async (req, res) => {
+    const { administrator_id, first_name, name, email, password } = req.body;
+    console.log(req.body);
 
+    try{
+        const result = await pool.query(`INSERT INTO administrators (administrator_id, first_name, name, email, password)
+        VALUES($1, $2, $3, $4, $5) RETURNING administrator_id`, 
+        [administrator_id, first_name, name, email, password]);
+
+        const insertedAdministratorId = result.rows[0].administrator_id;
+        console.log('insertion administrateur dans la base de donnée réussie');
+        res.status(201).json({ message: 'administrateur ajouté avec succès!', administrator_id: insertedAdministratorId});
+    }catch (error) {
+        console.error('Erreur d\'insertion administrateur dans la base de donnée', error);
+        res.status(500).json({ error: 'Erreur interne du serveur' });
+    };
+
+    /*
     pool.query(`INSERT INTO administrators (administrator_id, first_name, name, email, password) 
       VALUES($1, $2, $3, $4, $5)`,[administrator_id, first_name, name, email, password], 
      (err, result) => {
@@ -57,11 +92,19 @@ router.post('/', (req, res) => {
         console.log('insertion administrateur dans la base de donnée réussi');
         res.status(201).json({message: 'administrateur ajouté avec succès!'})
       }
-    });  
+    });
+    */
   });
 
-//requête SQL POST pour ajouter un administrateur dans la table administrators
+
+//requête SQL PUT pour mettre à jour un administrateur dans la table administrators
+// PUT /administrators
+
+
+
+//requête SQL DELETE pour supprimer un administrateur dans la table administrators
 // DELETE /administrators
+
 
 
   export default router;
