@@ -59,6 +59,3 @@ app.get('/ngos/:id',(req,res)=>
     }
 });
 
-//app.get('/homepage', (req, res) => res.send('Welcome Fanny!!'));
-
-
