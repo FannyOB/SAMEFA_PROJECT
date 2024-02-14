@@ -16,6 +16,10 @@
   }
 }
 
+h1{
+  margin-bottom: 2rem;
+}
+
 .auth-form {
   flex: 1;
   display: flex;
@@ -26,7 +30,7 @@
   text-align: center;
   justify-content: center;
   background-color: $color-green;
-  background-image: linear-gradient(50deg, rgb(6, 150, 135) 0%, rgb(255, 192, 203) 100%);
+  background-image: linear-gradient(45deg, rgb(6, 150, 135) 0%, $color-white 100%);
 }
 
 .form-group {
@@ -83,6 +87,7 @@
 
   .login-link {
     text-align: center;
+    padding: $padding-m;
   }
 
   .login-container {
@@ -90,4 +95,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid white;
+    border-radius: $bradius-m;
+    padding: $padding-m;
   }

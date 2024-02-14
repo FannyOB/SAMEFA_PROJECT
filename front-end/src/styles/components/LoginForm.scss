@@ -21,6 +21,7 @@
   margin-bottom: 2rem;
 }
 
+
 .form-group {
   display: flex;
   align-items: center;
@@ -51,11 +52,11 @@
 .input-field {
   flex: 1;
   padding-left: 10px;
-  vertical-align: middle;
+  //vertical-align: middle;
 }
 
 .input-field:focus {
-  outline: #06968876;
+  outline: pink;
 }
 
 .form-submit {

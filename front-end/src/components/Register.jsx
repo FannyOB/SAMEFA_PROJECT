@@ -50,10 +50,12 @@ const SignUpForm = () => {
     <div className='container'>
       <div className='auth-form'>
         <div className='login-container'>
+          <h1>Welcome</h1>
           <Link to ="/login" className='login-link'>
-            Already have an account? Login here.
+            Already have an account ? Login here.
           </Link>
-        </div>
+        
+{/* sign up form  */}
         <form onSubmit={handleSubmit}>
           <div className='form-group'>
           <AiOutlineUser/>
@@ -69,7 +71,6 @@ const SignUpForm = () => {
                 id='name' 
                 name='name'/>
           </div>
-
         <div className='form-group'>
           <AiOutlineMail/>
           <label htmlFor='name'className='label-with-icon'>
@@ -99,7 +100,11 @@ const SignUpForm = () => {
             name='password'/>
         </div>
         <button type='submit' className='form-submit'>Sign up</button>
-      </form>  
+      </form> 
+      </div>
+      
+
+    {/* sign up form  */} 
     </div>
     <div className='signup-image'>
       <img src={samefalogo} alt='two girls coding'/>

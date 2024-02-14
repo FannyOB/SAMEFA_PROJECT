@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate  } from 'react-router-dom'; 
 import '../styles/components/LoginForm.scss';
-import Header from './Header';
 import {AiOutlineMail} from 'react-icons/ai';
 import {AiOutlineLock} from 'react-icons/ai';
 import samefalogo from '../assets/img/samefalogo.png';
@@ -10,7 +9,7 @@ const LoginForm = (setToken) => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
 
-  const navigate = useNavigate();  // 2. Use useNavigation hook
+  //const navigate = useNavigate();  // 2. Use useNavigation hook
 
   const handleSubmit = async (e) => {
      e.preventDefault();
@@ -37,9 +36,9 @@ const LoginForm = (setToken) => {
         <div className='auth-form'>
           <div className='login-container'>
             <Link to ="/signup" className='login-link'>
-              Don't have an account? Sign up here.
+              Don't have an account ? Sign up here.
             </Link>
-          </div>
+          
           <form onSubmit={handleSubmit}>
             <div className='form-group'>
               <AiOutlineMail/>
@@ -70,7 +69,8 @@ const LoginForm = (setToken) => {
                 name='password'/>
             </div>
             <button type='submit' className='form-submit'>Log in</button>
-          </form>  
+          </form> 
+          </div> 
         </div>
         <div className='signup-image'>
           <img src={samefalogo} alt='two girls coding'/>

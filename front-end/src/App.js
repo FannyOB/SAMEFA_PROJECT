@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignUp from './pages/SignUp/SignUp';
-import Homepage from './pages/Homepage/Homepage';
-import Associations from './pages/Associations/Associations';
+import Homepage from './pages/Homepage';
+import Associations from './pages/Associations';
 import Categories from './components/Categories';
 import Login from './pages/Login/Login';
-import AboutUs from './pages/AboutUs/AboutUs';
-import DetailsProfile from './pages/DetailsProfile/DetailsProfile';
+import AboutUs from './pages/AboutUs';
+import DetailsProfile from './pages/DetailsProfile';
 //import './App.css'
 
 function App() {
