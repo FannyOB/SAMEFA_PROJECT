@@ -75,7 +75,7 @@ router.post('/', async (req, res) => {
         const insertedAdministratorId = result.rows[0].administrator_id;
         console.log('insertion administrateur dans la base de donnée réussie');
         res.status(201).json({ message: 'administrateur ajouté avec succès!', administrator_id: insertedAdministratorId});
-    }catch (error) {
+    } catch (error) {
         console.error('Erreur d\'insertion administrateur dans la base de donnée', error);
         res.status(500).json({ error: 'Erreur interne du serveur' });
     };
@@ -99,7 +99,24 @@ router.post('/', async (req, res) => {
 
 //requête SQL PUT pour mettre à jour un administrateur dans la table administrators
 // PUT /administrators
+router.put('/:id', async (req, res) =>{
+    //récupération de l'identifiant de l'administrateur via le paramètre de la route
+    const {first_name, name, email, password} = req.body;
+    const administrator_id = req.params.id;
+    console.log(req.body);
 
+    try{
+        const result = await pool.query(`UPDATE administrators SET first_name = $1, name = $2, email = $3,
+        password = $4 WHERE administrator_id = $5`,
+        [first_name, name, email, password, administrator_id]);
+
+        console.log('Mise à jour de l\'administrateur dans la base de données réussie');
+        res.status(201).json({message: 'Administrateur mis à jour avec succès!' });
+    } catch (error){
+        console.error('Erreur lors de la mise à jour de l\'administrateur dans la base de données', error);
+        res.status(500).json({error: 'Erreur interne du serveur'});
+    }
+});
 
 
 //requête SQL DELETE pour supprimer un administrateur dans la table administrators
