@@ -1,0 +1,1 @@
+//Composant React pour afficher les données d'un utilisateur.

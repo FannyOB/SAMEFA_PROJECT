@@ -1,0 +1,1 @@
+//Composant React pour supprimer une association par l'administrateur
