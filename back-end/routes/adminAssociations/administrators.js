@@ -133,7 +133,7 @@ router.delete('/:id', async (req, res) => {
         res.status(200).json({message: 'Administrateur supprimé avec succès!'});
     } catch (error){
         console.error('Erreur lors de la suppression de l\'administrateur dans la base de donnée', error);
-        res.status(500).json({error: "Impossible de supprimer cet adminstrateur"});
+        res.status(500).json({error: "Impossible de supprimer cet administrateur"});
     }
 });
 
