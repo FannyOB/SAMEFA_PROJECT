@@ -121,7 +121,21 @@ router.put('/:id', async (req, res) =>{
 
 //requête SQL DELETE pour supprimer un administrateur dans la table administrators
 // DELETE /administrators
+router.delete('/:id', async (req, res) => {
 
+    const administrator_id = req.params.id;
+    console.log(req.params.id)
+
+    try{
+        const result = await pool.query(`DELETE FROM administrators WHERE administrator_id = $1`, [administrator_id]);
+
+        console.log('suppression de l\'administrateur dans la base de donnée!');
+        res.status(200).json({message: 'Administrateur supprimé avec succès!'});
+    } catch (error){
+        console.error('Erreur lors de la suppression de l\'administrateur dans la base de donnée', error);
+        res.status(500).json({error: "Impossible de supprimer cet adminstrateur"});
+    }
+});
 
 
 export default router;
