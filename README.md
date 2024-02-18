@@ -3,20 +3,22 @@
 * Project for RNCP certification
 
 ## Stack principal : 
-* BDD : PostgreSQL <br>
+* BDD : PostgreSQL, pgAdmin <br>
 * NodeJs <br>
 * ReactJs (CSS : Sass) <br>
 * GitHub 
 
 
 ## Installation du projet : 
-* git clone <br> 
-* npm install
-
+* Clone the repo: git clone <br> 
+* Run "npm install"
+* Ensure you have a PostgreSQL instance running with SSL enabled
+* Ensure you have the proper environment variables configured for connecting to the instance
 
 ## Architecture des dossiers et lancement du projet : 
 * Works in Mono-repo <br>
-* "Frontend" launches from the path  "cd .\front-end\"  and runs with npm start" <br>
+* "Frontend" launches from the path  "cd .\front-end\"  and runs with "npm start" <br>
+* "Backend" launches from the path  "cd .\back-end\"  and runs with "npm run dev" <br>
 
 
 ## Convention de nommage et utilisation des branches :

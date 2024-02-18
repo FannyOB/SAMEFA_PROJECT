@@ -1,0 +1,1 @@
+//Route pour la suppression d'une association.
