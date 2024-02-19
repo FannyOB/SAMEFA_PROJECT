@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate  } from 'react-router-dom'; 
-import '../styles/components/LoginForm.scss';
-import {AiOutlineMail} from 'react-icons/ai';
-import {AiOutlineLock} from 'react-icons/ai';
+import '../styles/pages/LoginForm.scss';
+import FormInput from '../components/FormInput';
 import samefalogo from '../assets/img/samefalogo.png';
 
 const LoginForm = (setToken) => {
@@ -38,36 +37,23 @@ const LoginForm = (setToken) => {
             <Link to ="/signup" className='login-link'>
               Don't have an account ? Sign up here.
             </Link>
-          
-          <form onSubmit={handleSubmit}>
-            <div className='form-group'>
-              <AiOutlineMail/>
-              <label htmlFor='name'className='label-with-icon'>
-              Email
-              </label>
-                <input 
-                className='input-field' 
+            <form onSubmit={handleSubmit}>
+              <FormInput 
                 value={email} 
                 onChange ={(e) => setEmail(e.target.value)} 
                 type='email' 
                 placeholder='Your Email' 
                 id='email' 
-                name='email'/>
-            </div>
-            <div className='form-group'>
-              <AiOutlineLock/>
-              <label htmlFor='name'className='label-with-icon'>
-              Password
-              </label>
-                <input 
-                className='input-field' 
+                name='email'
+                label='Email'/>
+              <FormInput 
                 value={pass} 
                 onChange ={(e) => setPass(e.target.value)} 
                 type='password' 
                 placeholder='Password' 
                 id='password' 
-                name='password'/>
-            </div>
+                name='password'
+                label='Password'/>
             <button type='submit' className='form-submit'>Log in</button>
           </form> 
           </div> 

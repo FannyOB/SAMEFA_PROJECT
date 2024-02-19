@@ -33,32 +33,32 @@ h1{
   background-image: linear-gradient(45deg, rgb(6, 150, 135) 0%, $color-white 100%);
 }
 
-.form-group {
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-bottom: 15px;
-  gap: 1rem;
-}
-  .form-group:last-child {
-    margin-bottom: 0px; }
+// .form-group {
+//   display: flex;
+//   align-items: center;
+//   position: relative;
+//   margin-bottom: 15px;
+//   gap: 1rem;
+// }
+//   .form-group:last-child {
+//     margin-bottom: 0px; }
     
-.label-with-icon {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  font-weight: bold;
-  padding-left: 10px;
-}
+// .label-with-icon {
+//   display: flex;
+//   align-items: center;
+//   margin-right: 10px;
+//   font-weight: bold;
+//   padding-left: 10px;
+// }
 
-.input-field {
-  flex: 1;
-  padding-left: 10px;
-}
+// .input-field {
+//   flex: 1;
+//   padding-left: 10px;
+// }
 
-.input-field:focus {
-  outline:  #06968876;
-}
+// .input-field:focus {
+//   outline:  #06968876;
+// }
 
 .form-submit {
   display: inline-block;
