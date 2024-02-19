@@ -1,17 +1,17 @@
 // ce fichier n'apparaitra dans la l'appli celle ci à servi de test. Afin de savoir si notre projet est bien connecté 
 //à notre instance!
-import express, { Router } from "express";
+import express from "express";
 import pool from "../../config/elephantsql.js";
 
 const router = express.Router();
 
 //requête SQL GET pour selectionner toutes des données de la table administrators
 // GET /administrators
-router.get('/', async (req,res)=>{
+router.get('/', async (req, res) => {
 
     try{
         const result = await pool.query('SELECT * FROM administrators');
-        console.log("Récupération réussie!");
+        console.log('Récupération réussie!');
         res.json(result.rows);
     }catch(error) {
         console.log('Erreur lors de la requete SQL');

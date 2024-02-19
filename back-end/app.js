@@ -4,6 +4,10 @@ import { ngoList } from "./db/mockNgos.js";
 //import pool from "./config/connection.js";
 import administratorsRouter from "./routes/adminAssociations/administrators.js"; // Importez les routes des administrateurs
 
+import associationController from "./controllers/associationController.js";
+
+import associationsCreateRouter from "./routes/adminAssociations/createAssociation.js"
+
 const app = express();
 
 //Option du cors
@@ -21,8 +25,11 @@ app.use(express.json());
 //----------------- Routes ---------------------------------------------------------------
 // Utilisez les routes des administrateurs -> à définir par la suite
 app.use('/administrators', administratorsRouter);
+
 // Futures Routes à définir par la suite...
-//app.use('/associations', );
+app.use('/associations', associationController);
+app.use('/associations', associationsCreateRouter);
+
 //app.use('/signup', );
 //app.use('/login', );
 //app.use('/logout', );
@@ -58,4 +65,5 @@ app.get('/ngos/:id',(req,res)=>
       res.status(404).json({message:"Associaiton non trouvée"})
     }
 });
+
 
