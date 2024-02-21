@@ -2,11 +2,10 @@
 import express, { json }  from "express";
 import pool from "../../config/elephantsql.js";
 
-const router = express.Router();
 
-//requête SQL POST: pour ajouter des données de la table ngos
+//requête SQL POST: pour ajouter une association de la table ngos
 // GET /associations/create
-router.post('/', async (req, res) => {
+export const createAssociation = async (req, res) => {
     const { ngo_id, ngo_name, category, creation_date, description_ong, website, photo_url, location } = req.body;
     console.log(req.body);
 
@@ -22,6 +21,4 @@ router.post('/', async (req, res) => {
         console.log('Erreur d\'insertion association dans la base de donnée', error);
         res.status(500).json({ error: 'Erreur interne du serveur'});
     }
-});
-
-export default router;
+};

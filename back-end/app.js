@@ -6,7 +6,6 @@ import administratorsRouter from "./routes/adminAssociations/administrators.js";
 
 import associationController from "./controllers/associationController.js";
 
-import associationsCreateRouter from "./routes/adminAssociations/createAssociation.js"
 
 const app = express();
 
@@ -26,9 +25,8 @@ app.use(express.json());
 // Utilisez les routes des administrateurs -> à définir par la suite
 app.use('/administrators', administratorsRouter);
 
-// Futures Routes à définir par la suite...
+// Futures Routes à définir par la suite avec le controlleur
 app.use('/associations', associationController);
-app.use('/associations', associationsCreateRouter);
 
 //app.use('/signup', );
 //app.use('/login', );
@@ -43,6 +41,9 @@ app.listen(port, () =>
 );
 
 
+
+
+//PARTIE DE CODE OBSOLETE A SUPPRIMER UNE FOIS ROUTES VERS BDD EFFECTUEES!!
 //----------------------------------------------------------------------------------------
 //TEST REQUETES POUR CONNECTION FRONT ==> ce sera les futures Routes
 
