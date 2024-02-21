@@ -1,3 +1,4 @@
+
 @import '../../index.scss';
 
 .asso-list{
@@ -15,21 +16,12 @@
     position: relative;
     padding: 10px;
     margin: 5px;
-    min-height: 200px;
+    min-height: 310px;
+    height: 450px;
     border-radius: $bradius-m;
     border: 0.5px solid grey;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease; /* Add transitions for smooth effect */
-
-    span{
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        padding: 3px 5px;
-        font-weight: 500;
-        font-size: 16px;
-        cursor: pointer;
-    }
     
     &:hover{
         transform: scale(1.05); /* Increase size on hover */
@@ -44,4 +36,26 @@
         color:$color-black;
     }
 }
+
+.icon-buttons{
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 3px 5px;
+    font-weight: 500;
+    font-size: 16px;
+
+
+    .delete-button{
+        color: #e10d05;
+    }
+}
+
+.icon-buttons svg {
+    cursor: pointer;
+}
+
+
 

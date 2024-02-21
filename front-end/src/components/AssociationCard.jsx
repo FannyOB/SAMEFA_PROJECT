@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/components/AssociationItem.scss'
+import '../styles/components/AssociationICard.scss'
 
-const   AssociationItem = ({id, name, cover}) => {
+const   AssociationCard = ({id, name, cover}) => {
     return (
             <ul>
                 <li key={id} className='smf-asso-item' >
@@ -12,4 +12,4 @@ const   AssociationItem = ({id, name, cover}) => {
     );
 };
 
-export default AssociationItem;
+export default AssociationCard;

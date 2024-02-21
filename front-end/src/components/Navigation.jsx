@@ -1,6 +1,7 @@
-import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import {React} from 'react';
+import { NavLink, Link} from 'react-router-dom';
 import '../styles/components/Navigation.scss'
+import ButtonAction from './ButtonAction';
 
 const Navigation = () => {
     return (
@@ -12,21 +13,14 @@ const Navigation = () => {
             <NavLink to="/aboutUs" className="navigation-link">
                 <li>About us </li>
             </NavLink>
-            <NavLink to="/categories" className="navigation-link">
-                <li>Categories</li>
-            </NavLink>
         </ul>
-            <div className='navigation-button'> 
-                <button>
-                    <Link to="/signup" className="navigation-link">
-                    SIGN UP
-                    </Link>
-                </button>
-                <button>
-                    <Link to="/login" className="navigation-link">
-                        LOGIN
-                    </Link>
-                </button>
+            <div className='navigation-button'>
+                <Link to="/signup" >
+                    <ButtonAction type='primary' style={{backgroundColor: "rgb(6, 150, 135)"}} >SIGNUP</ButtonAction>
+                </Link>
+                <Link to="/login">
+                    <ButtonAction type='secondary' style={{borderColor:"rgb(6, 150, 135)"}}>LOGIN</ButtonAction> 
+                </Link>
             </div>
         </div>
     );

@@ -31,7 +31,7 @@ const Homepage = () => {
       </ComponentBanner>
       <SearchBar/>
       <AssociationList shouldSlice={false} className='asso-list' />
-      <Categories/>
+      {/* <Categories/> */}
       <Footer/>
     </>
   );

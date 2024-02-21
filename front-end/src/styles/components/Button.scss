@@ -1,0 +1,28 @@
+@import "../../index.scss";
+
+.primary-btn{
+    width: 80px;
+    height: 40px;
+    border-radius: $bradius-m;
+    border: none;
+    font-family: "Montserrat-Bold"; 
+    cursor: pointer;
+
+    &:hover{
+        color: pink;
+    }
+}
+
+.secondary-btn{
+    width: 80px;
+    height: 40px;
+    background-color: transparent; 
+    border-radius: $bradius-m;
+    border: solid 1px; 
+    font-family: "Montserrat-Bold";
+    cursor: pointer;
+
+    &:hover{
+        color: pink;
+    }
+}
