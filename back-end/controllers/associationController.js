@@ -2,18 +2,22 @@ import express from "express";
 import { getAssociations } from "../routes/adminAssociations/readAssociation.js"
 import { createAssociation } from "../routes/adminAssociations/createAssociation.js";
 import { updateAssociation } from "../routes/adminAssociations/updateAssociation.js";
+import { deleteAssociation } from "../routes/adminAssociations/deleteAssociation.js";
 
 
+// Controllers pour que les Routes puissent effectuer les requêtes sur la table ngos
 const associationController = express.Router();
 
-// Controllers pours les Routes pour effectuer le requêtes sur la table ngos
-// Route pour afficher des données de la table ngos
+// Route pour afficher les associations de la table ngos
 associationController.use('/read', getAssociations);
 
 // Route pour la création d'une nouvelle association
 associationController.use('/create', createAssociation);
 
-// Route pour la création d'une nouvelle association
-associationController.use('/update', updateAssociation);
+// Route pour la mise à jour d'une association
+associationController.put('/update/:id', updateAssociation);
+
+// Route pour la suppression d'une association
+associationController.delete('/delete/:id', deleteAssociation);
 
 export default associationController;

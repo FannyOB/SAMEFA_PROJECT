@@ -1,8 +1,7 @@
-//Route pour la mise à jour d'une association.
 import express from "express";
 import pool from "../../config/elephantsql.js";
 
-//requête SQL PUT pour mettre à jour une association dans la table ngos
+//requête SQL PUT pour mettre à jour une association de la table ngos
 // PUT /associations
 export const updateAssociation = async (req, res) => {
     //récupération de l'identifiant de l'association via le paramètre de la route
@@ -11,8 +10,15 @@ export const updateAssociation = async (req, res) => {
     console.log(req.body);
 
     try{
-        const result =  await pool.query(`UPDATE ngos SET ngo_name = $1, category = $2, creation_date = $3,
-        description_ong = $4, website = $5, photo_url = $6, location = $7 WHERE ngo_id = $8`,
+        const result =  await pool.query(`UPDATE ngos 
+        SET ngo_name = $1,
+            category = $2,
+            creation_date = $3,
+            description_ong = $4,
+            website = $5,
+            photo_url = $6,
+            location = $7
+        WHERE ngo_id = $8`,
         [ngo_name, category, creation_date, description_ong, website, photo_url, location, ngo_id]);
 
         console.log('Mise à jour de l\'association dans la base de données réussie');

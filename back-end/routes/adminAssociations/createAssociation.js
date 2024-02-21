@@ -1,4 +1,3 @@
-// Route pour la création d'une nouvelle association.
 import express, { json }  from "express";
 import pool from "../../config/elephantsql.js";
 

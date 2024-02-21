@@ -1,4 +1,3 @@
-//Route pour la lecture des informations sur les associations.
 import express from "express";
 import pool from "../../config/elephantsql.js";
 
