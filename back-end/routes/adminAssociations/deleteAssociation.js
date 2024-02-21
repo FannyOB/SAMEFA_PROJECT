@@ -1,1 +1,1 @@
-//Route pour la création d'une nouvelle association.
+//Route pour la supression d'une nouvelle association.
