@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import '../styles/components/SearchBar.scss';
 
-
 const SearchBar = ({onSearch}) => {
     const [searchQuery, setSearchQuery] = useState("");
     console.log(searchQuery)

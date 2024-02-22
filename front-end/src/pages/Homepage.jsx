@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import AssociationList from '../components/AssociationList';
 import Header from '../components/Header';
 import ComponentBanner from '../components/ComponentBanner';
@@ -6,9 +6,17 @@ import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
 import HomepageImg from '../assets/img/homepage_img.png';
 import '../styles/pages/Homepage.scss'
-import Categories from '../components/Categories';
+import ButtonAction from '../components/ButtonAction';
+import { IoIosAddCircleOutline } from "react-icons/io";
+import Modal from '../components/Modal';
 
 const Homepage = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () =>{
+    setModalOpen(!modalOpen)
+  }
+
 
   //connection front-end to back-end
   // const [data, setData]=useState("");
@@ -26,12 +34,17 @@ const Homepage = () => {
     <>
       <Header/>
       <ComponentBanner
-      title='Boost Your Engagement'
+      title='Your Values, Your Impact '
       image={HomepageImg}>
       </ComponentBanner>
+      <div className='add-button'>
       <SearchBar/>
+      <ButtonAction type='secondary'  style={{width:"100px"}} onClick={toggleModal}><IoIosAddCircleOutline/>
+       Add ngos
+       </ButtonAction>
+      </div>
+      <Modal modalOpen={modalOpen} toggleModal={toggleModal}/>
       <AssociationList shouldSlice={false} className='asso-list' />
-      {/* <Categories/> */}
       <Footer/>
     </>
   );
