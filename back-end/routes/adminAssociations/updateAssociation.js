@@ -2,7 +2,7 @@ import express from "express";
 import pool from "../../config/elephantsql.js";
 
 //requête SQL PUT pour mettre à jour une association de la table ngos
-// PUT /associations
+// PUT /associations/:id
 export const updateAssociation = async (req, res) => {
     //récupération de l'identifiant de l'association via le paramètre de la route
     const {ngo_name, category, creation_date, description_ong, website, photo_url, location } = req.body;

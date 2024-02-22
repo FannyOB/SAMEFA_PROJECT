@@ -27,9 +27,8 @@ app.use('/administrators', administratorsRouter);
 
 // Futures Routes à définir par la suite avec le controlleur
 app.use('/associations', associationController);
-
-//app.use('/signup', );
-//app.use('/login', );
+//app.use('/login', );penser à créer une table de users
+//app.use('/signup', ); penser à créer une table de users
 //app.use('/logout', );
 //app.use('/users', ); ou '/profil'
 
