@@ -1,0 +1,71 @@
+// les typographies qu'on utilise partout dans l'appli
+// définir ici les titres et paragraphes, ainsi que les break-points définis dans les mixins. 
+h1 {
+  font-family: "Montserrat-Bold";
+  white-space: pre-line;
+  font-size: $fontsize-xxl;
+  font-weight: 900;
+  //line-height: 76px;
+}
+
+h2{
+  font-family: 'Montserrat-Medium';
+  font-weight: 700;
+  font-size: $fontsize-l;
+}
+
+//export des fonts
+@font-face{
+    font-family:"Lora-Regular";
+    src: url(../assets/fonts/Lora/Lora-Regular.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: "Lora-Medium";
+    src: url(../assets/fonts/Lora/Lora-Medium.ttf) format('truetype');
+  }
+  
+  @font-face{
+    font-family: "Lora-Bold";
+    src: url(../assets/fonts/Lora/Lora-Bold.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: "Dosis-Light";
+    src: url(../assets/fonts/Dosis/Dosis-Light.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: "Dosis-Medium";
+    src: url(../assets/fonts/Dosis/Dosis-Medium.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: "Dosis-SemiBold";
+    src: url(../assets/fonts/Dosis/Dosis-SemiBold.ttf) format('truetype');
+  };
+
+   @font-face {
+    font-family: "Montserrat-Thin";
+    src: url(../assets/fonts/Montserrat/Montserrat-Thin.ttf) format('trutype');
+  };
+
+  @font-face {
+    font-family: "Montserrat-Light";
+    src: url(../assets/fonts/Montserrat/Montserrat-Light.ttf) format('trutype');
+  };
+
+  @font-face {
+    font-family: "Montserrat-Regular";
+    src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf) format('truetype');
+  };
+
+  @font-face {
+    font-family: "Montserrat-Medium";
+    src: url(../assets/fonts/Montserrat/Montserrat-Medium.ttf) format('truetype');
+  };
+
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: url(../assets/fonts/Montserrat/Montserrat-Bold.ttf) format('truetype');
+  };

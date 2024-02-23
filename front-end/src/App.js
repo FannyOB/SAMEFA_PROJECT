@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignUp from './pages/SignUp/SignUp';
-import Homepage from './pages/Homepage/Homepage';
-import Associations from './pages/Associations/Associations';
-import Categories from './components/Categories/Categories';
-import Login from './pages/Login/Login';
-import AboutUs from './pages/AboutUs/AboutUs';
-import DetailsProfile from './pages/DetailsProfile/DetailsProfile';
+import Homepage from './pages/Homepage';
+import Associations from './pages/Associations';
+import Categories from './components/Categories';
+import AboutUs from './pages/AboutUs';
+import DetailsProfile from './pages/DetailsProfile';
+import LoginForm from './pages/LoginForm';
 //import './App.css'
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route exact path="/categories" element={<Categories />} />
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/associations" element={<Associations />} />
-        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/login" element={<LoginForm />} />
         <Route exact path="/details/:id" element={<DetailsProfile />} />
       </Routes>
     </Router>
