@@ -21,19 +21,32 @@ const Modal = ({modalOpen, toggleModal})=> {
                 <form>
                     <img src={logo} alt="samefalogo" />
                         <h3>It's time to add new friends</h3>
-                        <FormInput label='Title'
-                         placeholder='title'
+                        <FormInput 
+                        label='Title'
+                        name='title'
+                        type='text'
+                        placeholder='title'
                         />
-                        <FormInput label='Description'
+                        <FormInput 
+                        label='Description'
+                        name='description'
+                        type='text'
                         placeholder='description'
                         />
-                        <FormInput label='Creation date'
-                            placeholder='creation date'
+                        <FormInput 
+                        label='Creation date'
+                        name='creation date'
+                        type='date'
+                        placeholder='creation date'
                         />
                         <FormInput
                         label='Image'
                         type='file'
                         accept="image/png, image/jpeg"/>
+                        <FormInput
+                        label='Location'/>
+                      
+                       
                 </form>
               
                 <button className='close-modal' onClick={toggleModal}>CLOSE</button>
