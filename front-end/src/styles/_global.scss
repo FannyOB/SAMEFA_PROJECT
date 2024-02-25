@@ -1,7 +1,6 @@
 // contient le style qu'il y a à la racine.
 @import '../styles/variables.scss';
 
-
 *{
     margin:0;
     padding: 0;
@@ -15,6 +14,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: $color-black;
     background-color: $color-white; 
-  }// permet de réinitialiser les marges du corps et définit la famille de polices selon les nagivateurs
+}// permet de réinitialiser les marges du corps et définit la famille de polices selon les nagivateurs
 
   

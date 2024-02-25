@@ -1,5 +1,11 @@
+@import '../../index.scss';
+
 body.active-modal {
     overflow-y: hidden;
+}
+
+.modal{
+    z-index: 1000;
 }
 
 .modal, .overlay {
@@ -10,10 +16,12 @@ body.active-modal {
     right: 0;
     bottom: 0;
     position: fixed;
+    
 }
 
 .overlay {
     background: rgba(49,49,49,0.8);
+    
 }
 .modal-content {
     position: absolute;
@@ -21,12 +29,17 @@ body.active-modal {
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
-    background: #f1f1f1;
+    background: $color-white;
     padding: 14px 28px;
-    border-radius: 3px;
+    border-radius: $bradius-m;
     max-width: 600px;
-    min-width: 480px;
-    
+    min-width: 480px; 
+}
+
+form h2{
+    text-align: center;
+    font-size: $fontsize-l;
+    margin-bottom: 2rem;
 }
 
 .close-modal {

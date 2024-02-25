@@ -1,7 +1,8 @@
+//composant qui va permettre d'afficher la bannière selon ses propriètées. Il sera repris dans les pages Homepage et AboutUs
 import React from 'react';
-import "../styles/components/ComponentBanner.scss";
+import "../styles/components/Banner.scss";
 
-const ComponentBanner = ({title,image}) => {
+const Banner = ({title,image}) => {
     return (
         <div className='component-banner-wrapper'>
             <div className='component-banner-title'>
@@ -12,4 +13,4 @@ const ComponentBanner = ({title,image}) => {
     );
 };
 
-export default ComponentBanner;
+export default Banner;

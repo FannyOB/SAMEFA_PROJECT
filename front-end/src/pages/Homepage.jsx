@@ -1,7 +1,8 @@
+// composant Homepage
 import {React, useState} from 'react';
 import AssociationList from '../components/AssociationList';
 import Header from '../components/Header';
-import ComponentBanner from '../components/ComponentBanner';
+import Banner from '../components/Banner';
 import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
 import HomepageImg from '../assets/img/homepage_img.png';
@@ -33,15 +34,18 @@ const Homepage = () => {
   return (
     <>
       <Header/>
-      <ComponentBanner
-      title='Your Values, Your Impact '
-      image={HomepageImg}>
-      </ComponentBanner>
+      <Banner
+        title='Your Values, Your Impact '
+        image={HomepageImg}>
+      </Banner>
       <div className='add-button'>
-      <SearchBar/>
-      <ButtonAction type='secondary'  style={{width:"100px"}} onClick={toggleModal}><IoIosAddCircleOutline/>
-       Add ngos
-       </ButtonAction>
+        <SearchBar/>
+        <ButtonAction 
+          type='secondary'  
+          style={{width:"100px"}} 
+          onClick={toggleModal}><IoIosAddCircleOutline/>
+        Add ngos
+        </ButtonAction>
       </div>
       <Modal modalOpen={modalOpen} toggleModal={toggleModal}/>
       <AssociationList shouldSlice={false} className='asso-list' />

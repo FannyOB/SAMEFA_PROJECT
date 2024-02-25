@@ -30,14 +30,7 @@
 
 .right p{
     color:black;
-    font-size: 18px;
-    font-weight: 300;
-    font-family:"Montserrat-Regular";
+    font-size: $fontsize-s;
+    font-family:"Poppins-Regular";
     text-align:left; 
-}
-
-.right h1{
-    font-family: "Montserrat-Bold";
-    font-size: 64px; 
-    text-align: left;
 }

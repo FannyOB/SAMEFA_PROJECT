@@ -1,3 +1,5 @@
+//composant qui va affiche la liste des associations
+
 import React, {useEffect,useState} from 'react';
 import axios from 'axios';
 import '../styles/components/AssociationList.scss'
@@ -10,8 +12,7 @@ import { MdEdit } from "react-icons/md";
 
 const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au composant AssociationList
   const [ngos, setNgos] = useState([]);
-
-  //Fonction pour récupérer la liste des associations
+  //Fonction pour récupérer la liste des associations via le mock
   const getAllNgos = async () => {
     try {
       const response = await axios.get("http://localhost:3001/ngos");
@@ -26,14 +27,14 @@ const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au comp
     getAllNgos()
   }, []);
 
-  const renderedList= shouldSlice ? ngos.slice(0,4) : ngos;// besoin d'utiliser la liste d'association de deux façons, une dans son entiereté et une autre en affichant seulement les 4 premiers éléments. Ici la const sliceAssoList stocke une condition ternaire: si c'est true ( shouldSlice = true) alors c'est assoList.slice(0,4) qui s'exécute, sinon (shouldSlice = false)c'est la liste complète qui s'affiche.
+  const renderedList= shouldSlice ? ngos.slice(0,4) : ngos;// besoin d'utiliser la liste d'association de deux façons, une dans son entiereté et une autre en affichant seulement les 4 premiers éléments. Ici la const renderedList stocke une condition ternaire: si c'est true ( shouldSlice = true) alors c'est ngos.slice(0,4) qui s'exécute, sinon (shouldSlice = false)c'est la liste complète qui s'affiche donc ngos
   return (
     <>
       <ul className='asso-list'>
-        {renderedList.map(({id,name, cover}) =>(
-          <div className='asso-item-wrapper'>
+        {renderedList.map(({id,name, cover}) =>(// ici on va mapper sur la liste
+          <div className='asso-item-wrapper'key={id}>
             <span><FaRegHeart /></span>
-              <Link to={`/details/${id}`} key={id} className='link-no-underline'>
+              <Link to={`/details/${id}`}  className='link-no-underline'>
                 <AssociationCard
                   key={id}
                   name={name} 

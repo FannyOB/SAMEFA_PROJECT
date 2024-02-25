@@ -7,21 +7,19 @@
 .navigation-wrapper ul{
 display: flex;
 align-items: center;
-list-style-type: none;
-gap:3rem; 
+list-style-type: none; 
 }
 
 .navigation-wrapper li{
 margin-right: 2rem; 
-font-family: "Montserrat-Medium";
+font-family: "Poppins-Medium";
 font-size: $fontsize-l;
 }
 
 .navigation-link{
 text-decoration: none;
 color: $color-black;
-font-family: "Montserrat-Bold";
-font-weight: bold;
+font-family: "Poppins-Bold";
 }
 
 .navigation-link:hover{
