@@ -1,3 +1,4 @@
+//composant qui va permettre d'afficher une garde selon ses propriètés. Il sera repris dans AssociationList
 import React from 'react';
 import '../styles/components/AssociationICard.scss'
 

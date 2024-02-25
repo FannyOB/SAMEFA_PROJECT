@@ -1,3 +1,4 @@
+//composant Header qui reprend le composant Navigation
 import React from 'react';
 import logo from '../assets/img/Logo.png'
 import Navigation from './Navigation';

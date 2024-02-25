@@ -1,3 +1,4 @@
+//composant Searchbar
 import React, {useState} from 'react';
 import '../styles/components/SearchBar.scss';
 
@@ -9,7 +10,7 @@ const SearchBar = ({onSearch}) => {
             <input 
                 type='text' 
                 placeholder='Research...'
-                OnChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 className='search-input'
             />
         </div>

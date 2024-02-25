@@ -1,3 +1,5 @@
+// COMPOSANT A REFACTORISER PAR FANNY
+
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/components/Register.scss';
 import React, { useState } from 'react';
