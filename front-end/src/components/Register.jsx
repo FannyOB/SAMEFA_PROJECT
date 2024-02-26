@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import {AiOutlineUser} from 'react-icons/ai';
 import {AiOutlineMail} from 'react-icons/ai';
 import {AiOutlineLock} from 'react-icons/ai';
-import samefalogo from '../assets/img/samefalogo.png';
+import logo from '../assets/img/logo_trans.png'
 
 
 const SignUpForm = () => {
@@ -51,12 +51,11 @@ const SignUpForm = () => {
     return (
     <div className='container'>
       <div className='auth-form'>
+      <img src={logo} alt="Samefa-logo" />
         <div className='login-container'>
-          <h1>Welcome</h1>
           <Link to ="/login" className='login-link'>
             Already have an account ? Login here.
           </Link>
-        
 {/* sign up form  */}
         <form onSubmit={handleSubmit}>
           <div className='form-group'>
@@ -104,13 +103,11 @@ const SignUpForm = () => {
         <button type='submit' className='form-submit'>Sign up</button>
       </form> 
       </div>
-      
-
     {/* sign up form  */} 
     </div>
-    <div className='signup-image'>
+    {/* <div className='signup-image'>
       <img src={samefalogo} alt='two girls coding'/>
-      </div>
+      </div> */}
     </div>
   );
 };
