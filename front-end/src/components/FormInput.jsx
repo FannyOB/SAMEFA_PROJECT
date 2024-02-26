@@ -11,7 +11,6 @@ const FormInput = ({ label, placeholder, type, value, onChange, id, name}) => {/
     } else if (label === "Password"){
         icon = <AiOutlineLock/>
     }
-
     return (
         <div className="form-group">
             {icon}
