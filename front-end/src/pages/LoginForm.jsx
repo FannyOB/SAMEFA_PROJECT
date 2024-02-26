@@ -1,3 +1,5 @@
+// composant Login, les lignes 13 et de 18 à 31 sont les appels avec supabase, à changer.
+
 import React, { useState } from 'react';
 import { Link, useNavigate  } from 'react-router-dom'; 
 import '../styles/pages/LoginForm.scss';
@@ -27,7 +29,6 @@ const LoginForm = (setToken) => {
   //    console.error("Login error:", error);
   //    // Handle the error appropriately, like showing an error message to the user
   //  }
-
   }
   return (
     <>

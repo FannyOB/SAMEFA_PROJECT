@@ -1,20 +1,27 @@
 // les typographies qu'on utilise partout dans l'appli
 // définir ici les titres et paragraphes, ainsi que les break-points définis dans les mixins. 
 h1 {
-  font-family: "Montserrat-Bold";
+  font-family: "Poppins-Bold";
   white-space: pre-line;
-  font-size: $fontsize-xxl;
-  font-weight: 900;
-  //line-height: 76px;
+  font-size: $fontsize-xl;
 }
 
+
 h2{
-  font-family: 'Montserrat-Medium';
-  font-weight: 700;
+  font-family: 'Poppins-Medium';
+  font-weight: 600;
   font-size: $fontsize-l;
 }
 
+h3{
+  font-family: 'Poppins-Regular';
+  font-weight: 400;
+  font-size: $fontsize-s;
+}
+
 //export des fonts
+
+// LORA FONTS
 @font-face{
     font-family:"Lora-Regular";
     src: url(../assets/fonts/Lora/Lora-Regular.ttf) format('truetype');
@@ -29,7 +36,7 @@ h2{
     font-family: "Lora-Bold";
     src: url(../assets/fonts/Lora/Lora-Bold.ttf) format('truetype');
   }
-  
+// DOSIS FONTS
   @font-face {
     font-family: "Dosis-Light";
     src: url(../assets/fonts/Dosis/Dosis-Light.ttf) format('truetype');
@@ -45,6 +52,7 @@ h2{
     src: url(../assets/fonts/Dosis/Dosis-SemiBold.ttf) format('truetype');
   };
 
+// MONTSERRAT FONTS
    @font-face {
     font-family: "Montserrat-Thin";
     src: url(../assets/fonts/Montserrat/Montserrat-Thin.ttf) format('trutype');
@@ -69,3 +77,24 @@ h2{
     font-family: "Montserrat-Bold";
     src: url(../assets/fonts/Montserrat/Montserrat-Bold.ttf) format('truetype');
   };
+
+// POPPINS FONTS
+  @font-face {
+    font-family: "Poppins-Regular";
+    src: url(../assets/fonts/Poppins/Poppins-Regular.ttf)
+  }
+
+  @font-face {
+    font-family: "Poppins-Medium";
+    src: url(../assets/fonts/Poppins/Poppins-Medium.ttf)
+  }
+
+  @font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf)
+  }
+  
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url(../assets/fonts/Poppins/Poppins-Bold.ttf)
+  }

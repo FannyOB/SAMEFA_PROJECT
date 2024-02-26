@@ -1,13 +1,14 @@
+//Composant AboutUs à faire. Il reprend le composant Banner
 import React from 'react';
 import Header from '../components/Header'
-import ComponentBanner from '../components/ComponentBanner';
+import Banner from '../components/Banner';
 import aboutUs from '../assets/img/aboutus_img.png';
 
 const AboutUs = () => {
     return (
         <div>
             <Header/>
-            <ComponentBanner 
+            <Banner 
             title="About us"
             image={aboutUs}
             />

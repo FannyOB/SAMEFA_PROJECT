@@ -1,3 +1,4 @@
+// Router : c'est de la que part les pages. Ce code configure le routage pour une application React, permettant la navigation entre différentes pages en fonction des URL correspondantes.
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignUp from './pages/SignUp/SignUp';

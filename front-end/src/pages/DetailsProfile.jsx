@@ -6,12 +6,10 @@ import Header from '../components/Header';
 import { useParams } from 'react-router-dom';
 
 const DetailsProfile = () => {
-
     const { id } = useParams();
     const [selectNgosId, setSelectNgosId] = useState(null);
-    // const selectedAssociation = assoList.find(association => association.id === parseInt(id));
 
-    // Fonction pour récupérer les données d'une association pour son ID
+    // Fonction pour récupérer les données d'une association pour son ID via la mock
     const getNgoId = async () =>{
         try{
             const response = await axios.get(`http://localhost:3001/ngos/${id}`);
@@ -25,11 +23,11 @@ const DetailsProfile = () => {
         getNgoId();
     });
 
-    if (!selectNgosId) {
+    if (!selectNgosId) {//ici condition, pour gérer l'erreur
       return <div> Erreur : cette association n'existe pas</div>;
     }
   
-    const { name, description, cover } = selectNgosId;
+    const { name, description, cover } = selectNgosId; // déstructuration des props c-à-d que selectNgosId doit avec ses propriètés
     return (
         <>
         <Header/>
