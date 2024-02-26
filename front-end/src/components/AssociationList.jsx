@@ -26,7 +26,10 @@ const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au comp
     getAllNgos()
   }, []);
 
-  const renderedList= shouldSlice ? ngos.slice(0,4) : ngos;// besoin d'utiliser la liste d'association de deux façons, une dans son entiereté et une autre en affichant seulement les 4 premiers éléments. Ici la const sliceAssoList stocke une condition ternaire: si c'est true ( shouldSlice = true) alors c'est assoList.slice(0,4) qui s'exécute, sinon (shouldSlice = false)c'est la liste complète qui s'affiche.
+  const renderedList= shouldSlice ? ngos.slice(0,4) : ngos; //besoin d'utiliser la liste d'association de deux façons,
+  //une dans son entiereté et une autre en affichant seulement les 4 premiers éléments. 
+  //Ici la const sliceAssoList stocke une condition ternaire: si c'est true ( shouldSlice = true) 
+  //alors c'est assoList.slice(0,4) qui s'exécute, sinon (shouldSlice = false)c'est la liste complète qui s'affiche.
   return (
     <>
       <ul className='asso-list'>
