@@ -8,7 +8,7 @@ import pool from "../../config/elephantsql.js";
 export const getAssociations = async (req, res) => {
 
     try{
-        const result = await pool.query(`SELECT * FROM ngos`);
+        const result = await pool.query(`SELECT * FROM ngo`);
         
         console.log('Affichage des associations réussie!')
         res.json(result.rows);
@@ -25,7 +25,7 @@ export const getOneAssociation = async (req, res) => {
     console.log(req.params.id);
 
     try{
-        const result = await pool.query(`SELECT * FROM ngos WHERE ngo_id = $1`, [ngo_id]);
+        const result = await pool.query(`SELECT * FROM ngo WHERE ngo_id = $1`, [ngo_id]);
         if(result.rows.length !== 0) {
             console.log('Affichage d\'une association réussie!');
             res.json(result.rows[0]);

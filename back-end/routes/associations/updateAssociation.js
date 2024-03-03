@@ -10,7 +10,7 @@ export const updateAssociation = async (req, res) => {
     console.log(req.body);
 
     try{
-        const result =  await pool.query(`UPDATE ngos 
+        const result =  await pool.query(`UPDATE "ngo"
         SET ngo_name = $1,
             category = $2,
             creation_date = $3,
