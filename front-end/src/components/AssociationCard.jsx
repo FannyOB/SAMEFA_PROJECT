@@ -2,14 +2,21 @@
 import React from 'react';
 import '../styles/components/AssociationICard.scss'
 
-const   AssociationCard = ({id, name, cover}) => {
+const   AssociationCard = ({id, name, photo_url, categories}) => {
     return (
-            <ul>
-                <li key={id} className='smf-asso-item' >
-                <img className='smf-asso-item-cover' src={cover} alt={`${name} cover`} />
+        <ul>
+            <li key={id} className='smf-asso-item' >
+                <img className='smf-asso-item-img' src={photo_url} alt={`${name} photo_url`} /> 
                 <h2>{name}</h2>
-                </li> 
-            </ul>
+                <div className='smf-asso-tags'>
+                {categories.map((category, index) => (
+                    <div key={index} className='smf-asso-tag'>
+                    {category}
+                    </div>
+                ))}
+                </div>
+            </li> 
+        </ul>
     );
 };
 

@@ -1,5 +1,4 @@
 //composant qui va affiche la liste des associations
-
 import React, {useEffect,useState} from 'react';
 import axios from 'axios';
 import '../styles/components/AssociationList.scss'
@@ -8,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { MdEdit } from "react-icons/md";
-
 
 const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au composant AssociationList
   const [ngos, setNgos] = useState([]);
@@ -31,14 +29,15 @@ const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au comp
   return (
     <>
       <ul className='asso-list'>
-        {renderedList.map(({id,name, cover}) =>(// ici on va mapper sur la liste
+        {renderedList.map(({id,name, photo_url, categories}) =>(// ici on va mapper sur la liste
           <div className='asso-item-wrapper'key={id}>
             <span><FaRegHeart /></span>
-              <Link to={`/details/${id}`}  className='link-no-underline'>
+              <Link to={`/details/${id}`} className='link-no-underline'>
                 <AssociationCard
                   key={id}
                   name={name} 
-                  cover={cover}
+                  photo_url={photo_url}
+                  categories={categories}
                 />
               </Link>
               <div className="icon-buttons">

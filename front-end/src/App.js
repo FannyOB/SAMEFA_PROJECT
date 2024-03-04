@@ -8,7 +8,6 @@ import Categories from './components/Categories';
 import AboutUs from './pages/AboutUs';
 import DetailsProfile from './pages/DetailsProfile';
 import LoginForm from './pages/LoginForm';
-//import './App.css'
 
 function App() {
   return (
