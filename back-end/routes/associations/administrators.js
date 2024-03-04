@@ -5,12 +5,12 @@ import pool from "../../config/elephantsql.js";
 
 const router = express.Router();
 
-//requête SQL GET pour selectionner toutes des données de la table administrators
-// GET /administrators
+//requête SQL GET pour selectionner toutes des données de la table user
+// GET /user
 router.get('/', async (req, res) => {
 
     try{
-        const result = await pool.query('SELECT * FROM administrators');
+        const result = await pool.query('SELECT * FROM "user" ');
         console.log('Récupération réussie!');
         res.json(result.rows);
     }catch(error) {
@@ -32,13 +32,13 @@ router.get('/', async (req, res) => {
   });
 
   
-  //requête SQL GET pour selectionner un id de la table administrators
-  // GET /administrators/:id
+  //requête SQL GET pour selectionner un id de la table user
+  // GET /user/:id
   router.get('/:id', async (req, res) => {
     
     try {
         // Nous utilisons $1 comme paramètre pour éviter les injections SQL, et nous passons req.params.id comme valeur de ce paramètre.
-        const result = await pool.query(`SELECT * FROM administrators WHERE administrator_id = $1`, [req.params.id]);
+        const result = await pool.query(`SELECT * FROM "user" WHERE user_id = $1`, [req.params.id]);
         console.log('Requete SQL REUSSI, id récupéré');
         res.json(result.rows);
     } catch (error) {
@@ -61,20 +61,20 @@ router.get('/', async (req, res) => {
   });
 
 
-//requête SQL POST pour ajouter un administrateur dans la table administrators
-// POST /administrators
+//requête SQL POST pour ajouter un user dans la table user
+// POST /user
 router.post('/', async (req, res) => {
-    const { administrator_id, first_name, name, email, password } = req.body;
+    const { user_id, first_name, name, email, password, administrator } = req.body;
     console.log(req.body);
 
     try{
-        const result = await pool.query(`INSERT INTO administrators (administrator_id, first_name, name, email, password)
-        VALUES($1, $2, $3, $4, $5) RETURNING administrator_id`, 
-        [administrator_id, first_name, name, email, password]);
+        const result = await pool.query(`INSERT INTO "user" (user_id, first_name, name, email, password, administrator)
+        VALUES($1, $2, $3, $4, $5, $6) RETURNING user_id`, 
+        [user_id, first_name, name, email, password, administrator]);
 
-        const insertedAdministratorId = result.rows[0].administrator_id;
+        const insertedUserId = result.rows[0].user_id;
         console.log('insertion administrateur dans la base de donnée réussie');
-        res.status(201).json({ message: 'administrateur ajouté avec succès!', administrator_id: insertedAdministratorId});
+        res.status(201).json({ message: 'administrateur ajouté avec succès!', user_id: insertedUserId});
     } catch (error) {
         console.error('Erreur d\'insertion administrateur dans la base de donnée', error);
         res.status(500).json({ error: 'Erreur interne du serveur' });
@@ -98,17 +98,17 @@ router.post('/', async (req, res) => {
 
 
 //requête SQL PUT pour mettre à jour un administrateur dans la table administrators
-// PUT /administrators
+// PUT /user
 router.put('/:id', async (req, res) =>{
     //récupération de l'identifiant de l'administrateur via le paramètre de la route
-    const {first_name, name, email, password} = req.body;
-    const administrator_id = req.params.id;
+    const {first_name, name, email, password, administrator} = req.body;
+    const user_id = req.params.id;
     console.log(req.body);
 
     try{
-        const result = await pool.query(`UPDATE administrators SET first_name = $1, name = $2, email = $3,
-        password = $4 WHERE administrator_id = $5`,
-        [first_name, name, email, password, administrator_id]);
+        const result = await pool.query(`UPDATE "user" SET first_name = $1, name = $2, email = $3,
+        password = $4, administrator = $5 WHERE user_id = $6`,
+        [first_name, name, email, password, administrator, user_id]);
 
         console.log('Mise à jour de l\'administrateur dans la base de données réussie');
         res.status(201).json({message: 'Administrateur mis à jour avec succès!' });
@@ -120,14 +120,14 @@ router.put('/:id', async (req, res) =>{
 
 
 //requête SQL DELETE pour supprimer un administrateur dans la table administrators
-// DELETE /administrators
+// DELETE /user
 router.delete('/:id', async (req, res) => {
 
-    const administrator_id = req.params.id;
+    const user_id = req.params.id;
     console.log(req.params.id)
 
     try{
-        const result = await pool.query(`DELETE FROM administrators WHERE administrator_id = $1`, [administrator_id]);
+        const result = await pool.query(`DELETE FROM "user" WHERE user_id = $1`, [user_id]);
 
         console.log('suppression de l\'administrateur dans la base de données!');
         res.status(200).json({message: 'Administrateur supprimé avec succès!'});

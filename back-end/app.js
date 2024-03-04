@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import { ngoList } from "./db/mockNgos.js";
 //import pool from "./config/connection.js";
-import administratorsRouter from "./routes/adminAssociations/administrators.js"; // Importez les routes des administrateurs
+import administratorsRouter from "./routes/associations/administrators.js"; // Importez les routes des administrateurs
 
 import associationController from "./controllers/associationController.js";
 
@@ -22,8 +22,8 @@ app.use(express.json());
 
 
 //----------------- Routes ---------------------------------------------------------------
-// Utilisez les routes des administrateurs -> à définir par la suite
-app.use('/administrators', administratorsRouter);
+// Utilisez les routes de la table user -> à définir par la suite
+app.use('/user', administratorsRouter);
 
 // Futures Routes à définir par la suite avec le controlleur
 app.use('/associations', associationController);

@@ -1,1 +1,0 @@
-// Route pour la suppression d'un utilisateur.
