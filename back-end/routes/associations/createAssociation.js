@@ -9,7 +9,7 @@ export const createAssociation = async (req, res) => {
     console.log(req.body);
     
     try{
-        const result = await pool.query(`INSERT INTO "ngo" (ngo_id, ngo_name, category, creation_date, description_ong, website, photo_url, location)
+        const result = await pool.query(`INSERT INTO ngo (ngo_id, ngo_name, category, creation_date, description_ong, website, photo_url, location)
         VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING ngo_id`,
         [ngo_id, ngo_name, category, creation_date, description_ong, website, photo_url, location]);
 
