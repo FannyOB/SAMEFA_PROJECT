@@ -9,7 +9,7 @@ export const deleteAssociation = async (req, res) =>{
     console.log(req.params.id);
 
     try{
-        const result = await pool.query(`DELETE FROM ngos WHERE ngo_id = $1`, [ngo_id]);
+        const result = await pool.query(`DELETE FROM ngo WHERE ngo_id = $1`, [ngo_id]);
 
         console.log('suppression de l\'association dans la base de données!');
         res.status(200).json({message: 'Association supprimée avec succès!'});
