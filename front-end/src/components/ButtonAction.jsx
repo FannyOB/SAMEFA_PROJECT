@@ -11,7 +11,7 @@ const ButtonAction = ({type, style, children, onClick}) => {//props du composant
     };
 // ici condition d'affichage selon le type du bouton
     if (type === 'primary'){
-        return <button style={{ ...style}} className="primary-btn" onClick={handleClick} >{children}</button>;
+        return <button style={{...style}} className="primary-btn" onClick={handleClick} >{children}</button>;
     } else if (type === 'secondary'){
         return <button style={{...style}} className="secondary-btn" onClick={handleClick}> {children}</button>;
     }

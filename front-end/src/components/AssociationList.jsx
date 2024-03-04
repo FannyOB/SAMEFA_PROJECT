@@ -44,7 +44,7 @@ const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au comp
                 />
               </Link>
               <div className="icon-buttons">
-                <button className="edit-button"><MdEdit /></button>
+                <button className="edit-button"><MdEdit/></button>
                 <button className="delete-button"><RiDeleteBin6Fill/></button>
               </div>
           </div>

@@ -1,7 +1,7 @@
 @import '../../index.scss';
 
 .asso-list{
-    display: grid ;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
@@ -56,11 +56,11 @@
     cursor: pointer;
 }
 
+// media queries
 @media screen and (max-width: $screen-xl) {
     .asso-list{
         grid-template-columns: 1fr 1fr 1fr;
     }
-
 }
 
 @media screen and (max-width: 850px) {
