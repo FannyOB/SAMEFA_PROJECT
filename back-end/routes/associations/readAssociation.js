@@ -18,7 +18,7 @@ export const getAssociations = async (req, res) => {
     }
 };
 
-// GET /associations/read/:id
+// GET /associations/:id
 export const getOneAssociation = async (req, res) => {
     //const {ngo_name, category, creation_date, description_ong, website, photo_url, location } = req.body;
     const ngo_id = req.params.id;

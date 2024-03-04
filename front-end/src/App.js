@@ -9,7 +9,6 @@ import AboutUs from './pages/AboutUs';
 import DetailsProfile from './pages/DetailsProfile';
 import LoginForm from './pages/LoginForm';
 //import './App.css'
-import TestAssoDatabase from './pages/TestAssoDatabase';
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
         <Route exact path="/associations" element={<Associations />} />
         <Route exact path="/login" element={<LoginForm />} />
         <Route exact path="/details/:id" element={<DetailsProfile />} />
-        <Route exact path="/test" element={<TestAssoDatabase />} />
       </Routes>
     </Router>
   );

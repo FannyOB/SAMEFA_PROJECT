@@ -14,9 +14,6 @@ const Navigation = () => {
             <NavLink to="/aboutUs" className="navigation-link">
                 <li>About us </li>
             </NavLink>
-            <NavLink to="/test" className="navigation-link">
-                <li>Test Home</li>
-            </NavLink>
         </ul>
             <div className='navigation-button'>
                 <Link to="/signup" >
