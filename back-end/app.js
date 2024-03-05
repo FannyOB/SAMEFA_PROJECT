@@ -5,7 +5,8 @@ import { ngoList } from "./db/mockNgos.js";
 import administratorsRouter from "./routes/associations/administrators.js"; // Importez les routes des administrateurs
 
 import associationController from "./controllers/associationController.js";
-
+import userController from "./controllers/authController.js";
+import authController from "./controllers/authController.js";
 
 const app = express();
 
@@ -27,8 +28,8 @@ app.use('/user', administratorsRouter);
 
 // Futures Routes à définir par la suite avec le controlleur
 app.use('/associations', associationController);
-//app.use('/login', );penser à créer une table de users
-//app.use('/signup', ); penser à créer une table de users
+app.use('/signup', authController); 
+//app.use('/login', authController);
 //app.use('/logout', );
 //app.use('/users', ); ou '/profil'
 
