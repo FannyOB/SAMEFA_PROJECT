@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "../styles/pages/DetailsProfile.scss";
 import Header from '../components/Header';
-//import { assoList  } from '../../data/AssoList';
 import { useParams } from 'react-router-dom';
 import ButtonAction from '../components/ButtonAction';
 import { FaRegHeart } from "react-icons/fa";
@@ -10,13 +9,13 @@ import { MdOutlineWeb } from "react-icons/md";
 
 const DetailsProfile = () => {
     const { id } = useParams();
-    const [selectNgosId, setSelectNgosId] = useState(null);
+    const [associationId, setAssociationId] = useState(null);
 
     // Fonction pour récupérer les données d'une association pour son ID via la mock
     const getNgoId = async () =>{
         try{
-            const response = await axios.get(`http://localhost:3001/ngos/${id}`);
-            setSelectNgosId(response.data);
+            const response = await axios.get(`http://localhost:3001/associations/${id}`);
+            setAssociationId(response.data);
         } catch (error) {
             console.error ('Erreur lors de la récupération des données');
         }
@@ -24,13 +23,13 @@ const DetailsProfile = () => {
     
     useEffect(() => {
         getNgoId();
-    });
+    },[id]);
 
-    if (!selectNgosId) {//ici condition, pour gérer l'erreur
+    if (!associationId) {//ici condition, pour gérer l'erreur
       return <div> Erreur : cette association n'existe pas</div>;
     }
   
-    const { name, description, photo_url, categories,website,mapUrl } = selectNgosId; // déstructuration des props c-à-d que selectNgosId doit avec ses propriètés
+    const {photo_url, category,website,location } = associationId; // déstructuration des props c-à-d que selectNgosId doit avec ses propriètés
     return (
         <>
         <Header/>
@@ -51,14 +50,14 @@ const DetailsProfile = () => {
                 </div>
                 <div className="right">
                     <div className="right-tags">
-                        {categories.map((category, index) => (
+                        {category.split(',').map((category, index) => (
                             <div key={index} className="right-tag">
                                 {category}
                             </div>
                         ))}
                     </div>
-                    <h1>{name}</h1>
-                    <p>{description}</p>
+                    <h1>{associationId.ngo_name}</h1>
+                    <p>{associationId.description_ong}</p>
                     <div className="donation">
                         <ButtonAction 
                         type="primary" 
@@ -71,7 +70,7 @@ const DetailsProfile = () => {
                     <div className="google-map">
                         <h2>Location</h2>
                         <iframe
-                        src={mapUrl}
+                        src={location}
                         width="600" 
                         height="450" 
                         style={{border:0}} 
