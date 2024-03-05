@@ -1,5 +1,4 @@
 //Route pour créer une association au profil utilisateur.
-import express from "express";
 import pool from "../../config/elephantsql.js";
 import bcrypt from "bcrypt";
 
@@ -13,7 +12,7 @@ export const createUser = async (req, res) => {
     try{
         const result = await pool.query(`INSERT INTO "user" (user_id, first_name, name, email, password, administrator)
         VALUES ($1, $2, $3, $4, $5, $6) RETURNING user_id`,
-        [user_id, first_name, name, email, hashedPassword, administrator ]
+        [user_id, first_name, name, email, hashedPassword, administrator]
         );
 
         const insertedUserId = result.rows[0].user_id;

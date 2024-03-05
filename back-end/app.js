@@ -5,7 +5,9 @@ import { ngoList } from "./db/mockNgos.js";
 import administratorsRouter from "./routes/associations/administrators.js"; // Importez les routes des administrateurs
 
 import associationController from "./controllers/associationController.js";
-import authController from "./controllers/authController.js";
+//import authController from "./controllers/signupController.js";
+import loginController from "./controllers/loginController.js";
+import signupController from "./controllers/signupController.js";
 
 const app = express();
 
@@ -29,10 +31,10 @@ app.use('/user', administratorsRouter);
 app.use('/associations', associationController);
 
 // Route pour l'inscription
-app.use('/signup', authController); 
+app.use('/signup', signupController); 
 
 // Route pour la connexion
-app.use('/login', authController);
+app.use('/login', loginController);
 
 //app.use('/logout', );
 //app.use('/users', ); ou '/profil'

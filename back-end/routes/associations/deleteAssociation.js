@@ -1,4 +1,3 @@
-import express from "express";
 import pool from "../../config/elephantsql.js";
 
 //requête SQL DELETE: pour la supression d'une association de la table ngos

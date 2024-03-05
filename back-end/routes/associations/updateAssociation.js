@@ -1,4 +1,3 @@
-import express from "express";
 import pool from "../../config/elephantsql.js";
 
 //requête SQL PUT pour mettre à jour une association de la table ngos
