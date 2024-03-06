@@ -23,13 +23,13 @@ const DetailsProfile = () => {
     
     useEffect(() => {
         getNgoId();
-    },[id]);
+    },[id]); // alerte concernant la dépendance mais n'empêche pas l'affichage (il permet d'arrêter de boucler)
 
     if (!associationId) {//ici condition, pour gérer l'erreur
       return <div> Erreur : cette association n'existe pas</div>;
     }
   
-    const {photo_url, category,website,location } = associationId; // déstructuration des props c-à-d que selectNgosId doit avec ses propriètés
+    const {photo_url, category,website,location } = associationId; // déstructuration des props c-à-d que associationId doit avec ses propriètés
     return (
         <>
         <Header/>
