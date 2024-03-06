@@ -2,12 +2,16 @@ import express from "express";
 import cors from "cors";
 import { ngoList } from "./db/mockNgos.js";
 //import pool from "./config/connection.js";
+import sessionConfig from "./config/expressSession.js"
+
 import administratorsRouter from "./routes/associations/administrators.js"; // Importez les routes des administrateurs=>fichier TEST
 import associationController from "./controllers/associationController.js";
 import signupController from "./controllers/signupController.js";
 import loginController from "./controllers/loginController.js";
 
 const app = express();
+
+app.use(sessionConfig); // Utilisez la configuration de session
 
 //Option du cors
 const corsOptions = { //pour dire que j'autorise spécifiquement les requêtes qui viennent de cette origine.
