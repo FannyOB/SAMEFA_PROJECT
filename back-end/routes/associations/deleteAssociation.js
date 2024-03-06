@@ -1,6 +1,6 @@
 import pool from "../../config/elephantsql.js";
 
-//requête SQL DELETE: pour la supression d'une association de la table ngos
+//requête SQL DELETE: pour la supression d'une association de la table ngo
 // DELETE/associations/:id
 export const deleteAssociation = async (req, res) =>{
 

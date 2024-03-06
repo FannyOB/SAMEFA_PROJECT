@@ -1,7 +1,7 @@
 import pool from "../../config/elephantsql.js";
 import bcrypt from "bcrypt";
 
-//POST/users (login pour le chemin)
+//POST/login
 export const validateUser = async (req, res) => {
     const {email, password} = req.body;
     console.log(req.body);

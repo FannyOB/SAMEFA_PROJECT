@@ -5,13 +5,13 @@ import { updateAssociation } from "../routes/associations/updateAssociation.js";
 import { deleteAssociation } from "../routes/associations/deleteAssociation.js";
 
 
-// Controllers pour que les Routes puissent effectuer les requêtes sur la table ngos
+// Controllers pour que les Routes puissent effectuer les requêtes sur la table ngo
 const associationController = express.Router();
 
-// Route pour afficher les associations de la table ngos
+// Route pour afficher les associations de la table ngo
 associationController.get('/', getAssociations);
 
-// Route pour afficher une association de la table ngos
+// Route pour afficher une association de la table ngo
 associationController.get('/:id', getOneAssociation);
 
 // Route pour la création d'une nouvelle association

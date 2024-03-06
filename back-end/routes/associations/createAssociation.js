@@ -1,7 +1,7 @@
 import pool from "../../config/elephantsql.js";
 
 
-//requête SQL POST: pour ajouter une association de la table ngos
+//requête SQL POST: pour ajouter une association de la table ngo
 // GET /associations
 export const createAssociation = async (req, res) => {
     const { ngo_id, ngo_name, category, creation_date, description_ong, website, photo_url, location } = req.body;

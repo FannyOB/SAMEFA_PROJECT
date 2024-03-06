@@ -2,12 +2,10 @@ import express from "express";
 import cors from "cors";
 import { ngoList } from "./db/mockNgos.js";
 //import pool from "./config/connection.js";
-import administratorsRouter from "./routes/associations/administrators.js"; // Importez les routes des administrateurs
-
+import administratorsRouter from "./routes/associations/administrators.js"; // Importez les routes des administrateurs=>fichier TEST
 import associationController from "./controllers/associationController.js";
-//import authController from "./controllers/signupController.js";
-import loginController from "./controllers/loginController.js";
 import signupController from "./controllers/signupController.js";
+import loginController from "./controllers/loginController.js";
 
 const app = express();
 
@@ -33,7 +31,7 @@ app.use('/associations', associationController);
 // Route pour l'inscription
 app.use('/signup', signupController); 
 
-// Route pour la connexion
+// Route pour la connection
 app.use('/login', loginController);
 
 //app.use('/logout', );

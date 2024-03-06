@@ -1,6 +1,6 @@
 import pool from "../../config/elephantsql.js";
 
-//requête SQL PUT pour mettre à jour une association de la table ngos
+//requête SQL PUT pour mettre à jour une association de la table ngo
 // PUT /associations/:id
 export const updateAssociation = async (req, res) => {
     //récupération de l'identifiant de l'association via le paramètre de la route

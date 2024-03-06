@@ -2,7 +2,7 @@
 import pool from "../../config/elephantsql.js";
 import bcrypt from "bcrypt";
 
-//POST/users
+//POST/signup
 export const createUser = async (req, res) => {
     const {user_id, first_name, name, email, password, administrator} = req.body;
     console.log(req.body);

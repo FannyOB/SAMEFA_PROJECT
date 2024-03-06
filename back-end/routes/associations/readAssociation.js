@@ -1,9 +1,9 @@
 import pool from "../../config/elephantsql.js";
 
 
-//requête SQL GET: pour afficher des données de la table ngos
+//requête SQL GET: pour afficher des données de la table ngo
 //exemple:  Route::get('/associations/read', 'AssociationController@create') -> middleware('auth');
-// GET /associations/read
+// GET /associations
 export const getAssociations = async (req, res) => {
 
     try{
