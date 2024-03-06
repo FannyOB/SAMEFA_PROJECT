@@ -1,1 +1,0 @@
-//Composant React pour mettre à jour les données utilisateur.

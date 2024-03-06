@@ -1,8 +1,7 @@
-
 @import '../../index.scss';
 
 .asso-list{
-    display: grid ;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
@@ -16,7 +15,7 @@
     position: relative;
     padding: 10px;
     margin: 5px;
-    min-height: 310px;
+    min-height: 350px;
     height: 450px;
     border-radius: $bradius-m;
     border: 0.5px solid grey;
@@ -56,6 +55,33 @@
 .icon-buttons svg {
     cursor: pointer;
 }
+
+// media queries
+@media screen and (max-width: $screen-xl) {
+    .asso-list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .asso-list{
+        grid-template-columns: 1fr 1fr; 
+    }
+    .asso-item-wrapper{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .asso-list{
+        grid-template-columns: 1fr; 
+    }
+    .asso-item-wrapper{
+        width: 350px;
+    }
+}
+
+
 
 
 

@@ -26,7 +26,7 @@ export const getOneAssociation = async (req, res) => {
     try{
         const result = await pool.query(`SELECT * FROM ngo WHERE ngo_id = $1`, [ngo_id]);
         if(result.rows.length !== 0) {
-            console.log('Affichage d\'une association réussie!');
+            console.log('Affichage d\'une association réussie!!');
             res.json(result.rows[0]);
         }else {
             console.log('Association non trouvée');

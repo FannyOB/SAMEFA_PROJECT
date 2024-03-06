@@ -17,8 +17,6 @@ const Homepage = () => {
   const toggleModal = () =>{
     setModalOpen(!modalOpen)
   }
-
-
   //connection front-end to back-end
   // const [data, setData]=useState("");
 
@@ -35,7 +33,7 @@ const Homepage = () => {
     <>
       <Header/>
       <Banner
-        title='Your Values, Your Impact '
+        title='Your Values, Your Impact'
         image={HomepageImg}>
       </Banner>
       <div className='add-button'>

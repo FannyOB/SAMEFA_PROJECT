@@ -9,7 +9,7 @@
     cursor: pointer;
 
     &:hover{
-        color: pink;
+        color: $color-white;
     }
 }
 
@@ -23,6 +23,6 @@
     cursor: pointer;
 
     &:hover{
-        color: pink;
+        color: $color-green;
     }
 }

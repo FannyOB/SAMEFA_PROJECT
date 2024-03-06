@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate  } from 'react-router-dom'; 
 import '../styles/pages/LoginForm.scss';
 import FormInput from '../components/FormInput';
-import samefalogo from '../assets/img/samefalogo.png';
+import logo from '../assets/img/logo_trans.png'
 
 const LoginForm = (setToken) => {
   const [email, setEmail] = useState('');
@@ -34,6 +34,7 @@ const LoginForm = (setToken) => {
     <>
       <div className='container'>
         <div className='auth-form'>
+          <img src={logo} alt="Samefa-logo" />
           <div className='login-container'>
             <Link to ="/signup" className='login-link'>
               Don't have an account ? Sign up here.
@@ -58,9 +59,6 @@ const LoginForm = (setToken) => {
             <button type='submit' className='form-submit'>Log in</button>
           </form> 
           </div> 
-        </div>
-        <div className='signup-image'>
-          <img src={samefalogo} alt='two girls coding'/>
         </div>
       </div>
     </>

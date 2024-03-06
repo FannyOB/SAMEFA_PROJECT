@@ -1,5 +1,4 @@
 //composant qui va affiche la liste des associations
-
 import React, {useEffect,useState} from 'react';
 import axios from 'axios';
 import '../styles/components/AssociationList.scss'
@@ -9,13 +8,12 @@ import { FaRegHeart } from "react-icons/fa";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { MdEdit } from "react-icons/md";
 
-
-const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au composant AssociationList
+const AssociationList = ({shouldSlice,item}) => { // ajout d'une props au composant AssociationList
   const [ngos, setNgos] = useState([]);
   //Fonction pour récupérer la liste des associations via le mock
   const getAllNgos = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/ngos");
+      const response = await axios.get("http://localhost:3001/associations");
       // console.log(response.data);
       setNgos(response.data);
     } catch (error) {
@@ -34,18 +32,19 @@ const AssociationList = ({shouldSlice},{item}) => { // ajout d'une props au comp
   return (
     <>
       <ul className='asso-list'>
-        {renderedList.map(({id,name, cover}) =>(// ici on va mapper sur la liste
-          <div className='asso-item-wrapper'key={id}>
+        {renderedList.map((association) =>(// ici on va mapper sur la liste
+          <div className='asso-item-wrapper'key={association.ngo_id}>
             <span><FaRegHeart /></span>
-              <Link to={`/details/${id}`}  className='link-no-underline'>
+              <Link to={`/details/${association.ngo_id}`} className='link-no-underline'>
                 <AssociationCard
-                  key={id}
-                  name={name} 
-                  cover={cover}
+                  key={association.ngo_id}
+                  name={association.ngo_name} 
+                  photo_url={association.photo_url}
+                  categories={association.category.split(',').map(category=>category.trim())}
                 />
               </Link>
               <div className="icon-buttons">
-                <button className="edit-button"><MdEdit /></button>
+                <button className="edit-button"><MdEdit/></button>
                 <button className="delete-button"><RiDeleteBin6Fill/></button>
               </div>
           </div>
