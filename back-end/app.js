@@ -8,6 +8,7 @@ import administratorsRouter from "./routes/associations/administrators.js"; // I
 import associationController from "./controllers/associationController.js";
 import signupController from "./controllers/signupController.js";
 import loginController from "./controllers/loginController.js";
+import profileController from "./controllers/profileController.js";
 
 const app = express();
 
@@ -37,6 +38,9 @@ app.use('/signup', signupController);
 
 // Route pour la connection
 app.use('/login', loginController);
+
+// Route pour la connection
+app.use('/profile', profileController);
 
 //app.use('/logout', );
 //app.use('/users', ); ou '/profil'
