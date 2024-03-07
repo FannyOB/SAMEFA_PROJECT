@@ -1,6 +1,8 @@
 //Route pour créer une association au profil utilisateur.
 import pool from "../../config/elephantsql.js";
 import bcrypt from "bcrypt";
+//import session from "express-session";
+//import expressSession from "../../config/expressSession.js"
 
 //POST/signup
 export const createUser = async (req, res) => {
@@ -15,7 +17,13 @@ export const createUser = async (req, res) => {
         [user_id, first_name, name, email, hashedPassword, administrator]
         );
 
+        
         const insertedUserId = result.rows[0].user_id;
+
+        // Stockez les informations de l'utilisateur dans la session
+        //req.session.userId = insertedUserId;
+        console.log("hello");
+
         console.log('insertion d\'un utilisateur dans la base de donnée réussie');
         res.status(201).json({ message: 'user ajouté avec succès!', user_id: insertedUserId});
 
