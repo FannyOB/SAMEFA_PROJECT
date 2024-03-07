@@ -20,7 +20,7 @@ export const validateUser = async (req, res) => {
                 res.status(200).json({message: 'connection réussie!'});
             } else {
                 console.log('mot de passe incorrect')
-                res.status(200).json({message: 'mot de passe incorrect!'});
+                res.status(401).json({message: 'mot de passe incorrect!'});
             }
             } else{
                 console.log('utilisateur non trouvé!');
