@@ -17,7 +17,7 @@ const LoginForm = () => {
       const response = await axios.post('http://localhost:3001/login', {
         email: email,
         password: pass,
-      });
+      },{ withCredentials: true });//permet l'envoi de cookies entre les domaines
       if (response.status === 200) {
         console.log(response.data.message);
         navigate('/'); // Redirection vers la homepage uniquement si la connexion réussit

@@ -12,13 +12,11 @@ const sessionMiddleware = session({
     name: "sid", //sid= pour session id
     resave: false,
     saveUninitialized: false,
-    /*cookie: {
+    cookie: {
         secure: process.env.ENVIRONEMENT === "production",
-        httpOnly: true,
-        sameSite: process.env.ENVIRONEMENT === "production" ? "none" : "lax",
-        
-
-    }*/
+        maxAge: 60000 * 60,
+        sameSite: 'lax'
+    }
 });
 
 app.use(sessionMiddleware);
