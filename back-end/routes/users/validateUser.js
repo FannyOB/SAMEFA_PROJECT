@@ -17,6 +17,9 @@ export const validateUser = async (req, res) => {
             const isValid = await bcrypt.compare(password, user.password);
             if(isValid) {
                 console.log('connexion réussie');
+                req.session.userId = user.user_id;
+                console.log(req.session);//enregistre un identifiant d'utilisateur et déclenche la création d'un cookie de session
+                console.log(req.session.id);// enregistre un identifiant
                 res.status(200).json({message: 'connection réussie!'});
             } else {
                 console.log('mot de passe incorrect')

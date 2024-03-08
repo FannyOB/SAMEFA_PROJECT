@@ -3,7 +3,6 @@ import cors from "cors";
 import { ngoList } from "./db/mockNgos.js";
 //import pool from "./config/connection.js";
 import sessionConfig from "./config/expressSession.js"
-
 import administratorsRouter from "./routes/associations/administrators.js"; // Importez les routes des administrateurs=>fichier TEST
 import associationController from "./controllers/associationController.js";
 import signupController from "./controllers/signupController.js";
@@ -18,10 +17,12 @@ app.use(sessionConfig); // Utilisez la configuration de session
 const corsOptions = { //pour dire que j'autorise spécifiquement les requêtes qui viennent de cette origine.
   origin: 'http://localhost:3000',
   optionsSuccessStatus: 200,
+  credentials: true,
 };
 
 // les middlewares
-app.use(cors(corsOptions));
+//Express répond correctement aux requêtes de pré-vérification OPTIONS avec les en-têtes appropriés, y compris Access-Control-Allow-Origin ('*')
+app.use('*',cors(corsOptions));
 //utilisation de express.json( pour parser le corps de requêtes JSON)
 app.use(express.json());
 
