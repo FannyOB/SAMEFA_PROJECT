@@ -11,7 +11,7 @@ import profileController from "./controllers/profileController.js";
 
 const app = express();
 
-app.use(sessionConfig); // Utilisez la configuration de session
+//app.use(sessionConfig); // Utilisez la configuration de session
 
 //Option du cors
 const corsOptions = { //pour dire que j'autorise spécifiquement les requêtes qui viennent de cette origine.
