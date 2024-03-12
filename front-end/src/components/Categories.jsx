@@ -13,7 +13,7 @@
 //     //console.log(query)
 
 //     useEffect(() => {
-//      getCategories();  
+//      getCategories();
 //     }, []);
 
 //     async function getCategories(){
@@ -24,27 +24,27 @@
 //     const handlecategoryChange =(categoryValue) =>{
 //         setSelectedCategory(categoryValue);
 //     }
-    
+
 //     //option selectionné
 //     console.log(selectedCategory);
 //     return (
-//         <div className='categories-wrapper'>           
+//         <div className='categories-wrapper'>
 //             <h2>Choose your favorite category</h2>
 //                 <div className='search-bar'> {/* ajout de la line 41 à 47*/}
-//                     <input 
-//                         type='text' 
+//                     <input
+//                         type='text'
 //                         placeholder='Research...'
 //                         className='search-input'
 //                         onChange={(e) => setQuery(e.target.value)}
 //                     />
-//                 </div> 
+//                 </div>
 //                 <ul className='categories-list'>
 //                     {categories
 //                     .filter(cat => cat.name_category
 //                         .toLowerCase()
 //                         .includes(query))
 //                     .map((categories) => (
-//                         <li className='list' 
+//                         <li className='list'
 //                         key={categories.id}
 //                         value={categories.name_category}
 //                         onClick={() => handlecategoryChange(categories.name_category)}
@@ -55,11 +55,11 @@
 //                 <h2 >Choose a Category: </h2>
 //                 <br></br>
 //                 <select id="categorie-select" onChange={handlecategoryChange}>
-//                     <option value="">--Please select a category--</option> 
+//                     <option value="">--Please select a category--</option>
 //                     {categories.map((categories)=>(
-//                         <option key={categories.id} 
+//                         <option key={categories.id}
 //                         value={categories.name_category}
-//                         >{categories.name_category}</option>  
+//                         >{categories.name_category}</option>
 //                     ))}
 //                 </select>
 //                 <button type="submit">Validate</button>

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   preset: 'jest-preset-react',
   testEnvironment: 'jsdom',
   roots: ['<rootDir>/src'],

@@ -1,87 +1,81 @@
 @import '../../index.scss';
 
-.asso-list{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto; 
+.asso-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.asso-item-wrapper{
-    position: relative;
-    padding: 10px;
-    margin: 5px;
-    min-height: 350px;
-    height: 450px;
-    border-radius: $bradius-m;
-    border: 0.5px solid grey;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease; /* Add transitions for smooth effect */
-    
-    &:hover{
-        transform: scale(1.05); /* Increase size on hover */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-    }
+.asso-item-wrapper {
+  position: relative;
+  padding: 10px;
+  margin: 5px;
+  min-height: 350px;
+  height: 450px;
+  border-radius: $bradius-m;
+  border: 0.5px solid grey;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease; /* Add transitions for smooth effect */
+
+  &:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
 }
 
-.asso-item-wrapper .link-no-underline{
-    text-decoration: none;
+.asso-item-wrapper .link-no-underline {
+  text-decoration: none;
 
-    &:visited{
-        color:$color-black;
-    }
+  &:visited {
+    color: $color-black;
+  }
 }
 
-.icon-buttons{
-    display: flex;
-    gap: 0.5rem;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    padding: 3px 5px;
-    font-weight: 500;
-    font-size: 16px;
+.icon-buttons {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 3px 5px;
+  font-weight: 500;
+  font-size: 16px;
 
-
-    .delete-button{
-        color: #e10d05;
-    }
+  .delete-button {
+    color: #e10d05;
+  }
 }
 
 .icon-buttons svg {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 // media queries
 @media screen and (max-width: $screen-xl) {
-    .asso-list{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  .asso-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 850px) {
-    .asso-list{
-        grid-template-columns: 1fr 1fr; 
-    }
-    .asso-item-wrapper{
-        width: 300px;
-    }
+  .asso-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .asso-item-wrapper {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 650px) {
-    .asso-list{
-        grid-template-columns: 1fr; 
-    }
-    .asso-item-wrapper{
-        width: 350px;
-    }
+  .asso-list {
+    grid-template-columns: 1fr;
+  }
+  .asso-item-wrapper {
+    width: 350px;
+  }
 }
-
-
-
-
-

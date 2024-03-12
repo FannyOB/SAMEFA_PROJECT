@@ -1,41 +1,41 @@
- @import '../../index.scss';
+@import '../../index.scss';
 
-.navigation-wrapper{
- display: flex;
+.navigation-wrapper {
+  display: flex;
 }
 
-.navigation-wrapper ul{
-display: flex;
-align-items: center;
-list-style-type: none; 
+.navigation-wrapper ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
 }
 
-.navigation-wrapper li{
-margin-right: 2rem; 
-font-family: "Poppins-Medium";
-font-size: $fontsize-l;
+.navigation-wrapper li {
+  margin-right: 2rem;
+  font-family: 'Poppins-Medium';
+  font-size: $fontsize-l;
 }
 
-.navigation-link{
-text-decoration: none;
-color: $color-black;
-font-family: "Poppins-Bold";
+.navigation-link {
+  text-decoration: none;
+  color: $color-black;
+  font-family: 'Poppins-Bold';
 }
 
-.navigation-link:hover{
-color: $color-green;
+.navigation-link:hover {
+  color: $color-green;
 }
 
-.navigation-button{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+.navigation-button {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 button .navigation-link {
-    color:$color-white;    
+  color: $color-white;
 }
 
 button .navigation-link:hover {
-    color:$color-black;    
+  color: $color-black;
 }

@@ -1,28 +1,28 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
-.primary-btn{
-    width: 80px;
-    height: 40px;
-    border-radius: $bradius-m;
-    border: none;
-    font-family: "Poppins-SemiBold"; 
-    cursor: pointer;
+.primary-btn {
+  width: 80px;
+  height: 40px;
+  border-radius: $bradius-m;
+  border: none;
+  font-family: 'Poppins-SemiBold';
+  cursor: pointer;
 
-    &:hover{
-        color: $color-white;
-    }
+  &:hover {
+    color: $color-white;
+  }
 }
 
-.secondary-btn{
-    width: 80px;
-    height: 40px;
-    background-color: transparent; 
-    border-radius: $bradius-m;
-    border: solid 1.5px; 
-    font-family: "Poppins-SemiBold";
-    cursor: pointer;
+.secondary-btn {
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: $bradius-m;
+  border: solid 1.5px;
+  font-family: 'Poppins-SemiBold';
+  cursor: pointer;
 
-    &:hover{
-        color: $color-green;
-    }
+  &:hover {
+    color: $color-green;
+  }
 }

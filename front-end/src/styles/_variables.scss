@@ -1,10 +1,10 @@
 // les variables qui contiennent des valeurs répétables, comme les couleurs.
 // colors
-$color-green : rgb(6, 150, 135);
+$color-green: rgb(6, 150, 135);
 $color-white: rgba(255, 255, 255, 1);
 $color-darkgrey: rgba(34, 34, 34, 1);
-$color-black : rgba(0, 0, 0, 1);
-$color-lightgrey: #CCC;
+$color-black: rgba(0, 0, 0, 1);
+$color-lightgrey: #ccc;
 
 // Screen sizes
 $screen-xs: 576px;
@@ -16,21 +16,21 @@ $screen-full: 1400px;
 
 // Font sizes
 $fontsize-xs: 10px;
-$fontsize-s:14px;
+$fontsize-s: 14px;
 $fontsize-m: 16px;
 $fontsize-l: 20px;
 $fontsize-xl: 40px;
 $fontsize-xxl: 64px;
 
-//margin 
-$margin-xs:.5rem;
+//margin
+$margin-xs: 0.5rem;
 $margin-s: 1rem;
 $margin-m: 1.5rem;
 $margin-l: 2rem;
 $margin-xl: 5rem;
 
 //padding
-$padding-xs:.5rem;
+$padding-xs: 0.5rem;
 $padding-s: 1rem;
 $padding-m: 1.5rem;
 $padding-l: 2rem;
@@ -40,4 +40,3 @@ $padding-xl: 5rem;
 $bradius-s: 8px;
 $bradius-m: 10px;
 $bradius-xl: 18px;
-

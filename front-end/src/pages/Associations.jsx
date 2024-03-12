@@ -1,4 +1,4 @@
-//COMPOSANT ASSOCIATIONS QUI N'EXISTE PLUS POUR L'INSTANT
+// COMPOSANT ASSOCIATIONS QUI N'EXISTE PLUS POUR L'INSTANT
 // import React from 'react';
 // import Header from '../components/Header';
 // import AssociationList from '../components/AssociationList';
@@ -11,15 +11,15 @@
 //     return(
 //         <>
 //             <Header/>
-//                 <Banner 
+//                 <Banner
 //                     title="All Associations"
 //                     image={AssociationImg}
 //                 />
 //                 <SearchBar/>
-//                 <h1>Assocations page in progress</h1> 
+//                 <h1>Assocations page in progress</h1>
 //                 <AssociationList />
 //         </>
-//     )  
+//     )
 // }
 
 // export default Associations

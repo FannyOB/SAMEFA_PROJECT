@@ -1,18 +1,18 @@
 @import '../../index.scss';
 
-.search-bar{
-    display: flex;
-    gap:1rem;
-    margin-left: 4rem;
+.search-bar {
+  display: flex;
+  gap: 1rem;
+  margin-left: 4rem;
 }
 
-.search-bar input{
-    width: 20rem;
-    height: 3rem;
-    border-radius: $bradius-xl;
-    border: 1px solid #000;  
+.search-bar input {
+  width: 20rem;
+  height: 3rem;
+  border-radius: $bradius-xl;
+  border: 1px solid #000;
 }
 
 .search-input {
-    text-align: center;
+  text-align: center;
 }

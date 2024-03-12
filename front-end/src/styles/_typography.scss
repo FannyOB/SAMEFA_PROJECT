@@ -1,19 +1,18 @@
 // les typographies qu'on utilise partout dans l'appli
-// définir ici les titres et paragraphes, ainsi que les break-points définis dans les mixins. 
+// définir ici les titres et paragraphes, ainsi que les break-points définis dans les mixins.
 h1 {
-  font-family: "Poppins-Bold";
+  font-family: 'Poppins-Bold';
   white-space: pre-line;
   font-size: $fontsize-xl;
 }
 
-
-h2{
+h2 {
   font-family: 'Poppins-Medium';
   font-weight: 600;
   font-size: $fontsize-l;
 }
 
-h3{
+h3 {
   font-family: 'Poppins-Regular';
   font-weight: 400;
   font-size: $fontsize-s;
@@ -21,22 +20,22 @@ h3{
 
 //export des fonts
 // POPPINS FONTS
-  @font-face {
-    font-family: "Poppins-Regular";
-    src: url(../assets/fonts/Poppins/Poppins-Regular.ttf)
-  }
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
 
-  @font-face {
-    font-family: "Poppins-Medium";
-    src: url(../assets/fonts/Poppins/Poppins-Medium.ttf)
-  }
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url(../assets/fonts/Poppins/Poppins-Medium.ttf);
+}
 
-  @font-face {
-    font-family: "Poppins-SemiBold";
-    src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf)
-  }
-  
-  @font-face {
-    font-family: "Poppins-Bold";
-    src: url(../assets/fonts/Poppins/Poppins-Bold.ttf)
-  }
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url(../assets/fonts/Poppins/Poppins-Bold.ttf);
+}
