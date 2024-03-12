@@ -16,7 +16,6 @@ export const createUser = async (req, res) => {
         VALUES ($1, $2, $3, $4, $5, $6) RETURNING user_id`,
         [user_id, first_name, name, email, hashedPassword, administrator]
         );
-
         
         const insertedUserId = result.rows[0].user_id;
 
@@ -29,7 +28,7 @@ export const createUser = async (req, res) => {
 
     } catch (error){
         console.error(error);
-        res.status(500).json({ error: 'Erreur lors de la création de l\'utilisateur!', error});
+        res.status(500).json({ error: 'Erreur lors de la création de l\'utilisateur!'});
     }
 
 };

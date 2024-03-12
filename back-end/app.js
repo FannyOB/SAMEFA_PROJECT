@@ -46,12 +46,8 @@ app.use('/profile', profileController);
 //app.use('/logout', );
 //app.use('/users', ); ou '/profil'
 
-const port = 3001;
 
-//PORT
-app.listen(port, () =>
-  console.log(`Notre application Node est démarée sur : http://localhost:${port}`)
-);
+
 
 
 
@@ -80,4 +76,4 @@ app.get('/ngos/:id',(req,res)=>
     }
 });
 
-
+export default app;
