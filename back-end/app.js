@@ -53,9 +53,6 @@ app.listen(port, () =>
   console.log(`Notre application Node est démarée sur : http://localhost:${port}`)
 );
 
-
-
-
 //PARTIE DE CODE OBSOLETE A SUPPRIMER UNE FOIS ROUTES VERS BDD EFFECTUEES!!
 //----------------------------------------------------------------------------------------
 //TEST REQUETES POUR CONNECTION FRONT ==> ce sera les futures Routes

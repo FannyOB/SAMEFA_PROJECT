@@ -17,18 +17,6 @@ const Homepage = () => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
-  // connection front-end to back-end
-  // const [data, setData]=useState("");
-
-  // // const getData=async()=>{
-  // //   const response=await axios.get("http://localhost:3001/getData");
-  // //   console.log(response.data);
-  // //   setData(response.data)
-  // // }
-
-  // // useEffect(()=>{
-  // //   getData()
-  // // }, []);
   return (
     <>
       <Header />

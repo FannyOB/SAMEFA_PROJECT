@@ -5,11 +5,13 @@ import '../styles/pages/LoginForm.scss';
 import axios from 'axios';
 import FormInput from '../components/FormInput.jsx';
 import logo from '../assets/img/logo_trans.png';
+import { useAuth } from '../AuthContext';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate(); // 2. Use useNavigation hook
+  const { login } = useAuth(); // useAuth pour accéder à la fonction login
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,6 +23,7 @@ const LoginForm = () => {
       if (response.status === 200) {
         console.log(response.data.message);
         localStorage.setItem('token', response.data.token);
+        login(); // Mets à jour l'état d'authentification après la connexion réussie
         navigate('/'); // Redirection vers la homepage uniquement si la connexion réussit
       } else {
         // Gérer les autres statuts de réponse (non-200)
