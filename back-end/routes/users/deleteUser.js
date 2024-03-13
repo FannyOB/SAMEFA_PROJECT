@@ -1,1 +1,1 @@
-//Route pour supprimer un profil utilisateur.
+// Route pour supprimer un profil utilisateur.

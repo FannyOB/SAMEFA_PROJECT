@@ -21,8 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format:fix": "prettier --write \"**/*.{jsx,js}\"",
-    "format": "prettier --check \"**/*.{js,jsx}\"",
+    "format:fix": "prettier --write .",
+    "format": "prettier --check .",
     "lint": "eslint ./",
     "lint:fix": "eslint . --fix"
   },
