@@ -46,10 +46,16 @@ app.use('/profile', profileController);
 //app.use('/logout', );
 //app.use('/users', ); ou '/profil'
 
-
-
-
-
+/*PORT 
+if: solution pour ne pas écouter explicitement le port lors de l'exécution de tests.
+lorsque l'on alimente l'application pour supertest, elle exécutera l'application sur le port 0, puisqu'elle ne s'exécute pas déjà sur un port.
+*/
+const port = 3001;
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () =>
+    console.log(`Notre application Node est démarée sur : http://localhost:${port}`)
+  )
+};
 
 
 //PARTIE DE CODE OBSOLETE A SUPPRIMER UNE FOIS ROUTES VERS BDD EFFECTUEES!!
@@ -75,5 +81,6 @@ app.get('/ngos/:id',(req,res)=>
       res.status(404).json({message:"Associaiton non trouvée"})
     }
 });
+
 
 export default app;

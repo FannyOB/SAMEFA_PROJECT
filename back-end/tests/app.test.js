@@ -1,7 +1,7 @@
-import express from "express";
 import request from "supertest";
 import app from "../app.js";
 import pool from "../config/elephantsql.js"
+
 
 describe("Test application",() => {
     test("Not found for site 404", async () => {
