@@ -1,9 +1,6 @@
-import  Register from '../../components/Register';
+import React from 'react';
+import Register from '../../components/Register.jsx';
 
-  const SignUp = () => {
-    return (
-      <Register />
-    );
-  }
+const SignUp = () => <Register />;
 
 export default SignUp;

@@ -7,16 +7,17 @@
 
 @media screen and (max-width: 768px) {
   .form-group {
-      flex-direction: column;
+    flex-direction: column;
   }
 
-  label, input {
-      flex: none;
-      /* Adjust styles for better readability on smaller screens */
+  label,
+  input {
+    flex: none;
+    /* Adjust styles for better readability on smaller screens */
   }
 }
 
-h1{
+h1 {
   margin-bottom: 2rem;
 }
 
@@ -30,7 +31,11 @@ h1{
   text-align: center;
   justify-content: center;
   background-color: $color-green;
-  background-image: linear-gradient(45deg, rgb(6, 150, 135) 0%, $color-white 100%);
+  background-image: linear-gradient(
+    45deg,
+    rgb(6, 150, 135) 0%,
+    $color-white 100%
+  );
 }
 
 // .form-group {
@@ -42,7 +47,7 @@ h1{
 // }
 //   .form-group:last-child {
 //     margin-bottom: 0px; }
-    
+
 // .label-with-icon {
 //   display: flex;
 //   align-items: center;
@@ -68,34 +73,34 @@ h1{
   border-radius: 8px;
   margin-top: 25px;
   margin-bottom: 16px;
-  background-color: #D0EDE8E6;
+  background-color: #d0ede8e6;
   cursor: pointer;
   transition: background-color 0.3s;
-} 
-  .form-submit:hover {
-    background: #92CDD9;
-  }
+}
+.form-submit:hover {
+  background: #92cdd9;
+}
 
-  .signup-image {
-    flex: 1;
-  }
+.signup-image {
+  flex: 1;
+}
 
-  .signup-image img {
-    max-width: 100%; /* Set maximum width to 100% of the container */
-    height: auto; /* Maintain aspect ratio */
-  }
+.signup-image img {
+  max-width: 100%; /* Set maximum width to 100% of the container */
+  height: auto; /* Maintain aspect ratio */
+}
 
-  .login-link {
-    text-align: center;
-    padding: $padding-m;
-  }
+.login-link {
+  text-align: center;
+  padding: $padding-m;
+}
 
-  .login-container {
-    margin-top: 16px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid white;
-    border-radius: $bradius-m;
-    padding: $padding-m;
-  }
+.login-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: $bradius-m;
+  padding: $padding-m;
+}

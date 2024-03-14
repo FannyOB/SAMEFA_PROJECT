@@ -1,19 +1,19 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
-.footer-wrapper{
-    /* border: 1px solid pink; */
-    height:5rem;
-    width: 100%;
-    background-color: $color-black;
+.footer-wrapper {
+  /* border: 1px solid pink; */
+  height: 5rem;
+  width: 100%;
+  background-color: $color-black;
 }
 
-p{
-    color: $color-white;
-    font-family: "Lora-Medium";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-    padding-top: 2rem;  
+p {
+  color: $color-white;
+  font-family: 'Lora-Medium';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  padding-top: 2rem;
 }

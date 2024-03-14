@@ -1,35 +1,31 @@
 @import '../../index.scss';
 
-.smf-asso-item{
-    margin: 15px;
-	display: flex;
-	flex-direction: column;
-	min-height: 250px;
-	max-width: 200px;
+.smf-asso-item {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  max-width: 200px;
 
-	h2{
-		margin-bottom: 1rem;
-	}
+  h2 {
+    margin-bottom: 1rem;
+  }
 
-	.smf-asso-item-img{
-	max-width: 200px;
-	max-height: 200px;
-	margin-bottom: 1.5rem;
-	}
+  .smf-asso-item-img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 1.5rem;
+  }
 
-	.smf-asso-tags {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.smf-asso-tag {
-		background-color: rgba(255, 204,204,35%);
-		border-radius: 10px;
-		padding: 5px 10px;
-		margin-right: 5px;
-		margin-bottom: 5px;
-	}
+  .smf-asso-tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .smf-asso-tag {
+    background-color: rgba(255, 204, 204, 35%);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
 }
-
-
-
-
