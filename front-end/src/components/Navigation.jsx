@@ -7,8 +7,8 @@ import ButtonAction from './ButtonAction.jsx';
 import { useAuth } from '../AuthContext';
 
 const Navigation = () => {
+  // Utilisation du hook useAuth pour accéder à l'état d'authentification et la fonction de déconnexion.
   const { isAuthenticated, logout } = useAuth();
-
   return (
     <div className="navigation-wrapper">
       <ul>
@@ -21,11 +21,13 @@ const Navigation = () => {
       </ul>
       <div className="navigation-button">
         {isAuthenticated ? (
+          // Si l'utilisateur est authentifié, afficher l'icône utilisateur et un bouton de déconnexion.
           <>
             <FaUser />
             <button onClick={logout}>Logout</button>
           </>
         ) : (
+          // Sinon, afficher les boutons Login et signup.
           <>
             <Link to="/signup">
               <ButtonAction

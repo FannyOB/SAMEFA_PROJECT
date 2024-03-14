@@ -1,4 +1,3 @@
-// composant Login, les lignes 13 et de 18 à 31 sont les appels avec supabase, à changer.
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/pages/LoginForm.scss';
@@ -10,9 +9,10 @@ import { useAuth } from '../AuthContext';
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // 2. Use useNavigation hook
-  const { login } = useAuth(); // useAuth pour accéder à la fonction login
+  const navigate = useNavigate();
+  const { login } = useAuth(); // Accès à la fonction login du contexte d'authentification pour mettre à jour l'état global d'authentification.
 
+  // Gestion de la soumission du formulaire.
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -22,7 +22,7 @@ const LoginForm = () => {
       });
       if (response.status === 200) {
         console.log(response.data.message);
-        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('token', response.data.token); // permet d'enregistrer le token dans le localStorage.
         login(); // Mets à jour l'état d'authentification après la connexion réussie
         navigate('/'); // Redirection vers la homepage uniquement si la connexion réussit
       } else {
