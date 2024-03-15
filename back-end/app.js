@@ -2,9 +2,12 @@ import express from "express";
 import cors from "cors";
 // import pool from "./config/connection.js";
 // import administratorsRouter from "./routes/associations/administrators.js"; // Importez les routes des administrateurs=>fichier TEST
+import dotenv from "dotenv";
 import associationController from "./controllers/associationController.js";
 import signupController from "./controllers/signupController.js";
 import loginController from "./controllers/loginController.js";
+
+dotenv.config();
 
 const app = express();
 
@@ -40,11 +43,16 @@ app.use("/login", loginController);
 // app.use('/logout', );
 // app.use('/users', ); ou '/profil'
 
-const port = 3001;
+// const port = 3001;
 
-// PORT
-app.listen(port, () =>
-  console.log(
-    `Notre application Node est démarée sur : http://localhost:${port}`,
-  ),
-);
+// PORT const port = 3001;
+if (!(process.env.NODE_ENV === "test" && process.env.JEST_TEST === "true")) {
+  const port = process.env.PORT || 3001;
+  app.listen(port, () => {
+    console.log(
+      `Notre application Node est démarée sur : http://localhost:${port}`,
+    );
+  });
+}
+
+export default app;
