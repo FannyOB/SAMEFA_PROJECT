@@ -11,8 +11,6 @@ dotenv.config();
 
 const app = express();
 
-// app.use(sessionConfig); // Utilisez la configuration de session
-
 // Option du cors
 const corsOptions = {
   // pour dire que j'autorise spécifiquement les requêtes qui viennent de cette origine.
@@ -31,7 +29,7 @@ app.use(express.json());
 // Utilisez les routes de la table user -> à définir par la suite
 // app.use("/user", administratorsRouter);
 
-// Futures Routes à définir par la suite avec le controlleur
+// Route  d'accueil (page d'accueil), affichage des associations
 app.use("/associations", associationController);
 
 // Route pour l'inscription
@@ -40,10 +38,7 @@ app.use("/signup", signupController);
 // Route pour la connection
 app.use("/login", loginController);
 
-// app.use('/logout', );
-// app.use('/users', ); ou '/profil'
-
-// const port = 3001;
+// app.use('/users', ) ou '/profil'
 
 // PORT const port = 3001;
 if (!(process.env.NODE_ENV === "test" && process.env.JEST_TEST === "true")) {
