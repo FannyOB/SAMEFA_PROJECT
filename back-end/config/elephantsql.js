@@ -8,6 +8,9 @@ const { Pool } = pkg;
 // Cela va créer une instance 'Pool' en spécifiant les informations nécéssaires pour se connecter à l'instance ElephantSQL
 const pool = new Pool({
   connectionString: process.env.DB_CONNECTION_STRING, // indiqué dans la page DETAILS sur Elephant SQL
+  ssl: {
+    rejectUnauthorized: false // pour désactiver la vérification SSL. ElephantSQL utilise SSL par défaut, mais dans certains cas, vous pouvez rencontrer des problèmes avec les certificats SSL auto-signés. Cela permet de contourner ces problèmes en désactivant la vérification SSL.
+  }
 });
 
 // Test Affichage du message dans le terminal
