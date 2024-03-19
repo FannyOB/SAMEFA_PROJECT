@@ -1,6 +1,6 @@
 // composant input repris dans les formulaires
 import React from 'react';
-import { AiOutlineMail, AiOutlineLock } from 'react-icons/ai';
+import { AiOutlineMail, AiOutlineLock, AiOutlineUser } from 'react-icons/ai';
 import '../styles/components/FormInput.scss';
 
 const FormInput = ({ label, placeholder, type, value, onChange, id, name }) => {
@@ -10,6 +10,8 @@ const FormInput = ({ label, placeholder, type, value, onChange, id, name }) => {
     icon = <AiOutlineMail />;
   } else if (label === 'Password') {
     icon = <AiOutlineLock />;
+  } else if (label === 'Name') {
+    icon = <AiOutlineUser />;
   }
   return (
     <div className="form-group">

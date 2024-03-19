@@ -37,6 +37,7 @@
     "react/prop-types": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "no-else-return": "off"
+    "no-else-return": "off",
+    "import/no-unresolved": "off"
   }
 }
