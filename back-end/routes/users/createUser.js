@@ -24,12 +24,11 @@ const createUser = async (req, res) => {
     // Stockez les informations de l'utilisateur dans la session
     // req.session.userId = insertedUserId;
     console.log("hello");
-
     console.log("insertion d'un utilisateur dans la base de donnée réussie");
     const token = jwt.sign({ userId: insertedUserId }, process.env.JWT_SECRET, {
       expiresIn: "7y",
     });
-    res.status(201).json({ message: "user ajouté avec succès!", token });
+    res.status(200).json({ message: "user ajouté avec succès!", token });
   } catch (error) {
     console.error(error);
     res
