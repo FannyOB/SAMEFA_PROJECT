@@ -5,7 +5,7 @@ import '../styles/pages/SignupForm.scss';
 import axios from 'axios';
 import logo from '../assets/img/logo_trans.png';
 import FormInput from '../components/FormInput.jsx';
-import { useAuth } from '../AuthContext';
+import { useAuth } from '../AuthContext.jsx';
 
 const SignupForm = () => {
   const [email, setEmail] = useState('');
