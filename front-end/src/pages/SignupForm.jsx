@@ -5,12 +5,14 @@ import '../styles/pages/SignupForm.scss';
 import axios from 'axios';
 import logo from '../assets/img/logo_trans.png';
 import FormInput from '../components/FormInput.jsx';
+import { useAuth } from '../AuthContext';
 
 const SignupForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const navigate = useNavigate(); // 2. Use useNavigation hook
+  const { signup } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,7 +25,9 @@ const SignupForm = () => {
       });
       if (response.status === 200) {
         console.log(response.data.message);
-        navigate('/login');
+        localStorage.setItem('token', response.data.token);
+        signup();
+        navigate('/');
       } else {
         console.error('Error:', response.data.message);
         // Gérer les autres statuts de réponse (non-200)

@@ -13,6 +13,11 @@ export const AuthProvider = ({ children }) => {
   const login = () => {
     setIsAuthenticated(true);
   };
+
+  const signup = () => {
+    setIsAuthenticated(true);
+  };
+
   // Fonction pour gérer la déconnexion de l'utilisateur. Elle met à jour l'état isAuthenticated à false et supprime également le token stocké dans le localStorage, assurant ainsi que l'utilisateur est complètement déconnecté.
   const logout = () => {
     setIsAuthenticated(false);
@@ -20,7 +25,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, login, signup, logout }}>
       {children}
     </AuthContext.Provider>
   );
