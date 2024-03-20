@@ -17,10 +17,12 @@ const validateUser = async (req, res) => {
       const isValid = await bcrypt.compare(password, user.password);
       if (isValid) {
         console.log("connexion réussie");
-        const token = jwt.sign(
-          { userId: user.user_id },
-          process.env.JWT_SECRET,
-          { expiresIn: "2m" },
+        const tokenPayload = {
+          userId: user.user_id,
+          isAdmin: user.administrator,
+        };
+        const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, 
+          expiresIn: "2m",
         );
 
         // req.session.userId = user.user_id;

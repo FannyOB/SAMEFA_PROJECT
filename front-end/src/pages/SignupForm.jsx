@@ -21,6 +21,7 @@ const SignupForm = () => {
         email,
         password,
         name,
+        isAdmin: false,
       });
       if (response.status === 200) {
         console.log(response.data.message);

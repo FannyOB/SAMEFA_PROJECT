@@ -7,8 +7,10 @@ import { FaRegHeart } from 'react-icons/fa';
 import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { MdEdit } from 'react-icons/md';
 import AssociationCard from './AssociationCard.jsx';
+import { useAuth } from '../AuthContext.jsx';
 
 const AssociationList = ({ shouldSlice, item }) => {
+  const { isAdmin } = useAuth();
   // ajout d'une props au composant AssociationList
   const [ngos, setNgos] = useState([]);
   // Fonction pour récupérer la liste des associations via le mock
@@ -25,6 +27,8 @@ const AssociationList = ({ shouldSlice, item }) => {
   useEffect(() => {
     getAllNgos();
   }, []);
+
+  console.log(isAdmin); // Afficher la valeur de isAdmin dans la console
 
   const renderedList = shouldSlice ? ngos.slice(0, 4) : ngos; // besoin d'utiliser la liste d'association de deux façons,
   // une dans son entiereté et une autre en affichant seulement les 4 premiers éléments.
@@ -54,12 +58,16 @@ const AssociationList = ({ shouldSlice, item }) => {
               />
             </Link>
             <div className="icon-buttons">
-              <button type="button" className="edit-button">
-                <MdEdit />
-              </button>
-              <button type="button" className="delete-button">
-                <RiDeleteBin6Fill />
-              </button>
+              {isAdmin && (
+                <>
+                  <button type="button" className="edit-button">
+                    <MdEdit />
+                  </button>
+                  <button type="button" className="delete-button">
+                    <RiDeleteBin6Fill />
+                  </button>
+                </>
+              )}
             </div>
           </div>
         ),
