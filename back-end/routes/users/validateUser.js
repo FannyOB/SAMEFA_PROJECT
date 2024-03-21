@@ -21,9 +21,9 @@ const validateUser = async (req, res) => {
           userId: user.user_id,
           isAdmin: user.administrator,
         };
-        const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, 
+        const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, {
           expiresIn: "2m",
-        );
+        });
 
         // req.session.userId = user.user_id;
         // console.log(req.session);//enregistre un identifiant d'utilisateur et déclenche la création d'un cookie de session
