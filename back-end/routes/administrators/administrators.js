@@ -1,11 +1,13 @@
-// // ce fichier n'apparaitra dans la l'appli celle ci à servi de test. Afin de savoir si notre projet est bien connecté
-// // à notre instance!
+// // ce fichier n'apparaitra dans la l'appli celle ci à servi de test. Afin de savoir si notre projet etait bien connecté
+// // à notre instance! Il se situait dans "/associations" au départ.
+// // il nous servira pour créer la partie administrator de notre application
 // import express from "express";
 // import pool from "../../config/elephantsql.js";
 
 // const router = express.Router();
 
-// // requête SQL GET pour selectionner toutes des données de la table user
+// // Initialement nous avions une table "administrator", qui a été modifié en table "user" car notre mvp a été revu en cours de projet.
+// // requête SQL GET pour selectionner toutes des données de la table "user"
 // // GET /user
 // router.get("/", async (req, res) => {
 //   try {
