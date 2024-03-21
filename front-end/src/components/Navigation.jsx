@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 import '../styles/components/Navigation.scss';
 import { FaUser } from 'react-icons/fa';
 import ButtonAction from './ButtonAction.jsx';
-import { useAuth } from '../AuthContext';
+import { useAuth } from '../AuthContext.jsx';
 
 const Navigation = () => {
   // Utilisation du hook useAuth pour accéder à l'état d'authentification et la fonction de déconnexion.
@@ -24,7 +24,13 @@ const Navigation = () => {
           // Si l'utilisateur est authentifié, afficher l'icône utilisateur et un bouton de déconnexion.
           <>
             <FaUser />
-            <button onClick={logout}>Logout</button>
+            <ButtonAction
+              type="primary"
+              onClick={logout}
+              style={{ backgroundColor: 'rgb(6, 150, 135)' }}
+            >
+              LOGOUT
+            </ButtonAction>
           </>
         ) : (
           // Sinon, afficher les boutons Login et signup.

@@ -4,7 +4,7 @@ import '../styles/pages/LoginForm.scss';
 import axios from 'axios';
 import FormInput from '../components/FormInput.jsx';
 import logo from '../assets/img/logo_trans.png';
-import { useAuth } from '../AuthContext';
+import { useAuth } from '../AuthContext.jsx';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');

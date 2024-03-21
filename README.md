@@ -16,6 +16,10 @@
 * Ensure you have a PostgreSQL instance running with SSL enabled
 * Ensure you have the proper environment variables configured for connecting to the instance
 
+##Tests
+Use Jest for unit tests and Supertest for integration tests.
+*Run npm test to execute the tests
+
 ## Architecture des dossiers et lancement du projet : 
 * Works in Mono-repo <br>
 * "Frontend" launches from the path  "cd .\front-end\"  and runs with ** `npm start` <br>
