@@ -33,7 +33,7 @@
     "spaced-comment": ["error", "always"],
     "arrow-body-style": ["error", "as-needed"],
     "react/no-unescaped-entities": "off",
-    "camelcase": ["error", { "allow": ["photo_url"] }],
+    "camelcase": "off",
     "react/prop-types": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
