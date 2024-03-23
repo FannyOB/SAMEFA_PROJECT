@@ -4,17 +4,20 @@
   display: flex;
 }
 
-.navigation-wrapper ul {
+.navigation-wrapper {
+  ul {
   display: flex;
   align-items: center;
   list-style-type: none;
-}
-
-.navigation-wrapper li {
+  }
+  li {
   margin-right: 2rem;
   font-family: 'Poppins-Medium';
   font-size: $fontsize-l;
 }
+}
+
+.navigation-wrapper 
 
 .navigation-link {
   text-decoration: none;
@@ -32,10 +35,13 @@
   gap: 2rem;
 }
 
-button .navigation-link {
+button {
+  .navigation-link {
   color: $color-white;
+  }
+  .navigation-link:hover {
+  color: $color-black;
+  }
 }
 
-button .navigation-link:hover {
-  color: $color-black;
-}
+

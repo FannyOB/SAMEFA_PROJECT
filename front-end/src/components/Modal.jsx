@@ -72,7 +72,7 @@ const Modal = ({ modalOpen, toggleModal }) => {
                 name="description"
               />
               <FormInput
-                label="Catégories"
+                label="Categories"
                 placeholder="Enter ngo's categories"
                 type="text"
                 list="categories list"
@@ -81,14 +81,14 @@ const Modal = ({ modalOpen, toggleModal }) => {
                 name="categories"
               />
               <FormInput
-                label="Creation date"
+                label="Date"
                 type="date"
                 value={ngo.creationDate}
                 onChange={handleChange}
                 name="creation date"
               />
               <FormInput
-                label="Image cover"
+                label="Image"
                 type="file"
                 accept="image/png, image/jpeg"
                 onChange={handleChange}

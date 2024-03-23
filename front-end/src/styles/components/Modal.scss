@@ -35,10 +35,12 @@ body.active-modal {
   min-width: 480px;
 }
 
-form h2 {
+form {
+  h2 {
   text-align: center;
   font-size: $fontsize-l;
   margin-bottom: 2rem;
+  }
 }
 
 .close-modal {
