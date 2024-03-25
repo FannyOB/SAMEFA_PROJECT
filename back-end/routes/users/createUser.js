@@ -14,9 +14,9 @@ const createUser = async (req, res) => {
 
   try {
     const result = await pool.query(
-      `INSERT INTO "user" ( name, email, password)
-        VALUES ($1, $2, $3) RETURNING user_id`,
-      [name, email, hashedPassword],
+      `INSERT INTO "user" ( name, email, password administrator)
+        VALUES ($1, $2, $3, $4) RETURNING user_id`,
+      [name, email, hashedPassword, false],
     );
 
     const insertedUserId = result.rows[0].user_id;

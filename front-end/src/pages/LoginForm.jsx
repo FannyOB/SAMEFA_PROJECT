@@ -10,7 +10,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const { login } = useAuth(); // Accès à la fonction login du contexte d'authentification pour mettre à jour l'état global d'authentification.
+  const { loginAdmin, login } = useAuth(); // Accès à la fonction login du contexte d'authentification pour mettre à jour l'état global d'authentification.
 
   // Gestion de la soumission du formulaire.
   const handleSubmit = async (e) => {
@@ -23,7 +23,12 @@ const LoginForm = () => {
       if (response.status === 200) {
         console.log(response.data.message);
         localStorage.setItem('token', response.data.token); // permet d'enregistrer le token dans le localStorage.
-        login(); // Mets à jour l'état d'authentification après la connexion réussie
+        console.log(response.data);
+        if (response.data.isAdmin) {
+          loginAdmin(); // Mets à jour l'état d'authentification après la connexion réussie
+        } else {
+          login();
+        }
         navigate('/'); // Redirection vers la homepage uniquement si la connexion réussit
       } else {
         // Gérer les autres statuts de réponse (non-200)

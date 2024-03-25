@@ -8,6 +8,7 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider = ({ children }) => {
   // Utilisation du hook useState pour gérer l'état d'authentification. Par défaut, l'utilisateur n'est pas authentifié (false).
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   // Fonction pour permettre la connexion de l'utilisateur. Elle met à jour l'état isAuthenticated à true, indiquant que l'utilisateur est désormais authentifié.
   const login = () => {
@@ -21,11 +22,19 @@ export const AuthProvider = ({ children }) => {
   // Fonction pour gérer la déconnexion de l'utilisateur. Elle met à jour l'état isAuthenticated à false et supprime également le token stocké dans le localStorage, assurant ainsi que l'utilisateur est complètement déconnecté.
   const logout = () => {
     setIsAuthenticated(false);
+    setIsAdmin(false);
     localStorage.removeItem('token'); // Cette ligne supprime le token du localStorage
   };
 
+  const loginAdmin = () => {
+    setIsAuthenticated(true);
+    setIsAdmin(true);
+  };
+
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, signup, logout }}>
+    <AuthContext.Provider
+      value={{ isAuthenticated, isAdmin, login, signup, logout, loginAdmin }}
+    >
       {children}
     </AuthContext.Provider>
   );
