@@ -26,7 +26,7 @@ app.use("*", cors(corsOptions));
 app.use(express.json());
 
 // ----------------- Routes ---------------------------------------------------------------
-// Utilisez les routes de la table user -> à définir par la suite
+// Utilisez les routes de la table "administrators" qui a été modifié en "user" -> à définir par la suite
 // app.use("/user", administratorsRouter);
 
 // Route  d'accueil (page d'accueil), affichage des associations
@@ -38,7 +38,7 @@ app.use("/signup", signupController);
 // Route pour la connection
 app.use("/login", loginController);
 
-// app.use('/users', ) ou '/profil'
+// app.use('/profil', profilController);
 
 // PORT const port = 3001;
 if (!(process.env.NODE_ENV === "test" && process.env.JEST_TEST === "true")) {

@@ -44,7 +44,6 @@ const SignupForm = () => {
           <Link to="/login" className="login-link">
             Already have an account ? Login here.
           </Link>
-          {/* sign up form  */}
           <form onSubmit={handleSubmit}>
             <FormInput
               className="input-field"
