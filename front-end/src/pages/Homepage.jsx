@@ -5,7 +5,6 @@ import { useAuth } from '../AuthContext.jsx';
 import AssociationList from '../components/AssociationList.jsx';
 import Header from '../components/Header.jsx';
 import Banner from '../components/Banner.jsx';
-import SearchBar from '../components/SearchBar.jsx';
 import Footer from '../components/Footer.jsx';
 import HomepageImg from '../assets/img/homepage_img.png';
 import '../styles/pages/Homepage.scss';
@@ -24,7 +23,6 @@ const Homepage = () => {
       <Header />
       <Banner title="Your Values, Your Impact" image={HomepageImg}></Banner>
       <div className="add-button">
-        <SearchBar />
         {isAdmin && (
           <ButtonAction
             type="secondary"

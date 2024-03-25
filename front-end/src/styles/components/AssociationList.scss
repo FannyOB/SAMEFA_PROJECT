@@ -55,14 +55,14 @@
   cursor: pointer;
 }
 
-// media queries
-@media screen and (max-width: $screen-xl) {
+// media queries en utilisnt les mixins
+@include xlMinBreakPoint{
   .asso-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media screen and (max-width: 850px) {
+@include lgMinBreakPoint {
   .asso-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@include mdMinBreakPoint {
   .asso-list {
     grid-template-columns: 1fr;
   }

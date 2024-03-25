@@ -17,3 +17,11 @@ test('renders secondary button correctly', () => {
   expect(buttonElement).toBeInTheDocument();
   expect(buttonElement).toHaveClass('secondary-btn');
 });
+
+// deuxième test si ButtonAction rend correctement un bouton de type "primary", ici le text échoue
+test('renders primary button correctly', () => {
+  render(<ButtonAction type="primary">Primary Button</ButtonAction>);
+  const buttonElement = screen.getByText('Primary Button');
+  expect(buttonElement).toBeInTheDocument();
+  expect(buttonElement).not.toHaveClass('primary-btn'); // Modification intentionnelle
+});

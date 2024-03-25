@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './AuthContext.jsx';
 import SignUp from './pages/SignupForm.jsx';
 import Homepage from './pages/Homepage.jsx';
-import AboutUs from './pages/AboutUs.jsx';
 import DetailsProfile from './pages/DetailsProfile.jsx';
 import LoginForm from './pages/LoginForm.jsx';
 
@@ -14,7 +13,6 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
-          <Route exact path="/aboutUs" element={<AboutUs />} />
           <Route exact path="/signup" element={<SignUp />} />
           <Route exact path="/login" element={<LoginForm />} />
           <Route exact path="/details/:id" element={<DetailsProfile />} />

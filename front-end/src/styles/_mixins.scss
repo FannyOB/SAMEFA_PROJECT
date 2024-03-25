@@ -1,19 +1,19 @@
 // contient des blocs de code répétables par exemple mettre ici les break-points ( en fonction du changement de la taille, ref responsive, média queries)
 
 @mixin mdMinBreakPoint {
-  @media (min-width: #{$screen-md}) {
+  @media (max-width: #{$screen-md}) {
     @content;
   }
 }
 
 @mixin lgMinBreakPoint {
-  @media (min-width: #{$screen-lg}) {
+  @media (max-width: #{$screen-lg}) {
     @content;
   }
 }
 
 @mixin xlMinBreakPoint {
-  @media (min-width: #{$screen-xl}) {
+  @media (max-width: #{$screen-xl}) {
     @content;
   }
 }

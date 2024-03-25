@@ -15,9 +15,6 @@ const Navigation = () => {
         <NavLink to="/" className="navigation-link">
           <li>Home</li>
         </NavLink>
-        <NavLink to="/aboutUs" className="navigation-link">
-          <li>About us </li>
-        </NavLink>
       </ul>
       <div className="navigation-button">
         {isAuthenticated ? (

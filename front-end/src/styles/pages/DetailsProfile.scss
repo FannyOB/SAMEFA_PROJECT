@@ -89,3 +89,21 @@
     }
   }
 }
+
+// media queries avec les mixins
+@include lgMinBreakPoint {
+  .product{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include xlMinBreakPoint {
+  .donation{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+  }
+
+}
