@@ -1,6 +1,7 @@
 // composant Homepage
 import { React, useState } from 'react';
 import { IoIosAddCircleOutline } from 'react-icons/io';
+import { useAuth } from '../AuthContext.jsx';
 import AssociationList from '../components/AssociationList.jsx';
 import Header from '../components/Header.jsx';
 import Banner from '../components/Banner.jsx';
@@ -13,6 +14,7 @@ import Modal from '../components/Modal.jsx';
 
 const Homepage = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const { isAdmin } = useAuth();
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -23,14 +25,16 @@ const Homepage = () => {
       <Banner title="Your Values, Your Impact" image={HomepageImg}></Banner>
       <div className="add-button">
         <SearchBar />
-        <ButtonAction
-          type="secondary"
-          style={{ width: '100px' }}
-          onClick={toggleModal}
-        >
-          <IoIosAddCircleOutline />
-          Add ngos
-        </ButtonAction>
+        {isAdmin && (
+          <ButtonAction
+            type="secondary"
+            style={{ width: '100px' }}
+            onClick={toggleModal}
+          >
+            <IoIosAddCircleOutline />
+            Add ngos
+          </ButtonAction>
+        )}
       </div>
       <Modal modalOpen={modalOpen} toggleModal={toggleModal} />
       <AssociationList shouldSlice={false} className="asso-list" />

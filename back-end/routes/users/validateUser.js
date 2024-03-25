@@ -28,7 +28,11 @@ const validateUser = async (req, res) => {
         // req.session.userId = user.user_id;
         // console.log(req.session);//enregistre un identifiant d'utilisateur et déclenche la création d'un cookie de session
         // console.log(req.session.id);// enregistre un identifiant
-        res.status(200).json({ message: "connection réussie!", token });
+        res.status(200).json({
+          message: "connection réussie!",
+          token,
+          isAdmin: user.administrator,
+        });
       } else {
         console.log("mot de passe incorrect");
         res.status(401).json({ message: "mot de passe incorrect!" });

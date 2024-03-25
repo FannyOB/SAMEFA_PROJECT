@@ -28,8 +28,6 @@ const AssociationList = ({ shouldSlice, item }) => {
     getAllNgos();
   }, []);
 
-  console.log(isAdmin); // Afficher la valeur de isAdmin dans la console
-
   const renderedList = shouldSlice ? ngos.slice(0, 4) : ngos; // besoin d'utiliser la liste d'association de deux façons,
   // une dans son entiereté et une autre en affichant seulement les 4 premiers éléments.
   // Ici la const sliceAssoList stocke une condition ternaire: si c'est true ( shouldSlice = true)

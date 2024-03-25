@@ -22,6 +22,7 @@ export const AuthProvider = ({ children }) => {
   // Fonction pour gérer la déconnexion de l'utilisateur. Elle met à jour l'état isAuthenticated à false et supprime également le token stocké dans le localStorage, assurant ainsi que l'utilisateur est complètement déconnecté.
   const logout = () => {
     setIsAuthenticated(false);
+    setIsAdmin(false);
     localStorage.removeItem('token'); // Cette ligne supprime le token du localStorage
   };
 

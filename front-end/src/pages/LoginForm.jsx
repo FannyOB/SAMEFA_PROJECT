@@ -23,6 +23,7 @@ const LoginForm = () => {
       if (response.status === 200) {
         console.log(response.data.message);
         localStorage.setItem('token', response.data.token); // permet d'enregistrer le token dans le localStorage.
+        console.log(response.data);
         if (response.data.isAdmin) {
           loginAdmin(); // Mets à jour l'état d'authentification après la connexion réussie
         } else {
