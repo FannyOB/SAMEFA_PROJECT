@@ -11,12 +11,13 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const { loginAdmin, login } = useAuth(); // Accès à la fonction login du contexte d'authentification pour mettre à jour l'état global d'authentification.
+  const BACKEND_URL = 'http://192.168.7.135:3001';
 
   // Gestion de la soumission du formulaire.
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/login', {
+      const response = await axios.post(`${BACKEND_URL}/login`, {
         email,
         password,
       });

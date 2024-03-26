@@ -13,11 +13,12 @@ const SignupForm = () => {
   const [name, setName] = useState('');
   const navigate = useNavigate(); // 2. Use useNavigation hook
   const { signup } = useAuth();
+  const BACKEND_URL = 'http://192.168.7.135:3001';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/signup', {
+      const response = await axios.post(`${BACKEND_URL}/signup`, {
         email,
         password,
         name,
