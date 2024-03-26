@@ -14,7 +14,7 @@ const app = express();
 // Option du cors
 const corsOptions = {
   // pour dire que j'autorise spécifiquement les requêtes qui viennent de cette origine.
-  origin: "http://localhost:3000",
+  origin: ["http://localhost:3000","https://samefa-project.vercel.app"],
   optionsSuccessStatus: 200,
   credentials: true,
 };
