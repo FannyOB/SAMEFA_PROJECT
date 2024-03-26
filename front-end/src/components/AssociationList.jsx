@@ -34,42 +34,43 @@ const AssociationList = ({ shouldSlice, item }) => {
   // alors c'est assoList.slice(0,4) qui s'exécute, sinon (shouldSlice = false)c'est la liste complète qui s'affiche.
   return (
     <ul className="asso-list">
-      {renderedList.map(
-        (
-          association, // ici on va mapper sur la liste
-        ) => (
-          <div className="asso-item-wrapper" key={association.ngo_id}>
-            <span>
-              <FaRegHeart />
-            </span>
-            <Link
-              to={`/details/${association.ngo_id}`}
-              className="link-no-underline"
-            >
-              <AssociationCard
-                key={association.ngo_id}
-                name={association.ngo_name}
-                photo_url={association.photo_url}
-                categories={association.category
-                  .split(',')
-                  .map((category) => category.trim())}
-              />
-            </Link>
-            <div className="icon-buttons">
-              {isAdmin && (
-                <>
-                  <button type="button" className="edit-button">
-                    <MdEdit />
-                  </button>
-                  <button type="button" className="delete-button">
-                    <RiDeleteBin6Fill />
-                  </button>
-                </>
-              )}
+      {Array.isArray(renderedList) &&
+        renderedList.map(
+          (
+            association, // ici on va mapper sur la liste
+          ) => (
+            <div className="asso-item-wrapper" key={association.ngo_id}>
+              <span>
+                <FaRegHeart />
+              </span>
+              <Link
+                to={`/details/${association.ngo_id}`}
+                className="link-no-underline"
+              >
+                <AssociationCard
+                  key={association.ngo_id}
+                  name={association.ngo_name}
+                  photo_url={association.photo_url}
+                  categories={association.category
+                    .split(',')
+                    .map((category) => category.trim())}
+                />
+              </Link>
+              <div className="icon-buttons">
+                {isAdmin && (
+                  <>
+                    <button type="button" className="edit-button">
+                      <MdEdit />
+                    </button>
+                    <button type="button" className="delete-button">
+                      <RiDeleteBin6Fill />
+                    </button>
+                  </>
+                )}
+              </div>
             </div>
-          </div>
-        ),
-      )}
+          ),
+        )}
     </ul>
   );
 };

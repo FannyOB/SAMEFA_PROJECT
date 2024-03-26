@@ -92,18 +92,17 @@
 
 // media queries avec les mixins
 @include lgMinBreakPoint {
-  .product{
+  .product {
     display: flex;
     flex-direction: column;
   }
 }
 
 @include xlMinBreakPoint {
-  .donation{
+  .donation {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem
+    gap: 1rem;
   }
-
 }

@@ -6,20 +6,18 @@
 
 .navigation-wrapper {
   ul {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
   }
   li {
-  margin-right: 2rem;
-  font-family: 'Poppins-Medium';
-  font-size: $fontsize-l;
-}
+    margin-right: 2rem;
+    font-family: 'Poppins-Medium';
+    font-size: $fontsize-l;
+  }
 }
 
-.navigation-wrapper 
-
-.navigation-link {
+.navigation-wrapper .navigation-link {
   text-decoration: none;
   color: $color-black;
   font-family: 'Poppins-Bold';
@@ -37,11 +35,9 @@
 
 button {
   .navigation-link {
-  color: $color-white;
+    color: $color-white;
   }
   .navigation-link:hover {
-  color: $color-black;
+    color: $color-black;
   }
 }
-
-
