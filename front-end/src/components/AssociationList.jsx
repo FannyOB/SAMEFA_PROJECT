@@ -9,6 +9,8 @@ import { MdEdit } from 'react-icons/md';
 import AssociationCard from './AssociationCard.jsx';
 import { useAuth } from '../AuthContext.jsx';
 
+const BACKEND_URL = 'http://192.168.7.135:3001';
+
 const AssociationList = ({ shouldSlice, item }) => {
   const { isAdmin } = useAuth();
   // ajout d'une props au composant AssociationList
@@ -16,7 +18,7 @@ const AssociationList = ({ shouldSlice, item }) => {
   // Fonction pour récupérer la liste des associations via le mock
   const getAllNgos = async () => {
     try {
-      const response = await axios.get('/associations');
+      const response = await axios.get(`${BACKEND_URL}/associations`);
       // console.log(response.data);
       setNgos(response.data);
     } catch (error) {
