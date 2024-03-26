@@ -14,9 +14,7 @@ const DetailsProfile = () => {
   // Fonction pour récupérer les données d'une association pour son ID via la mock
   const getNgoId = async () => {
     try {
-      const response = await axios.get(
-        `http://localhost:3001/associations/${id}`,
-      );
+      const response = await axios.get(`/associations/${id}`);
       setAssociationId(response.data);
     } catch (error) {
       console.error('Erreur lors de la récupération des données');
