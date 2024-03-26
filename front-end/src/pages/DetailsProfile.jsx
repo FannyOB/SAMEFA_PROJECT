@@ -15,7 +15,7 @@ const DetailsProfile = () => {
   const getNgoId = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/associations/${id}`,
+        `http://localhost:3001/associations/${id}`,
       );
       setAssociationId(response.data);
     } catch (error) {
