@@ -10,12 +10,13 @@ import ButtonAction from '../components/ButtonAction.jsx';
 const DetailsProfile = () => {
   const { id } = useParams();
   const [associationId, setAssociationId] = useState(null);
-  const BACKEND_URL = 'http://192.168.7.135:3001';
 
   // Fonction pour récupérer les données d'une association pour son ID via la mock
   const getNgoId = async () => {
     try {
-      const response = await axios.get(`${BACKEND_URL}/associations/${id}`);
+      const response = await axios.get(
+        `http://localhost:3001/associations/${id}`,
+      );
       setAssociationId(response.data);
     } catch (error) {
       console.error('Erreur lors de la récupération des données');
