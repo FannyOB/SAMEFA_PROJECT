@@ -8,6 +8,7 @@ import FormInput from '../components/FormInput.jsx';
 import { useAuth } from '../AuthContext.jsx';
 
 const SignupForm = () => {
+  const url = process.env.REACT_APP_URL;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -17,7 +18,7 @@ const SignupForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/signup', {
+      const response = await axios.post(`${url}/signup`, {
         email,
         password,
         name,

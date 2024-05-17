@@ -8,15 +8,14 @@ import Header from '../components/Header.jsx';
 import ButtonAction from '../components/ButtonAction.jsx';
 
 const DetailsProfile = () => {
+  const url = process.env.REACT_APP_URL;
   const { id } = useParams();
   const [associationId, setAssociationId] = useState(null);
 
   // Fonction pour récupérer les données d'une association pour son ID via la mock
   const getNgoId = async () => {
     try {
-      const response = await axios.get(
-        `http://localhost:3001/associations/${id}`,
-      );
+      const response = await axios.get(`${url}/associations/${id}`);
       setAssociationId(response.data);
     } catch (error) {
       console.error('Erreur lors de la récupération des données');

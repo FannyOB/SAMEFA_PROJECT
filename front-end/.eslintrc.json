@@ -39,6 +39,7 @@
     "react/jsx-uses-vars": "error",
     "no-else-return": "off",
     "import/no-unresolved": "off",
-    "react-hooks/exhaustive-deps": "off"
+    "react-hooks/exhaustive-deps": "off",
+    "import/no-extraneous-dependencies": ["off", { "devDependencies": true }]
   }
 }

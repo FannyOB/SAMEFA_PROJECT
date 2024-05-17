@@ -10,23 +10,24 @@ import AssociationCard from './AssociationCard.jsx';
 import { useAuth } from '../AuthContext.jsx';
 
 const AssociationList = ({ shouldSlice, item }) => {
+  const url = process.env.REACT_APP_URL;
   const { isAdmin } = useAuth();
   // ajout d'une props au composant AssociationList
   const [ngos, setNgos] = useState([]);
   // Fonction pour récupérer la liste des associations via le mock
   const getAllNgos = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/associations');
+      const response = await axios.get(`${url}/associations`);
       // console.log(response.data);
       setNgos(response.data);
     } catch (error) {
-      console.error('Erreur lors de la récupération des données');
+      console.error('Erreur lors de la récupération des données:', error);
     }
   };
 
   useEffect(() => {
     getAllNgos();
-  }, []);
+  }, [url]);
 
   const renderedList = shouldSlice ? ngos.slice(0, 4) : ngos; // besoin d'utiliser la liste d'association de deux façons,
   // une dans son entiereté et une autre en affichant seulement les 4 premiers éléments.
