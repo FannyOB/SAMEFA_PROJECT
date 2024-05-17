@@ -14,9 +14,10 @@ const LoginForm = () => {
 
   // Gestion de la soumission du formulaire.
   const handleSubmit = async (e) => {
+    const url = process.env.REACT_APP_URL;
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/login', {
+      const response = await axios.post(`${url}/login`, {
         email,
         password,
       });
