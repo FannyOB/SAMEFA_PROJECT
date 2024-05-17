@@ -40,6 +40,6 @@
     "no-else-return": "off",
     "import/no-unresolved": "off",
     "react-hooks/exhaustive-deps": "off",
-    "import/no-extraneous-dependencies": ["off", {"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["off", { "devDependencies": true }]
   }
 }
