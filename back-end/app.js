@@ -14,7 +14,7 @@ const app = express();
 // Option du cors
 const corsOptions = {
   // pour dire que j'autorise spécifiquement les requêtes qui viennent de cette origine.
-  origin: "http://localhost:3000",
+  origin: "http://188.165.238.74:8591",
   optionsSuccessStatus: 200,
   credentials: true,
 };
@@ -42,10 +42,10 @@ app.use("/login", loginController);
 
 // PORT const port = 3001;
 if (!(process.env.NODE_ENV === "test" && process.env.JEST_TEST === "true")) {
-  const port = process.env.PORT || 3001;
+  const port = process.env.PORT || 8591;
   app.listen(port, () => {
     console.log(
-      `Notre application Node est démarée sur : http://localhost:${port}`,
+      `Notre application Node est démarée sur : http://188.165.238.74:${port}`,
     );
   });
 }
