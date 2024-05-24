@@ -14,7 +14,7 @@ const app = express();
 // Option du cors
 const corsOptions = {
   // pour dire que j'autorise spécifiquement les requêtes qui viennent de cette origine.
-  origin: "http://188.165.238.74:8591",
+  origin: "https://samefa-project.vercel.app", // mettre de lien url Vercel
   optionsSuccessStatus: 200,
   credentials: true,
 };
@@ -42,10 +42,10 @@ app.use("/login", loginController);
 
 // PORT const port = 3001;
 if (!(process.env.NODE_ENV === "test" && process.env.JEST_TEST === "true")) {
-  const port = process.env.PORT || 8591;
+  const port = process.env.PORT || 3001; // remettre en 3001 ici et dans le .env
   app.listen(port, () => {
     console.log(
-      `Notre application Node est démarée sur : http://188.165.238.74:${port}`,
+      `Notre application Node est démarée sur le port local :${port}`,
     );
   });
 }
